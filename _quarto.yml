@@ -1,0 +1,35 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "Report Title Here"
+  author: "Corinne Fogarty, Gracie Williams, Ruth Melese, Jolie "
+  favicon: png
+  description: fill in later
+  keyword: add keywords
+  #url: 
+  sidebar:
+    logo: png
+    search: true
+  repo-url: https://github.com/corinnefog/DS2023-Final
+  repo-branch: main
+  #image:
+
+
+  chapters:
+    - index.qmd
+    - datacleaning.qmd
+    - eda.qmd
+    - dataviz.qmd
+    - datadictionary.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme:
+      light: minty
+    code-fold: false
+    backgroundcolor: "#FFFFFF"
+
