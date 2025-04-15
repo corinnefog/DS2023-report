@@ -1,6 +1,6 @@
 ---
 title: "DS2023 Report"
-type: website
+type: book
 ---
 
 **Jolie Ng, Gracie Williams, Ruth Melese, Corinne Fogarty**
