@@ -1,5 +1,6 @@
 ---
-jupyter: python3
+title: "DS2023 Report"
+type: website
 ---
 
 **Jolie Ng, Gracie Williams, Ruth Melese, Corinne Fogarty**
