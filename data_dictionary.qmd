@@ -1,0 +1,20 @@
+
+---
+title: "Data Dictionary"
+format: html
+---
+
+## Player Performance Metrics
+
+| **Metric**                  | **Description** |
+|----------------------------|-----------------|
+| Position                   | The player’s role on the team (e.g., Guard, Forward, Center), which influences movement patterns and workload. |
+| Period Number              | The specific segment of the game or practice session being recorded. |
+| Total Player Load          | A cumulative measure of the physical workload experienced by a player during a session. |
+| Player Load Per Minute     | Player load normalized per minute to account for differences in playing time. |
+| IMA Accel Total            | The total number of inertial movement accelerations across all intensity levels. |
+| IMA Decel Total            | The total number of inertial movement decelerations across all intensity levels. |
+| Explosive Efforts          | The number of high-intensity movements, such as quick sprints or jumps. |
+| Session Total Jump         | The total number of jumps performed by a player during the session. |
+| Session Jumps Per Minute   | The number of jumps a player performs per minute, useful for workload analysis. |
+| Total High IMA             | The total number of high-intensity inertial movement activities, capturing rapid changes in motion. |
