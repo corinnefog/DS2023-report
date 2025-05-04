@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="fill in later">
 
-<title>datacleaning – Report Title Here</title>
+<title>1&nbsp; Data Cleaning – Report Title Here</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,10 +21,44 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -69,11 +104,14 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 </head>
 
-<body class="nav-sidebar floating fullcontent">
+<body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -82,7 +120,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./datacleaning.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">datacleaning.html</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./datacleaning.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Data Cleaning</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -122,7 +160,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./datacleaning.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">datacleaning.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Data Cleaning</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -134,13 +172,13 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./dataviz.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">dataviz.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data Viz</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./datadictionary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">datadictionary.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Data Dictionary</span></span></a>
   </div>
 </li>
     </ul>
@@ -148,13 +186,881 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Data Cleaning</span></h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div id="ca5e0b6e" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>First, we need to load the data, and see what it looks like</strong></p>
+<div id="19fedb23" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>season1 <span class="op">=</span> pd.read_csv(<span class="st">'~/Downloads/DS2023/Final Project/catapult season 1(in).csv'</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>season2 <span class="op">=</span> pd.read_csv(<span class="st">'~/Downloads/DS2023/Final Project/catapult season 2(in).csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="c7263170" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>season1.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="3">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Date</th>
+<th data-quarto-table-cell-role="th">About</th>
+<th data-quarto-table-cell-role="th">Position</th>
+<th data-quarto-table-cell-role="th">Period Number</th>
+<th data-quarto-table-cell-role="th">Period</th>
+<th data-quarto-table-cell-role="th">Total Acceleration Efforts</th>
+<th data-quarto-table-cell-role="th">Total Player Load</th>
+<th data-quarto-table-cell-role="th">Player Load Per Minute</th>
+<th data-quarto-table-cell-role="th">IMA Accel Low</th>
+<th data-quarto-table-cell-role="th">IMA Decel Low</th>
+<th data-quarto-table-cell-role="th">...</th>
+<th data-quarto-table-cell-role="th">Session Jump Count High Band</th>
+<th data-quarto-table-cell-role="th">Session Total Jump</th>
+<th data-quarto-table-cell-role="th">Session Jumps Per Minute</th>
+<th data-quarto-table-cell-role="th">Total CoD Left</th>
+<th data-quarto-table-cell-role="th">Total CoD Right</th>
+<th data-quarto-table-cell-role="th">Total High IMA</th>
+<th data-quarto-table-cell-role="th">Total IMA</th>
+<th data-quarto-table-cell-role="th">IMA/Min</th>
+<th data-quarto-table-cell-role="th">event-uuid</th>
+<th data-quarto-table-cell-role="th">group-uuid</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>3/14/2023</td>
+<td>Athlete I</td>
+<td>Guard</td>
+<td>1</td>
+<td>1. Pre Practice</td>
+<td>0</td>
+<td>87.437</td>
+<td>4.1</td>
+<td>3</td>
+<td>17</td>
+<td>...</td>
+<td>24.0</td>
+<td>95.0</td>
+<td>1.05</td>
+<td>269.0</td>
+<td>306.0</td>
+<td>89.0</td>
+<td>899.0</td>
+<td>NaN</td>
+<td>c4e1f0fe-b87a-42ca-8f41-b5b0e4cdfab3</td>
+<td>c4e1f0fe-b87a-42ca-8f41-b5b0e4cdfab3</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>3/14/2023</td>
+<td>Athlete I</td>
+<td>Guard</td>
+<td>2</td>
+<td>2. Drill_Offense_ Flare, Rescreen_Half Court_4v4</td>
+<td>0</td>
+<td>34.257</td>
+<td>8.2</td>
+<td>4</td>
+<td>4</td>
+<td>...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>c4e1f0fe-b87a-42ca-8f41-b5b0e4cdfab3</td>
+<td>c4e1f0fe-b87a-42ca-8f41-b5b0e4cdfab3</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>3/14/2023</td>
+<td>Athlete I</td>
+<td>Guard</td>
+<td>3</td>
+<td>3. Drill_Defense_PCM_Half Court_4v4</td>
+<td>0</td>
+<td>31.399</td>
+<td>9.9</td>
+<td>1</td>
+<td>4</td>
+<td>...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>c4e1f0fe-b87a-42ca-8f41-b5b0e4cdfab3</td>
+<td>c4e1f0fe-b87a-42ca-8f41-b5b0e4cdfab3</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>3/14/2023</td>
+<td>Athlete I</td>
+<td>Guard</td>
+<td>4</td>
+<td>4. Drill_Defense_Lane Width Slide_Full Court_1v1</td>
+<td>0</td>
+<td>13.616</td>
+<td>7.0</td>
+<td>1</td>
+<td>2</td>
+<td>...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>c4e1f0fe-b87a-42ca-8f41-b5b0e4cdfab3</td>
+<td>c4e1f0fe-b87a-42ca-8f41-b5b0e4cdfab3</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>3/14/2023</td>
+<td>Athlete I</td>
+<td>Guard</td>
+<td>5</td>
+<td>5. Drill_Defense_Fake Game_Half Court_2v2</td>
+<td>0</td>
+<td>28.724</td>
+<td>7.7</td>
+<td>2</td>
+<td>8</td>
+<td>...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>c4e1f0fe-b87a-42ca-8f41-b5b0e4cdfab3</td>
+<td>c4e1f0fe-b87a-42ca-8f41-b5b0e4cdfab3</td>
+</tr>
+</tbody>
+</table>
+
+<p>5 rows × 53 columns</p>
+</div>
+</div>
+</div>
+<div id="de41dfe8" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>season2.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="4">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Date</th>
+<th data-quarto-table-cell-role="th">About</th>
+<th data-quarto-table-cell-role="th">Position</th>
+<th data-quarto-table-cell-role="th">Period Number</th>
+<th data-quarto-table-cell-role="th">Period</th>
+<th data-quarto-table-cell-role="th">Total Acceleration Efforts</th>
+<th data-quarto-table-cell-role="th">Total Player Load</th>
+<th data-quarto-table-cell-role="th">Player Load Per Minute</th>
+<th data-quarto-table-cell-role="th">IMA Accel Low</th>
+<th data-quarto-table-cell-role="th">IMA Decel Low</th>
+<th data-quarto-table-cell-role="th">...</th>
+<th data-quarto-table-cell-role="th">Session Jump Count High Band</th>
+<th data-quarto-table-cell-role="th">Session Total Jump</th>
+<th data-quarto-table-cell-role="th">Session Jumps Per Minute</th>
+<th data-quarto-table-cell-role="th">Total CoD Left</th>
+<th data-quarto-table-cell-role="th">Total CoD Right</th>
+<th data-quarto-table-cell-role="th">Total High IMA</th>
+<th data-quarto-table-cell-role="th">Total IMA</th>
+<th data-quarto-table-cell-role="th">IMA/Min</th>
+<th data-quarto-table-cell-role="th">event-uuid</th>
+<th data-quarto-table-cell-role="th">group-uuid</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>3/13/2024</td>
+<td>Athlete E</td>
+<td>Forward</td>
+<td>1</td>
+<td>1. Pre Practice</td>
+<td>0</td>
+<td>228.177</td>
+<td>4.9</td>
+<td>11</td>
+<td>36</td>
+<td>...</td>
+<td>23.0</td>
+<td>197.0</td>
+<td>1.75</td>
+<td>266.0</td>
+<td>281.0</td>
+<td>91.0</td>
+<td>957.0</td>
+<td>20.67</td>
+<td>735d4b60-9bd0-41d6-a9e5-b94432a01350</td>
+<td>f85f0e57-ac6f-4121-b063-b3800e15571d</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>3/13/2024</td>
+<td>Athlete E</td>
+<td>Forward</td>
+<td>2</td>
+<td>2. Drill_Defense_Fake Game_Half Court_1v1</td>
+<td>0</td>
+<td>30.349</td>
+<td>7.4</td>
+<td>1</td>
+<td>3</td>
+<td>...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>735d4b60-9bd0-41d6-a9e5-b94432a01350</td>
+<td>f85f0e57-ac6f-4121-b063-b3800e15571d</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>3/13/2024</td>
+<td>Athlete E</td>
+<td>Forward</td>
+<td>3</td>
+<td>3. Drill_Defense_Ball Screen Breakdown to Rebo...</td>
+<td>0</td>
+<td>27.615</td>
+<td>5.1</td>
+<td>3</td>
+<td>4</td>
+<td>...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>735d4b60-9bd0-41d6-a9e5-b94432a01350</td>
+<td>f85f0e57-ac6f-4121-b063-b3800e15571d</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>3/13/2024</td>
+<td>Athlete E</td>
+<td>Forward</td>
+<td>4</td>
+<td>4. Play_Defense_Scramble_Half Court_5v5</td>
+<td>0</td>
+<td>61.841</td>
+<td>6.5</td>
+<td>11</td>
+<td>9</td>
+<td>...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>735d4b60-9bd0-41d6-a9e5-b94432a01350</td>
+<td>f85f0e57-ac6f-4121-b063-b3800e15571d</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>3/13/2024</td>
+<td>Athlete E</td>
+<td>Forward</td>
+<td>5</td>
+<td>5. Play_Defense_Half Court D_Half Court_5vG</td>
+<td>0</td>
+<td>60.133</td>
+<td>5.3</td>
+<td>6</td>
+<td>7</td>
+<td>...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>735d4b60-9bd0-41d6-a9e5-b94432a01350</td>
+<td>f85f0e57-ac6f-4121-b063-b3800e15571d</td>
+</tr>
+</tbody>
+</table>
+
+<p>5 rows × 53 columns</p>
+</div>
+</div>
+</div>
+<div id="974a363d" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>season1.isnull().<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="5">
+<pre><code>Date                                0
+About                               0
+Position                            0
+Period Number                       0
+Period                              0
+Total Acceleration Efforts          0
+Total Player Load                   0
+Player Load Per Minute              0
+IMA Accel Low                       0
+IMA Decel Low                       0
+IMA CoD Left Low                    0
+IMA CoD Right Low                   0
+IMA Accel Medium                    0
+IMA Decel Medium                    0
+IMA CoD Left Medium                 0
+IMA CoD Right Medium                0
+IMA Accel High                      0
+IMA Decel High                      0
+IMA Accel Total                     0
+IMA Decel Total                     0
+IMA CoD Left High                   0
+IMA CoD Right High                  0
+IMA Jump Count Low Band             0
+IMA Jump Count Med Band             0
+IMA Jump Count High Band            0
+Explosive Efforts                   0
+Session Total Jumps             14491
+Session Accel Low               14491
+Session Decel Low               14491
+Session CoD Left Low            14491
+Session CoD Right Low           14491
+Session Accel Med               14491
+Session Decel Medium            14491
+Session CoD Left Medium         14491
+Session CoD Right Medium        14491
+Session IMA Accel High          14491
+Session Decel High              14491
+Session CoD Left High           14491
+Session CoD Right High          14491
+Session IMA Accel Total         14491
+Session IMA Decel Total         14491
+Session Jump Count Low Band     14491
+Session Jump Count Med Band     14491
+Session Jump Count High Band    14491
+Session Total Jump              14491
+Session Jumps Per Minute        14491
+Total CoD Left                  14491
+Total CoD Right                 14491
+Total High IMA                  14491
+Total IMA                       14491
+IMA/Min                         16070
+event-uuid                          0
+group-uuid                          0
+dtype: int64</code></pre>
+</div>
+</div>
+<div id="5668c1b8" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>season2.isnull().<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="6">
+<pre><code>Date                                0
+About                               0
+Position                            0
+Period Number                       0
+Period                              0
+Total Acceleration Efforts          0
+Total Player Load                   0
+Player Load Per Minute              0
+IMA Accel Low                       0
+IMA Decel Low                       0
+IMA CoD Left Low                    0
+IMA CoD Right Low                   0
+IMA Accel Medium                    0
+IMA Decel Medium                    0
+IMA CoD Left Medium                 0
+IMA CoD Right Medium                0
+IMA Accel High                      0
+IMA Decel High                      0
+IMA Accel Total                     0
+IMA Decel Total                     0
+IMA CoD Left High                   0
+IMA CoD Right High                  0
+IMA Jump Count Low Band             0
+IMA Jump Count Med Band             0
+IMA Jump Count High Band            0
+Explosive Efforts                   0
+Session Total Jumps             11716
+Session Accel Low               11716
+Session Decel Low               11716
+Session CoD Left Low            11716
+Session CoD Right Low           11716
+Session Accel Med               11716
+Session Decel Medium            11716
+Session CoD Left Medium         11716
+Session CoD Right Medium        11716
+Session IMA Accel High          11716
+Session Decel High              11716
+Session CoD Left High           11716
+Session CoD Right High          11716
+Session IMA Accel Total         11716
+Session IMA Decel Total         11716
+Session Jump Count Low Band     11716
+Session Jump Count Med Band     11716
+Session Jump Count High Band    11716
+Session Total Jump              11716
+Session Jumps Per Minute        11716
+Total CoD Left                  11716
+Total CoD Right                 11716
+Total High IMA                  11716
+Total IMA                       11716
+IMA/Min                         12461
+event-uuid                          0
+group-uuid                          0
+dtype: int64</code></pre>
+</div>
+</div>
+<p><strong>Next, since there are a lot of N/A values for the columns describing the session as a whole, I’m going to fill in the values for the date so it looks better</strong></p>
+<div id="7e0046a6" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>nan_columns <span class="op">=</span> season1.iloc[:, <span class="dv">26</span>:<span class="op">-</span><span class="dv">2</span>]</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>nan_columns.columns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="7">
+<pre><code>Index(['Session Total Jumps', 'Session Accel Low', 'Session Decel Low',
+       'Session CoD Left Low', 'Session CoD Right Low', 'Session Accel Med',
+       'Session Decel Medium', 'Session CoD Left Medium',
+       'Session CoD Right Medium', 'Session IMA Accel High',
+       'Session Decel High', 'Session CoD Left High', 'Session CoD Right High',
+       'Session IMA Accel Total', 'Session IMA Decel Total',
+       'Session Jump Count Low Band', 'Session Jump Count Med Band',
+       'Session Jump Count High Band', 'Session Total Jump',
+       'Session Jumps Per Minute', 'Total CoD Left', 'Total CoD Right',
+       'Total High IMA', 'Total IMA', 'IMA/Min'],
+      dtype='object')</code></pre>
+</div>
+</div>
+<div id="b8ad9481" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>column_fill <span class="op">=</span> [<span class="st">'Session Total Jumps'</span>, <span class="st">'Session Accel Low'</span>, <span class="st">'Session Decel Low'</span>,</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>       <span class="st">'Session CoD Left Low'</span>, <span class="st">'Session CoD Right Low'</span>, <span class="st">'Session Accel Med'</span>,</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>       <span class="st">'Session Decel Medium'</span>, <span class="st">'Session CoD Left Medium'</span>,</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>       <span class="st">'Session CoD Right Medium'</span>, <span class="st">'Session IMA Accel High'</span>,</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>       <span class="st">'Session Decel High'</span>, <span class="st">'Session CoD Left High'</span>, <span class="st">'Session CoD Right High'</span>,</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>       <span class="st">'Session IMA Accel Total'</span>, <span class="st">'Session IMA Decel Total'</span>,</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>       <span class="st">'Session Jump Count Low Band'</span>, <span class="st">'Session Jump Count Med Band'</span>,</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>       <span class="st">'Session Jump Count High Band'</span>, <span class="st">'Session Total Jump'</span>,</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>       <span class="st">'Session Jumps Per Minute'</span>, <span class="st">'Total CoD Left'</span>, <span class="st">'Total CoD Right'</span>,</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>       <span class="st">'Total High IMA'</span>, <span class="st">'Total IMA'</span>, <span class="st">'IMA/Min'</span>]</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>season1[column_fill] <span class="op">=</span> season1.groupby(<span class="st">'About'</span>)[column_fill].ffill()</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>season1.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="8">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Date</th>
+<th data-quarto-table-cell-role="th">About</th>
+<th data-quarto-table-cell-role="th">Position</th>
+<th data-quarto-table-cell-role="th">Period Number</th>
+<th data-quarto-table-cell-role="th">Period</th>
+<th data-quarto-table-cell-role="th">Total Acceleration Efforts</th>
+<th data-quarto-table-cell-role="th">Total Player Load</th>
+<th data-quarto-table-cell-role="th">Player Load Per Minute</th>
+<th data-quarto-table-cell-role="th">IMA Accel Low</th>
+<th data-quarto-table-cell-role="th">IMA Decel Low</th>
+<th data-quarto-table-cell-role="th">...</th>
+<th data-quarto-table-cell-role="th">Session Jump Count High Band</th>
+<th data-quarto-table-cell-role="th">Session Total Jump</th>
+<th data-quarto-table-cell-role="th">Session Jumps Per Minute</th>
+<th data-quarto-table-cell-role="th">Total CoD Left</th>
+<th data-quarto-table-cell-role="th">Total CoD Right</th>
+<th data-quarto-table-cell-role="th">Total High IMA</th>
+<th data-quarto-table-cell-role="th">Total IMA</th>
+<th data-quarto-table-cell-role="th">IMA/Min</th>
+<th data-quarto-table-cell-role="th">event-uuid</th>
+<th data-quarto-table-cell-role="th">group-uuid</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>3/14/2023</td>
+<td>Athlete I</td>
+<td>Guard</td>
+<td>1</td>
+<td>1. Pre Practice</td>
+<td>0</td>
+<td>87.437</td>
+<td>4.1</td>
+<td>3</td>
+<td>17</td>
+<td>...</td>
+<td>24.0</td>
+<td>95.0</td>
+<td>1.05</td>
+<td>269.0</td>
+<td>306.0</td>
+<td>89.0</td>
+<td>899.0</td>
+<td>NaN</td>
+<td>c4e1f0fe-b87a-42ca-8f41-b5b0e4cdfab3</td>
+<td>c4e1f0fe-b87a-42ca-8f41-b5b0e4cdfab3</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>3/14/2023</td>
+<td>Athlete I</td>
+<td>Guard</td>
+<td>2</td>
+<td>2. Drill_Offense_ Flare, Rescreen_Half Court_4v4</td>
+<td>0</td>
+<td>34.257</td>
+<td>8.2</td>
+<td>4</td>
+<td>4</td>
+<td>...</td>
+<td>24.0</td>
+<td>95.0</td>
+<td>1.05</td>
+<td>269.0</td>
+<td>306.0</td>
+<td>89.0</td>
+<td>899.0</td>
+<td>NaN</td>
+<td>c4e1f0fe-b87a-42ca-8f41-b5b0e4cdfab3</td>
+<td>c4e1f0fe-b87a-42ca-8f41-b5b0e4cdfab3</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>3/14/2023</td>
+<td>Athlete I</td>
+<td>Guard</td>
+<td>3</td>
+<td>3. Drill_Defense_PCM_Half Court_4v4</td>
+<td>0</td>
+<td>31.399</td>
+<td>9.9</td>
+<td>1</td>
+<td>4</td>
+<td>...</td>
+<td>24.0</td>
+<td>95.0</td>
+<td>1.05</td>
+<td>269.0</td>
+<td>306.0</td>
+<td>89.0</td>
+<td>899.0</td>
+<td>NaN</td>
+<td>c4e1f0fe-b87a-42ca-8f41-b5b0e4cdfab3</td>
+<td>c4e1f0fe-b87a-42ca-8f41-b5b0e4cdfab3</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>3/14/2023</td>
+<td>Athlete I</td>
+<td>Guard</td>
+<td>4</td>
+<td>4. Drill_Defense_Lane Width Slide_Full Court_1v1</td>
+<td>0</td>
+<td>13.616</td>
+<td>7.0</td>
+<td>1</td>
+<td>2</td>
+<td>...</td>
+<td>24.0</td>
+<td>95.0</td>
+<td>1.05</td>
+<td>269.0</td>
+<td>306.0</td>
+<td>89.0</td>
+<td>899.0</td>
+<td>NaN</td>
+<td>c4e1f0fe-b87a-42ca-8f41-b5b0e4cdfab3</td>
+<td>c4e1f0fe-b87a-42ca-8f41-b5b0e4cdfab3</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>3/14/2023</td>
+<td>Athlete I</td>
+<td>Guard</td>
+<td>5</td>
+<td>5. Drill_Defense_Fake Game_Half Court_2v2</td>
+<td>0</td>
+<td>28.724</td>
+<td>7.7</td>
+<td>2</td>
+<td>8</td>
+<td>...</td>
+<td>24.0</td>
+<td>95.0</td>
+<td>1.05</td>
+<td>269.0</td>
+<td>306.0</td>
+<td>89.0</td>
+<td>899.0</td>
+<td>NaN</td>
+<td>c4e1f0fe-b87a-42ca-8f41-b5b0e4cdfab3</td>
+<td>c4e1f0fe-b87a-42ca-8f41-b5b0e4cdfab3</td>
+</tr>
+</tbody>
+</table>
+
+<p>5 rows × 53 columns</p>
+</div>
+</div>
+</div>
+<div id="24f98dee" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>season2[column_fill] <span class="op">=</span> season2.groupby(<span class="st">'About'</span>)[column_fill].ffill()</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>season2.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="9">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Date</th>
+<th data-quarto-table-cell-role="th">About</th>
+<th data-quarto-table-cell-role="th">Position</th>
+<th data-quarto-table-cell-role="th">Period Number</th>
+<th data-quarto-table-cell-role="th">Period</th>
+<th data-quarto-table-cell-role="th">Total Acceleration Efforts</th>
+<th data-quarto-table-cell-role="th">Total Player Load</th>
+<th data-quarto-table-cell-role="th">Player Load Per Minute</th>
+<th data-quarto-table-cell-role="th">IMA Accel Low</th>
+<th data-quarto-table-cell-role="th">IMA Decel Low</th>
+<th data-quarto-table-cell-role="th">...</th>
+<th data-quarto-table-cell-role="th">Session Jump Count High Band</th>
+<th data-quarto-table-cell-role="th">Session Total Jump</th>
+<th data-quarto-table-cell-role="th">Session Jumps Per Minute</th>
+<th data-quarto-table-cell-role="th">Total CoD Left</th>
+<th data-quarto-table-cell-role="th">Total CoD Right</th>
+<th data-quarto-table-cell-role="th">Total High IMA</th>
+<th data-quarto-table-cell-role="th">Total IMA</th>
+<th data-quarto-table-cell-role="th">IMA/Min</th>
+<th data-quarto-table-cell-role="th">event-uuid</th>
+<th data-quarto-table-cell-role="th">group-uuid</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>3/13/2024</td>
+<td>Athlete E</td>
+<td>Forward</td>
+<td>1</td>
+<td>1. Pre Practice</td>
+<td>0</td>
+<td>228.177</td>
+<td>4.9</td>
+<td>11</td>
+<td>36</td>
+<td>...</td>
+<td>23.0</td>
+<td>197.0</td>
+<td>1.75</td>
+<td>266.0</td>
+<td>281.0</td>
+<td>91.0</td>
+<td>957.0</td>
+<td>20.67</td>
+<td>735d4b60-9bd0-41d6-a9e5-b94432a01350</td>
+<td>f85f0e57-ac6f-4121-b063-b3800e15571d</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>3/13/2024</td>
+<td>Athlete E</td>
+<td>Forward</td>
+<td>2</td>
+<td>2. Drill_Defense_Fake Game_Half Court_1v1</td>
+<td>0</td>
+<td>30.349</td>
+<td>7.4</td>
+<td>1</td>
+<td>3</td>
+<td>...</td>
+<td>23.0</td>
+<td>197.0</td>
+<td>1.75</td>
+<td>266.0</td>
+<td>281.0</td>
+<td>91.0</td>
+<td>957.0</td>
+<td>20.67</td>
+<td>735d4b60-9bd0-41d6-a9e5-b94432a01350</td>
+<td>f85f0e57-ac6f-4121-b063-b3800e15571d</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>3/13/2024</td>
+<td>Athlete E</td>
+<td>Forward</td>
+<td>3</td>
+<td>3. Drill_Defense_Ball Screen Breakdown to Rebo...</td>
+<td>0</td>
+<td>27.615</td>
+<td>5.1</td>
+<td>3</td>
+<td>4</td>
+<td>...</td>
+<td>23.0</td>
+<td>197.0</td>
+<td>1.75</td>
+<td>266.0</td>
+<td>281.0</td>
+<td>91.0</td>
+<td>957.0</td>
+<td>20.67</td>
+<td>735d4b60-9bd0-41d6-a9e5-b94432a01350</td>
+<td>f85f0e57-ac6f-4121-b063-b3800e15571d</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>3/13/2024</td>
+<td>Athlete E</td>
+<td>Forward</td>
+<td>4</td>
+<td>4. Play_Defense_Scramble_Half Court_5v5</td>
+<td>0</td>
+<td>61.841</td>
+<td>6.5</td>
+<td>11</td>
+<td>9</td>
+<td>...</td>
+<td>23.0</td>
+<td>197.0</td>
+<td>1.75</td>
+<td>266.0</td>
+<td>281.0</td>
+<td>91.0</td>
+<td>957.0</td>
+<td>20.67</td>
+<td>735d4b60-9bd0-41d6-a9e5-b94432a01350</td>
+<td>f85f0e57-ac6f-4121-b063-b3800e15571d</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>3/13/2024</td>
+<td>Athlete E</td>
+<td>Forward</td>
+<td>5</td>
+<td>5. Play_Defense_Half Court D_Half Court_5vG</td>
+<td>0</td>
+<td>60.133</td>
+<td>5.3</td>
+<td>6</td>
+<td>7</td>
+<td>...</td>
+<td>23.0</td>
+<td>197.0</td>
+<td>1.75</td>
+<td>266.0</td>
+<td>281.0</td>
+<td>91.0</td>
+<td>957.0</td>
+<td>20.67</td>
+<td>735d4b60-9bd0-41d6-a9e5-b94432a01350</td>
+<td>f85f0e57-ac6f-4121-b063-b3800e15571d</td>
+</tr>
+</tbody>
+</table>
+
+<p>5 rows × 53 columns</p>
+</div>
+</div>
+</div>
+<p><strong>Since some of the numeric values ended up having a .0 at the end, we decided to remove that to make the look of the dataset cleaner</strong></p>
+<div id="a4149071" class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>round_col <span class="op">=</span> [<span class="st">'Session Total Jumps'</span>, <span class="st">'Session Accel Low'</span>, <span class="st">'Session Decel Low'</span>,</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>       <span class="st">'Session CoD Left Low'</span>, <span class="st">'Session CoD Right Low'</span>, <span class="st">'Session Accel Med'</span>,</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>       <span class="st">'Session Decel Medium'</span>, <span class="st">'Session CoD Left Medium'</span>,</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>       <span class="st">'Session CoD Right Medium'</span>, <span class="st">'Session IMA Accel High'</span>,</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>       <span class="st">'Session Decel High'</span>, <span class="st">'Session CoD Left High'</span>, <span class="st">'Session CoD Right High'</span>,</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>       <span class="st">'Session IMA Accel Total'</span>, <span class="st">'Session IMA Decel Total'</span>,</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>       <span class="st">'Session Jump Count Low Band'</span>, <span class="st">'Session Jump Count Med Band'</span>,</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>       <span class="st">'Session Jump Count High Band'</span>, <span class="st">'Session Total Jump'</span>,</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>       <span class="st">'Session Jumps Per Minute'</span>, <span class="st">'Total CoD Left'</span>, <span class="st">'Total CoD Right'</span>,</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>       <span class="st">'Total High IMA'</span>, <span class="st">'Total IMA'</span>]</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>season1[round_col] <span class="op">=</span> season1[round_col].<span class="bu">round</span>(<span class="dv">0</span>).astype(<span class="st">'Int64'</span>)</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>season2[round_col] <span class="op">=</span> season2[round_col].<span class="bu">round</span>(<span class="dv">0</span>).astype(<span class="st">'Int64'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>A lot of values also have three decimal places when they aren’t needed, so we will round them down to one, again, for polishing purposes</strong></p>
+<div id="cd0a015b" class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>season1[<span class="st">'Total Player Load'</span>] <span class="op">=</span> season1[<span class="st">'Total Player Load'</span>].<span class="bu">round</span>(<span class="dv">1</span>)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>season2[<span class="st">'Total Player Load'</span>] <span class="op">=</span> season2[<span class="st">'Total Player Load'</span>].<span class="bu">round</span>(<span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Next, we just wanted to make sure the dates were all formatted correctly and the same between datasets</strong></p>
+<div id="9bf6c3b3" class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>season1[<span class="st">'Date'</span>] <span class="op">=</span> pd.to_datetime(season1[<span class="st">'Date'</span>], <span class="bu">format</span><span class="op">=</span><span class="st">'%m/</span><span class="sc">%d</span><span class="st">/%y'</span>, errors<span class="op">=</span><span class="st">'coerce'</span>)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>season2[<span class="st">'Date'</span>] <span class="op">=</span> pd.to_datetime(season2[<span class="st">'Date'</span>], <span class="bu">format</span><span class="op">=</span><span class="st">'%m/</span><span class="sc">%d</span><span class="st">/%y'</span>, errors<span class="op">=</span><span class="st">'coerce'</span>)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>season1 <span class="op">=</span> season1.sort_values(<span class="st">'Date'</span>)</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>season2 <span class="op">=</span> season2.sort_values(<span class="st">'Date'</span>)</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="co"># print a date to check</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(season1[<span class="st">'Date'</span>].head())</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(season2[<span class="st">'Date'</span>].head())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0   NaT
+1   NaT
+2   NaT
+3   NaT
+4   NaT
+Name: Date, dtype: datetime64[ns]
+0   NaT
+1   NaT
+2   NaT
+3   NaT
+4   NaT
+Name: Date, dtype: datetime64[ns]</code></pre>
+</div>
+</div>
 
 
 

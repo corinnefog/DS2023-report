@@ -1,5 +1,6 @@
 ---
-jupyter: python3
+title: "Data Viz"
+format: html
 ---
 
 ```{python}
