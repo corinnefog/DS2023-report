@@ -3,3 +3,22 @@
 This is a Quarto book.
 
 To learn more about Quarto books visit <https://quarto.org/docs/books>.
+
+## Problem Statement
+In basketball, physical actions like sprints, jumps, and quick decisions contribute to the overall physical demand placed on players. Tracking this workload helps
+teams better understand performance trends and identify moments where adjustments might be needed. This report examines how player load relates to individual and team
+outcomes. Our analysis was guided by three key questions. First, we examined whether workload patterns changed between seasons. Second, we evaluated whether these
+changes were associated with game outcomes. Third, we considered how these insights could inform coaching decisions.
+
+## Analysis
+We started  by reviewing all the player load data across both seasons. Then we focused on three variables. These were average player load by position, player load per
+minute each week, and explosive efforts during games. Our goal was to find a story in the data that coaches could use to make informed decisions about training and
+strategy. When we looked at player load by position, we saw that guards and forwards tended to have lower average loads in games that ended in wins. Centers had about
+the same load whether the team won or lost. This suggests that efficient and well-paced effort leads to better outcomes. It also suggests adjusting intensity by 
+position in both practice and in-game strategy. When looking at weekly load per minute, we found that Season 2 had much higher levels of effort between Weeks 11 and 
+21. During that time, the team had a stronger win record compared to the same section in Season 1. This might suggest that higher physical intensity in the middle of 
+the season improved overall fitness.
+
+## Conclusion
+Player load can do more than explain what happened in a game. It can help predict future performance and guide how teams prepare. We found that different positions have different workload patterns that are tied to winning. We also found that pushing harder in the middle of the season may lead to better results. Finally, we saw that explosive effort is a good signal of player engagement and energy. Based on what we learned, we suggest personalizing load management instead of giving everyone the same recovery plan. We also suggest increasing physical intensity during the middle of the season when players are most ready to push themselves. Finally, we believe explosive efforts should be tracked regularly to catch signs of fatigue early and avoid injuries.
+In the future, we could learn even more by bringing in other types of data. For example, heart rate, recovery time, and sleep could give more insight into player health. It would also help to look at how travel and game schedules affect performance. Postseason data might give us the clearest picture of how to help the team succeed during the most important games.
