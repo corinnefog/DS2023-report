@@ -211,7 +211,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div id="c4bce847" class="cell" data-execution_count="1">
+<div id="803ee1ab" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -220,14 +220,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <section id="loading-the-data" class="level4" data-number="2.0.0.1">
 <h4 data-number="2.0.0.1" class="anchored" data-anchor-id="loading-the-data"><span class="header-section-number">2.0.0.1</span> Loading the Data</h4>
-<div id="786c287f" class="cell" data-execution_count="2">
+<div id="3ddc3328" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>season1 <span class="op">=</span> pd.read_csv(<span class="st">'~/Downloads/DS2023/Final Project/catapult season 1(in).csv'</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>season2 <span class="op">=</span> pd.read_csv(<span class="st">'~/Downloads/DS2023/Final Project/catapult season 2(in).csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="looking-at-the-entries" class="level4" data-number="2.0.0.2">
 <h4 data-number="2.0.0.2" class="anchored" data-anchor-id="looking-at-the-entries"><span class="header-section-number">2.0.0.2</span> Looking at the Entries</h4>
-<div id="7358cd56" class="cell" data-execution_count="3">
+<div id="b539aef3" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>season1.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
 <div>
@@ -388,7 +388,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<div id="1007007a" class="cell" data-execution_count="4">
+<div id="a66a27c4" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>season2.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
 <div>
@@ -549,7 +549,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<div id="9a22cef5" class="cell" data-execution_count="5">
+<div id="4c2637ed" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Shape of Season 1 Dataset:"</span>, season1.shape)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Shape of Season 2 Dataset:"</span>, season2.shape)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -559,7 +559,7 @@ Shape of Season 1 Dataset: (16217, 53)
 Shape of Season 2 Dataset: (13225, 53)</code></pre>
 </div>
 </div>
-<div id="e27a7292" class="cell" data-execution_count="6">
+<div id="35e538e5" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>display(season1.info())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
@@ -627,7 +627,7 @@ memory usage: 6.6+ MB</code></pre>
 <pre><code>None</code></pre>
 </div>
 </div>
-<div id="9922e701" class="cell" data-execution_count="7">
+<div id="bb9c4dbe" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>display(season2.info())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
@@ -697,7 +697,7 @@ memory usage: 5.3+ MB</code></pre>
 </div>
 <p>As we can see, the datasets have both categorical variables (objects) and numerical variables (floats and integers). Let’s split them up.</p>
 <p>For Season 1 Data:</p>
-<div id="b5d61996" class="cell" data-execution_count="8">
+<div id="40a61436" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>categorical_vars1 <span class="op">=</span> season1.select_dtypes(include<span class="op">=</span>[<span class="st">'object'</span>]).columns.tolist()</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>numerical_vars1 <span class="op">=</span> season1.select_dtypes(include<span class="op">=</span>[<span class="st">'float64'</span>, <span class="st">'int64'</span>]).columns.tolist()</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Categorical variables:</span><span class="ch">\n</span><span class="st">"</span>, <span class="st">"</span><span class="ch">\n</span><span class="st">"</span>.join(categorical_vars1), <span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span>
@@ -763,7 +763,7 @@ IMA/Min</code></pre>
 </div>
 </div>
 <p>For Season 2 Data:</p>
-<div id="51f6c0ec" class="cell" data-execution_count="9">
+<div id="b43b1232" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>categorical_vars2 <span class="op">=</span> season2.select_dtypes(include<span class="op">=</span>[<span class="st">'object'</span>]).columns.tolist()</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>numerical_vars2 <span class="op">=</span> season2.select_dtypes(include<span class="op">=</span>[<span class="st">'float64'</span>, <span class="st">'int64'</span>]).columns.tolist()</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Categorical variables:</span><span class="ch">\n</span><span class="st">"</span>, <span class="st">"</span><span class="ch">\n</span><span class="st">"</span>.join(categorical_vars2), <span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span>
@@ -829,12 +829,12 @@ IMA/Min</code></pre>
 </div>
 </div>
 <p>The variables in the two datasets are the same, so we can just use the variables list from either season.</p>
-<div id="72e6a8d1" class="cell" data-execution_count="10">
+<div id="4766e708" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>categorical_vars <span class="op">=</span> categorical_vars1</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>numerical_vars <span class="op">=</span> numerical_vars1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Now we want to look at the numerical data values from the two datasets separately and look at their summary statistics.</p>
-<div id="eb1be21e" class="cell" data-execution_count="11">
+<div id="f1e47772" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>display(season1[numerical_vars].describe())</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>display(season2[numerical_vars].describe())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
@@ -1302,7 +1302,7 @@ IMA/Min</code></pre>
 </section>
 <section id="data-frames-for-games" class="level4" data-number="2.0.0.3">
 <h4 data-number="2.0.0.3" class="anchored" data-anchor-id="data-frames-for-games"><span class="header-section-number">2.0.0.3</span> Data Frames for Games</h4>
-<div id="b8c38294" class="cell" data-execution_count="12">
+<div id="ec0b3cab" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>games_season1 <span class="op">=</span> [</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'11/07/2022'</span>, <span class="st">'11/11/2022'</span>, <span class="st">'11/18/2022'</span>, <span class="st">'11/20/2022'</span>,</span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'11/25/2022'</span>, <span class="st">'11/29/2022'</span>, <span class="st">'12/03/2022'</span>, <span class="st">'12/06/2022'</span>, <span class="st">'12/17/2022'</span>,</span>
@@ -1328,7 +1328,7 @@ IMA/Min</code></pre>
 <span id="cb19-23"><a href="#cb19-23" aria-hidden="true" tabindex="-1"></a>df1[<span class="st">'Win'</span>] <span class="op">=</span> df1[<span class="st">'Result'</span>].<span class="bu">map</span>({<span class="st">'W'</span>: <span class="dv">1</span>, <span class="st">'L'</span>: <span class="dv">0</span>})</span>
 <span id="cb19-24"><a href="#cb19-24" aria-hidden="true" tabindex="-1"></a>df1[<span class="st">'Season'</span>] <span class="op">=</span> <span class="st">'2022–23'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="c15106ee" class="cell" data-execution_count="13">
+<div id="690832e1" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>df1.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="13">
 <div>
@@ -1386,7 +1386,7 @@ IMA/Min</code></pre>
 </div>
 </div>
 </div>
-<div id="c2b11d56" class="cell" data-execution_count="14">
+<div id="9246b42d" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>games_season2 <span class="op">=</span> [</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'11/06/2023'</span>, <span class="st">'11/10/2023'</span>, <span class="st">'11/14/2023'</span>, <span class="st">'11/16/2023'</span>, <span class="st">'11/20/2023'</span>,</span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'11/22/2023'</span>, <span class="st">'11/29/2023'</span>, <span class="st">'12/02/2024'</span>, <span class="st">'12/05/2023'</span>, <span class="st">'12/16/2023'</span>,</span>
@@ -1412,7 +1412,7 @@ IMA/Min</code></pre>
 <span id="cb21-23"><a href="#cb21-23" aria-hidden="true" tabindex="-1"></a>df2[<span class="st">'Win'</span>] <span class="op">=</span> df2[<span class="st">'Result'</span>].<span class="bu">map</span>({<span class="st">'W'</span>: <span class="dv">1</span>, <span class="st">'L'</span>: <span class="dv">0</span>})</span>
 <span id="cb21-24"><a href="#cb21-24" aria-hidden="true" tabindex="-1"></a>df2[<span class="st">'Season'</span>] <span class="op">=</span> <span class="st">'2023–24'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="7c8ff4e7" class="cell" data-execution_count="15">
+<div id="384a80d4" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>df2.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="15">
 <div>
@@ -1473,7 +1473,7 @@ IMA/Min</code></pre>
 </section>
 <section id="finding-win-proportions-by-season" class="level4" data-number="2.0.0.4">
 <h4 data-number="2.0.0.4" class="anchored" data-anchor-id="finding-win-proportions-by-season"><span class="header-section-number">2.0.0.4</span> Finding Win Proportions By Season</h4>
-<div id="f5185c5d" class="cell" data-execution_count="16">
+<div id="5d1a36f2" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>df1[<span class="st">'Win'</span>].value_counts(normalize<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="16">
 <pre><code>Win
@@ -1482,7 +1482,7 @@ IMA/Min</code></pre>
 Name: proportion, dtype: float64</code></pre>
 </div>
 </div>
-<div id="6f441b9d" class="cell" data-execution_count="17">
+<div id="3604c829" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>df2[<span class="st">'Win'</span>].value_counts(normalize<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="17">
 <pre><code>Win
@@ -1494,11 +1494,11 @@ Name: proportion, dtype: float64</code></pre>
 </section>
 <section id="data-frames-for-practice-before-games" class="level4" data-number="2.0.0.5">
 <h4 data-number="2.0.0.5" class="anchored" data-anchor-id="data-frames-for-practice-before-games"><span class="header-section-number">2.0.0.5</span> Data Frames for Practice (Before Games)</h4>
-<div id="0b83765e" class="cell" data-execution_count="18">
+<div id="bec232e1" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>season1[<span class="st">'Date'</span>] <span class="op">=</span> pd.to_datetime(season1[<span class="st">'Date'</span>]).dt.normalize()</span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>season2[<span class="st">'Date'</span>] <span class="op">=</span> pd.to_datetime(season2[<span class="st">'Date'</span>]).dt.normalize()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="0d923226" class="cell" data-execution_count="19">
+<div id="1308f7ed" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>before_games_season1 <span class="op">=</span> [</span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'11/06/2022'</span>, <span class="st">'11/10/2022'</span>, <span class="st">'11/13/2022'</span>, <span class="st">'11/17/2022'</span>, <span class="st">'11/19/2022'</span>,</span>
 <span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'11/24/2022'</span>, <span class="st">'11/28/2022'</span>, <span class="st">'12/04/2022'</span>, <span class="st">'12/05/2022'</span>, <span class="st">'12/16/2022'</span>,</span>
@@ -1525,7 +1525,7 @@ Name: proportion, dtype: float64</code></pre>
 </section>
 <section id="data-frames-for-practice-after-games" class="level4" data-number="2.0.0.6">
 <h4 data-number="2.0.0.6" class="anchored" data-anchor-id="data-frames-for-practice-after-games"><span class="header-section-number">2.0.0.6</span> Data Frames for Practice (After Games)</h4>
-<div id="3dfbb823" class="cell" data-execution_count="20">
+<div id="f543bc58" class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>after_games_season1 <span class="op">=</span> [</span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'11/08/2022'</span>, <span class="st">'11/12/2022'</span>, <span class="st">'11/15/2022'</span>, <span class="st">'11/19/2022'</span>, <span class="st">'11/21/2022'</span>,</span>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'11/26/2022'</span>, <span class="st">'11/30/2022'</span>, <span class="st">'12/04/2022'</span>, <span class="st">'12/07/2022'</span>, <span class="st">'12/18/2022'</span>,</span>
@@ -1553,7 +1553,7 @@ Name: proportion, dtype: float64</code></pre>
 <section id="cumulative-wins-graph" class="level4" data-number="2.0.0.7">
 <h4 data-number="2.0.0.7" class="anchored" data-anchor-id="cumulative-wins-graph"><span class="header-section-number">2.0.0.7</span> Cumulative Wins Graph</h4>
 <p>First, with our in-game dataframe, we can create a visual of the wins (cumulatively) we have each season by game number. By doing so, we can look for any trends in how the seasons progress e.g.&nbsp;strong starts, mid-season slumps, momentum building toward playoffs, etc.</p>
-<div id="bbafcf56" class="cell" data-execution_count="21">
+<div id="de4323e7" class="cell" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>df1[<span class="st">'Cumulative Wins'</span>] <span class="op">=</span> df1[<span class="st">'Win'</span>].cumsum()</span>
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>df2[<span class="st">'Cumulative Wins'</span>] <span class="op">=</span> df2[<span class="st">'Win'</span>].cumsum()</span>
 <span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1582,14 +1582,14 @@ Name: proportion, dtype: float64</code></pre>
 <section id="correlation-heatmaps-for-key-metrics" class="level4" data-number="2.0.0.8">
 <h4 data-number="2.0.0.8" class="anchored" data-anchor-id="correlation-heatmaps-for-key-metrics"><span class="header-section-number">2.0.0.8</span> Correlation Heatmaps for Key Metrics</h4>
 <p>Now, we want to understand the relationships between the key metrics: total player load, player load per minute, IMA accel total, IMA decel total, and explosive efforts, so we plot correlation heatmaps for those metrics for each season. We are most interested in seeing if there’s a correlation between total player load and explosive efforts.</p>
-<div id="58ce00fa" class="cell" data-execution_count="22">
+<div id="0f7e2398" class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>key_metrics1 <span class="op">=</span> season1[[<span class="st">'Total Player Load'</span>, <span class="st">'Player Load Per Minute'</span>, <span class="st">'IMA Accel Total'</span>,</span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>                   <span class="st">'IMA Decel Total'</span>, <span class="st">'Explosive Efforts'</span>]]</span>
 <span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>key_metrics2 <span class="op">=</span> season2[[<span class="st">'Total Player Load'</span>, <span class="st">'Player Load Per Minute'</span>, <span class="st">'IMA Accel Total'</span>,</span>
 <span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>                   <span class="st">'IMA Decel Total'</span>, <span class="st">'Explosive Efforts'</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="bdfae3c0" class="cell" data-execution_count="23">
+<div id="8760145f" class="cell" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">6</span>))</span>
 <span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>sns.heatmap(key_metrics1.corr(), annot<span class="op">=</span><span class="va">True</span>, cmap<span class="op">=</span><span class="st">'coolwarm'</span>, center<span class="op">=</span><span class="dv">0</span>)</span>
 <span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Metrics"</span>)</span>
@@ -1605,7 +1605,7 @@ Name: proportion, dtype: float64</code></pre>
 </div>
 </div>
 </div>
-<div id="b44a2c8d" class="cell" data-execution_count="24">
+<div id="d9fd07d7" class="cell" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">6</span>))</span>
 <span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>sns.heatmap(key_metrics2.corr(), annot<span class="op">=</span><span class="va">True</span>, cmap<span class="op">=</span><span class="st">'coolwarm'</span>, center<span class="op">=</span><span class="dv">0</span>)</span>
 <span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Metrics"</span>)</span>
@@ -1625,7 +1625,7 @@ Name: proportion, dtype: float64</code></pre>
 </section>
 <section id="total-player-load-vs-explosive-efforts-scatterplots" class="level4" data-number="2.0.0.9">
 <h4 data-number="2.0.0.9" class="anchored" data-anchor-id="total-player-load-vs-explosive-efforts-scatterplots"><span class="header-section-number">2.0.0.9</span> Total Player Load vs Explosive Efforts Scatterplots</h4>
-<div id="2e24118d" class="cell" data-execution_count="25">
+<div id="a9c84d5f" class="cell" data-execution_count="25">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">6</span>))</span>
 <span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(data<span class="op">=</span>season1, x<span class="op">=</span><span class="st">"Total Player Load"</span>, y<span class="op">=</span><span class="st">"Explosive Efforts"</span>, color<span class="op">=</span><span class="st">'blue'</span>)</span>
 <span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>sns.regplot(data<span class="op">=</span>season1, x<span class="op">=</span><span class="st">"Total Player Load"</span>, y<span class="op">=</span><span class="st">"Explosive Efforts"</span>, scatter<span class="op">=</span><span class="va">False</span>, color<span class="op">=</span><span class="st">'red'</span>, line_kws<span class="op">=</span>{<span class="st">"linestyle"</span>:<span class="st">"dashed"</span>})</span>
@@ -1642,7 +1642,7 @@ Name: proportion, dtype: float64</code></pre>
 </div>
 </div>
 </div>
-<div id="d06f7d4b" class="cell" data-execution_count="26">
+<div id="b8aaedf3" class="cell" data-execution_count="26">
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">6</span>))</span>
 <span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(data<span class="op">=</span>season2, x<span class="op">=</span><span class="st">"Total Player Load"</span>, y<span class="op">=</span><span class="st">"Explosive Efforts"</span>, color<span class="op">=</span><span class="st">'red'</span>)</span>
 <span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>sns.regplot(data<span class="op">=</span>season2, x<span class="op">=</span><span class="st">"Total Player Load"</span>, y<span class="op">=</span><span class="st">"Explosive Efforts"</span>, scatter<span class="op">=</span><span class="va">False</span>, color<span class="op">=</span><span class="st">'blue'</span>, line_kws<span class="op">=</span>{<span class="st">"linestyle"</span>:<span class="st">"dashed"</span>})</span>
@@ -1664,7 +1664,7 @@ Name: proportion, dtype: float64</code></pre>
 <section id="explosive-efforts-heatmap" class="level4" data-number="2.0.0.10">
 <h4 data-number="2.0.0.10" class="anchored" data-anchor-id="explosive-efforts-heatmap"><span class="header-section-number">2.0.0.10</span> Explosive Efforts Heatmap</h4>
 <p>Here, we are exploring how explosive efforts by itself changed over each of the two seasons.</p>
-<div id="89ae9cd3" class="cell" data-execution_count="27">
+<div id="774f4500" class="cell" data-execution_count="27">
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>season1[<span class="st">'Season'</span>] <span class="op">=</span> <span class="dv">1</span></span>
 <span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>season2[<span class="st">'Season'</span>] <span class="op">=</span> <span class="dv">2</span></span>
 <span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>seasons_combined <span class="op">=</span> pd.concat([season1, season2])</span>
@@ -1718,15 +1718,15 @@ Name: proportion, dtype: float64</code></pre>
 <section id="metrics-vs-game-outcome-graphs-by-each-season" class="level4" data-number="2.0.0.11">
 <h4 data-number="2.0.0.11" class="anchored" data-anchor-id="metrics-vs-game-outcome-graphs-by-each-season"><span class="header-section-number">2.0.0.11</span> Metrics vs Game Outcome Graphs (by each season)</h4>
 <p>Now, let’s analyze IMA accel total alongside the two variables above and compare all three metrics by game outcome (win/loss):</p>
-<div id="068d929a" class="cell" data-execution_count="28">
+<div id="945c82de" class="cell" data-execution_count="28">
 <div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>games1 <span class="op">=</span> season1[season1[<span class="st">'Date'</span>].isin(games_dates1)]</span>
 <span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>games1 <span class="op">=</span> pd.merge(games1, df1[[<span class="st">'Date'</span>, <span class="st">'Result'</span>, <span class="st">'Win'</span>]], on<span class="op">=</span><span class="st">'Date'</span>, how<span class="op">=</span><span class="st">'left'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="0038f5ed" class="cell" data-execution_count="29">
+<div id="e9dbb201" class="cell" data-execution_count="29">
 <div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>games2 <span class="op">=</span> season2[season2[<span class="st">'Date'</span>].isin(games_dates2)]</span>
 <span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>games2 <span class="op">=</span> pd.merge(games2, df2[[<span class="st">'Date'</span>, <span class="st">'Result'</span>, <span class="st">'Win'</span>]], on<span class="op">=</span><span class="st">'Date'</span>, how<span class="op">=</span><span class="st">'left'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="e5f11b7f" class="cell" data-execution_count="30">
+<div id="d908da15" class="cell" data-execution_count="30">
 <div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>games1.groupby(<span class="st">'Result'</span>)[[<span class="st">'Total Player Load'</span>, <span class="st">'IMA Accel Total'</span>, <span class="st">'Explosive Efforts'</span>]].mean().plot(kind<span class="op">=</span><span class="st">'bar'</span>)</span>
 <span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Average Metrics by Game Outcome for 2022-2023 Season'</span>)</span>
 <span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Average Value'</span>)</span>
@@ -1740,7 +1740,7 @@ Name: proportion, dtype: float64</code></pre>
 </div>
 </div>
 </div>
-<div id="5c60f78d" class="cell" data-execution_count="31">
+<div id="ccf18b1e" class="cell" data-execution_count="31">
 <div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>games2.groupby(<span class="st">'Result'</span>)[[<span class="st">'Total Player Load'</span>, <span class="st">'IMA Accel Total'</span>, <span class="st">'Explosive Efforts'</span>]].mean().plot(kind<span class="op">=</span><span class="st">'bar'</span>)</span>
 <span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Average Metrics by Game Outcome for 2023-2024 Season'</span>)</span>
 <span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Average Value'</span>)</span>
@@ -1759,7 +1759,7 @@ Name: proportion, dtype: float64</code></pre>
 <section id="total-player-load-box-plot-graphs" class="level4" data-number="2.0.0.12">
 <h4 data-number="2.0.0.12" class="anchored" data-anchor-id="total-player-load-box-plot-graphs"><span class="header-section-number">2.0.0.12</span> Total Player Load Box Plot Graphs</h4>
 <p>Just to look at it clearer, let’s create visualizations of just total player load in wins and losses.</p>
-<div id="179e1388" class="cell" data-execution_count="32">
+<div id="fc383101" class="cell" data-execution_count="32">
 <div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>sns.boxplot(data<span class="op">=</span>games1, x<span class="op">=</span><span class="st">'Win'</span>, y<span class="op">=</span><span class="st">'Total Player Load'</span>)</span>
 <span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>plt.xticks([<span class="dv">0</span>, <span class="dv">1</span>], [<span class="st">'Loss'</span>, <span class="st">'Win'</span>])</span>
 <span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Total Player Load in Wins vs Losses'</span>)</span>
@@ -1772,7 +1772,7 @@ Name: proportion, dtype: float64</code></pre>
 </div>
 </div>
 </div>
-<div id="ae1bc632" class="cell" data-execution_count="33">
+<div id="5928814b" class="cell" data-execution_count="33">
 <div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>sns.boxplot(data<span class="op">=</span>games2, x<span class="op">=</span><span class="st">'Win'</span>, y<span class="op">=</span><span class="st">'Total Player Load'</span>)</span>
 <span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>plt.xticks([<span class="dv">0</span>, <span class="dv">1</span>], [<span class="st">'Loss'</span>, <span class="st">'Win'</span>])</span>
 <span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Total Player Load in Wins vs Losses'</span>)</span>
@@ -1790,17 +1790,17 @@ Name: proportion, dtype: float64</code></pre>
 <section id="position-analysis-graph" class="level4" data-number="2.0.0.13">
 <h4 data-number="2.0.0.13" class="anchored" data-anchor-id="position-analysis-graph"><span class="header-section-number">2.0.0.13</span> Position Analysis Graph</h4>
 <p>Now, we would like to analyze the data by player position to see if this trend still exists and if there are variations there.</p>
-<div id="9a6444e2" class="cell" data-execution_count="34">
+<div id="d5f4ebaa" class="cell" data-execution_count="34">
 <div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>forward1 <span class="op">=</span> season1[season1[<span class="st">'Position'</span>] <span class="op">==</span> <span class="st">'Forward'</span>]</span>
 <span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>center1 <span class="op">=</span> season1[season1[<span class="st">'Position'</span>] <span class="op">==</span> <span class="st">'Guard'</span>]</span>
 <span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>guard1 <span class="op">=</span> season1[season1[<span class="st">'Position'</span>] <span class="op">==</span> <span class="st">'Center'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="fb45106e" class="cell" data-execution_count="35">
+<div id="48d71910" class="cell" data-execution_count="35">
 <div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>forward2 <span class="op">=</span> games2[games2[<span class="st">'Position'</span>] <span class="op">==</span> <span class="st">'Forward'</span>]</span>
 <span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>center2 <span class="op">=</span> games2[games2[<span class="st">'Position'</span>] <span class="op">==</span> <span class="st">'Guard'</span>]</span>
 <span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>guard2 <span class="op">=</span> games2[games2[<span class="st">'Position'</span>] <span class="op">==</span> <span class="st">'Center'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="da04faa9" class="cell" data-execution_count="36">
+<div id="aad6bf3d" class="cell" data-execution_count="36">
 <div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>load_by_position <span class="op">=</span> games1.groupby([<span class="st">'Position'</span>, <span class="st">'Win'</span>])[<span class="st">'Total Player Load'</span>].mean().reset_index()</span>
 <span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
 <span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>sns.barplot(data<span class="op">=</span>load_by_position, x<span class="op">=</span><span class="st">'Position'</span>, y<span class="op">=</span><span class="st">'Total Player Load'</span>, hue<span class="op">=</span><span class="st">'Win'</span>)</span>
@@ -1818,7 +1818,7 @@ Name: proportion, dtype: float64</code></pre>
 </div>
 </div>
 </div>
-<div id="73ddadea" class="cell" data-execution_count="37">
+<div id="5d235188" class="cell" data-execution_count="37">
 <div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>load_by_position <span class="op">=</span> games2.groupby([<span class="st">'Position'</span>, <span class="st">'Win'</span>])[<span class="st">'Total Player Load'</span>].mean().reset_index()</span>
 <span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
 <span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>sns.barplot(data<span class="op">=</span>load_by_position, x<span class="op">=</span><span class="st">'Position'</span>, y<span class="op">=</span><span class="st">'Total Player Load'</span>, hue<span class="op">=</span><span class="st">'Win'</span>)</span>
@@ -1841,7 +1841,7 @@ Name: proportion, dtype: float64</code></pre>
 <section id="player-load-by-position-and-game-result-across-seasons" class="level4" data-number="2.0.0.14">
 <h4 data-number="2.0.0.14" class="anchored" data-anchor-id="player-load-by-position-and-game-result-across-seasons"><span class="header-section-number">2.0.0.14</span> Player Load by Position and Game Result Across Seasons</h4>
 <p>Using the same variables as above, let’s visualize our data slightly differently (different colors now represent different seasons instead of win or loss) to see if we can find any other trends that we didn’t see previously.</p>
-<div id="2fccd9cd" class="cell" data-execution_count="38">
+<div id="63e1e61a" class="cell" data-execution_count="38">
 <div class="sourceCode cell-code" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>games1[<span class="st">'Season'</span>] <span class="op">=</span> <span class="st">'2022–23'</span></span>
 <span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>games2[<span class="st">'Season'</span>] <span class="op">=</span> <span class="st">'2023–24'</span></span>
 <span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a>combined <span class="op">=</span> pd.concat([games1, games2])</span>
@@ -1870,7 +1870,7 @@ Name: proportion, dtype: float64</code></pre>
 </section>
 <section id="player-load-by-position-between-seasons-different-hues-winloss" class="level4" data-number="2.0.0.15">
 <h4 data-number="2.0.0.15" class="anchored" data-anchor-id="player-load-by-position-between-seasons-different-hues-winloss"><span class="header-section-number">2.0.0.15</span> Player Load by Position Between Seasons (Different Hues = Win/Loss)</h4>
-<div id="7e2c9eeb" class="cell" data-execution_count="39">
+<div id="0e085de9" class="cell" data-execution_count="39">
 <div class="sourceCode cell-code" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>combined.columns <span class="op">=</span> combined.columns.<span class="bu">str</span>.strip()</span>
 <span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a>combined[<span class="st">'Result Label'</span>] <span class="op">=</span> combined[<span class="st">'Win'</span>].<span class="bu">map</span>({<span class="dv">1</span>: <span class="st">'Win'</span>, <span class="dv">0</span>: <span class="st">'Loss'</span>})</span>
@@ -1943,7 +1943,7 @@ Name: proportion, dtype: float64</code></pre>
 <section id="drills-analysis" class="level4" data-number="2.0.0.16">
 <h4 data-number="2.0.0.16" class="anchored" data-anchor-id="drills-analysis"><span class="header-section-number">2.0.0.16</span> Drills Analysis</h4>
 <p>Now, let’s look at the ‘drills’ periods during practice to see how player load affects the players during these periods specifically. We will make a new dataframe that only consists of the entries that are recorded during drill periods.</p>
-<div id="d3ee79cf" class="cell" data-execution_count="40">
+<div id="245481ab" class="cell" data-execution_count="40">
 <div class="sourceCode cell-code" id="cb50"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>drills1 <span class="op">=</span> season1[season1[<span class="st">'Period'</span>].<span class="bu">str</span>.contains(<span class="st">'5v5'</span>, na<span class="op">=</span><span class="va">False</span>)]</span>
 <span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>drills1.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="40">
@@ -2105,7 +2105,7 @@ Name: proportion, dtype: float64</code></pre>
 </div>
 </div>
 </div>
-<div id="277415ba" class="cell" data-execution_count="41">
+<div id="dd6704a0" class="cell" data-execution_count="41">
 <div class="sourceCode cell-code" id="cb51"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>drills1.describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="41">
 <div>
@@ -2338,7 +2338,7 @@ Name: proportion, dtype: float64</code></pre>
 </div>
 </div>
 </div>
-<div id="d8680ad7" class="cell" data-execution_count="42">
+<div id="874c8f60" class="cell" data-execution_count="42">
 <div class="sourceCode cell-code" id="cb52"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>drills2 <span class="op">=</span> season2[season2[<span class="st">'Period'</span>].<span class="bu">str</span>.contains(<span class="st">'5v5'</span>, na<span class="op">=</span><span class="va">False</span>)]</span>
 <span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>drills2.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="42">
@@ -2500,7 +2500,7 @@ Name: proportion, dtype: float64</code></pre>
 </div>
 </div>
 </div>
-<div id="c08f82ef" class="cell" data-execution_count="43">
+<div id="1ae96bce" class="cell" data-execution_count="43">
 <div class="sourceCode cell-code" id="cb53"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>drills2.describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="43">
 <div>
@@ -2733,7 +2733,7 @@ Name: proportion, dtype: float64</code></pre>
 </div>
 </div>
 </div>
-<div id="bb28aab2" class="cell" data-execution_count="44">
+<div id="705ff0df" class="cell" data-execution_count="44">
 <div class="sourceCode cell-code" id="cb54"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>drills1_5vG <span class="op">=</span> season1[season1[<span class="st">'Period'</span>].<span class="bu">str</span>.contains(<span class="st">'5vG'</span>, na<span class="op">=</span><span class="va">False</span>)]</span>
 <span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>drills1_5vG.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="44">
@@ -2895,7 +2895,7 @@ Name: proportion, dtype: float64</code></pre>
 </div>
 </div>
 </div>
-<div id="97c0a6a3" class="cell" data-execution_count="45">
+<div id="0763ec82" class="cell" data-execution_count="45">
 <div class="sourceCode cell-code" id="cb55"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>drills2_5vG <span class="op">=</span> season2[season2[<span class="st">'Period'</span>].<span class="bu">str</span>.contains(<span class="st">'5vG'</span>, na<span class="op">=</span><span class="va">False</span>)]</span>
 <span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>drills2_5vG.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="45">
@@ -3057,7 +3057,7 @@ Name: proportion, dtype: float64</code></pre>
 </div>
 </div>
 </div>
-<div id="689cacb6" class="cell" data-execution_count="46">
+<div id="08b469d5" class="cell" data-execution_count="46">
 <div class="sourceCode cell-code" id="cb56"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>drills1_5vG.describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="46">
 <div>
@@ -3290,7 +3290,7 @@ Name: proportion, dtype: float64</code></pre>
 </div>
 </div>
 </div>
-<div id="0980d152" class="cell" data-execution_count="47">
+<div id="1f9b64c3" class="cell" data-execution_count="47">
 <div class="sourceCode cell-code" id="cb57"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a>drills2_5vG.describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="47">
 <div>
@@ -3528,7 +3528,7 @@ Name: proportion, dtype: float64</code></pre>
 <section id="before-vs-during-vs-after-games-analysis" class="level4" data-number="2.0.0.17">
 <h4 data-number="2.0.0.17" class="anchored" data-anchor-id="before-vs-during-vs-after-games-analysis"><span class="header-section-number">2.0.0.17</span> Before VS During VS After Games Analysis</h4>
 <p>Then, let’s look at the differences between the dataframes for before, during, and after games.</p>
-<div id="91083b9b" class="cell" data-execution_count="48">
+<div id="77b84f97" class="cell" data-execution_count="48">
 <div class="sourceCode cell-code" id="cb58"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>before_games1.describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="48">
 <div>
@@ -3761,7 +3761,7 @@ Name: proportion, dtype: float64</code></pre>
 </div>
 </div>
 </div>
-<div id="926f8a48" class="cell" data-execution_count="49">
+<div id="ed914384" class="cell" data-execution_count="49">
 <div class="sourceCode cell-code" id="cb59"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>games1.describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="49">
 <div>
@@ -3994,7 +3994,7 @@ Name: proportion, dtype: float64</code></pre>
 </div>
 </div>
 </div>
-<div id="5dcc8039" class="cell" data-execution_count="50">
+<div id="4b779478" class="cell" data-execution_count="50">
 <div class="sourceCode cell-code" id="cb60"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a>after_games1.describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="50">
 <div>
@@ -4227,7 +4227,7 @@ Name: proportion, dtype: float64</code></pre>
 </div>
 </div>
 </div>
-<div id="e3fc6879" class="cell" data-execution_count="51">
+<div id="bc57909b" class="cell" data-execution_count="51">
 <div class="sourceCode cell-code" id="cb61"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a>before_games2.describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="51">
 <div>
@@ -4460,7 +4460,7 @@ Name: proportion, dtype: float64</code></pre>
 </div>
 </div>
 </div>
-<div id="76bacba7" class="cell" data-execution_count="52">
+<div id="a11331f3" class="cell" data-execution_count="52">
 <div class="sourceCode cell-code" id="cb62"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a>games2.describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="52">
 <div>
@@ -4693,7 +4693,7 @@ Name: proportion, dtype: float64</code></pre>
 </div>
 </div>
 </div>
-<div id="5b9e4b32" class="cell" data-execution_count="53">
+<div id="fb7c768b" class="cell" data-execution_count="53">
 <div class="sourceCode cell-code" id="cb63"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a>after_games2.describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="53">
 <div>
@@ -4930,7 +4930,7 @@ Name: proportion, dtype: float64</code></pre>
 <section id="correlation-graph-between-total-player-load-and-performance" class="level4" data-number="2.0.0.18">
 <h4 data-number="2.0.0.18" class="anchored" data-anchor-id="correlation-graph-between-total-player-load-and-performance"><span class="header-section-number">2.0.0.18</span> Correlation Graph Between Total Player Load and Performance</h4>
 <p>From above, we see that for both seasons on average, the total player load was highest during the games and lowest right before the games. But is there a more specific game-by-game correlation between this relationship and team’s performance?</p>
-<div id="6fb4049c" class="cell" data-execution_count="54">
+<div id="27ed2655" class="cell" data-execution_count="54">
 <div class="sourceCode cell-code" id="cb64"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">6</span>))</span>
 <span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb64-3"><a href="#cb64-3" aria-hidden="true" tabindex="-1"></a>sns.lineplot(data<span class="op">=</span>before_games1, x<span class="op">=</span><span class="st">'Date'</span>, y<span class="op">=</span><span class="st">'Total Player Load'</span>, label<span class="op">=</span><span class="st">'Before Games'</span>)</span>
@@ -4950,7 +4950,7 @@ Name: proportion, dtype: float64</code></pre>
 </div>
 </div>
 </div>
-<div id="8762854d" class="cell" data-execution_count="55">
+<div id="85e9e040" class="cell" data-execution_count="55">
 <div class="sourceCode cell-code" id="cb65"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">6</span>))</span>
 <span id="cb65-2"><a href="#cb65-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb65-3"><a href="#cb65-3" aria-hidden="true" tabindex="-1"></a>sns.lineplot(data<span class="op">=</span>before_games2, x<span class="op">=</span><span class="st">'Date'</span>, y<span class="op">=</span><span class="st">'Total Player Load'</span>, label<span class="op">=</span><span class="st">'Before Games'</span>)</span>
