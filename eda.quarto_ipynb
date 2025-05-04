@@ -5,11 +5,11 @@
       "metadata": {},
       "source": [
         "---\n",
-        "title: Importing Libraries\n",
-        "jupyter: python3\n",
+        "title: EDA\n",
+        "format: html\n",
         "---"
       ],
-      "id": "c8bb01a1"
+      "id": "7ff44395"
     },
     {
       "cell_type": "code",
@@ -21,7 +21,7 @@
         "%matplotlib inline\n",
         "import seaborn as sns"
       ],
-      "id": "c6efb5cd",
+      "id": "476e8274",
       "execution_count": null,
       "outputs": []
     },
@@ -31,16 +31,16 @@
       "source": [
         "#### Loading the Data\n"
       ],
-      "id": "adcc3e32"
+      "id": "de8c1ca9"
     },
     {
       "cell_type": "code",
       "metadata": {},
       "source": [
-        "season1 = pd.read_csv('season1.csv')\n",
-        "season2 = pd.read_csv('season2.csv')"
+        "season1 = pd.read_csv('~/DS2023/Final Project/catapult season 1(in).csv')\n",
+        "season2 = pd.read_csv('~/DS2023/Final Project/catapult season 2(in).csv')"
       ],
-      "id": "53cbc3b6",
+      "id": "1ce38a26",
       "execution_count": null,
       "outputs": []
     },
@@ -50,7 +50,7 @@
       "source": [
         "#### Looking at the Entries\n"
       ],
-      "id": "2dbeefc2"
+      "id": "7562a580"
     },
     {
       "cell_type": "code",
@@ -63,7 +63,7 @@
       "source": [
         "season1.head()"
       ],
-      "id": "a140c404",
+      "id": "cdb591ec",
       "execution_count": null,
       "outputs": []
     },
@@ -78,7 +78,7 @@
       "source": [
         "season2.head()"
       ],
-      "id": "09a27583",
+      "id": "9ea58d2c",
       "execution_count": null,
       "outputs": []
     },
@@ -93,7 +93,7 @@
         "print(\"\\nShape of Season 1 Dataset:\", season1.shape)\n",
         "print(\"\\nShape of Season 2 Dataset:\", season2.shape)"
       ],
-      "id": "222c226a",
+      "id": "1921c191",
       "execution_count": null,
       "outputs": []
     },
@@ -108,7 +108,7 @@
       "source": [
         "display(season1.info())"
       ],
-      "id": "847c78ab",
+      "id": "7bfe5b44",
       "execution_count": null,
       "outputs": []
     },
@@ -123,7 +123,7 @@
       "source": [
         "display(season2.info())"
       ],
-      "id": "5d8b6c00",
+      "id": "75a42b97",
       "execution_count": null,
       "outputs": []
     },
@@ -135,7 +135,7 @@
         "\n",
         "For Season 1 Data:\n"
       ],
-      "id": "c5d71a05"
+      "id": "0e90b7a0"
     },
     {
       "cell_type": "code",
@@ -150,7 +150,7 @@
         "print(\"\\nCategorical variables:\\n\", \"\\n\".join(categorical_vars1), \"\\n\")\n",
         "print(\"Numerical variables:\\n\", \"\\n\".join(numerical_vars1))"
       ],
-      "id": "fdcf0294",
+      "id": "04c4bbbf",
       "execution_count": null,
       "outputs": []
     },
@@ -160,7 +160,7 @@
       "source": [
         "For Season 2 Data:\n"
       ],
-      "id": "c56edeea"
+      "id": "00fc5b12"
     },
     {
       "cell_type": "code",
@@ -175,7 +175,7 @@
         "print(\"\\nCategorical variables:\\n\", \"\\n\".join(categorical_vars2), \"\\n\")\n",
         "print(\"Numerical variables:\\n\", \"\\n\".join(numerical_vars2))"
       ],
-      "id": "c4425732",
+      "id": "677df57f",
       "execution_count": null,
       "outputs": []
     },
@@ -185,7 +185,7 @@
       "source": [
         "The variables in the two datasets are the same, so we can just use the variables list from either season.\n"
       ],
-      "id": "c3eba347"
+      "id": "ce03dab8"
     },
     {
       "cell_type": "code",
@@ -194,7 +194,7 @@
         "categorical_vars = categorical_vars1\n",
         "numerical_vars = numerical_vars1"
       ],
-      "id": "41744ed8",
+      "id": "dbf97ff7",
       "execution_count": null,
       "outputs": []
     },
@@ -204,7 +204,7 @@
       "source": [
         "Now we want to look at the numerical data values from the two datasets separately and look at their summary statistics.\n"
       ],
-      "id": "7661cfcb"
+      "id": "99e93d70"
     },
     {
       "cell_type": "code",
@@ -218,7 +218,7 @@
         "display(season1[numerical_vars].describe())\n",
         "display(season2[numerical_vars].describe())"
       ],
-      "id": "e26a2e97",
+      "id": "21bb6695",
       "execution_count": null,
       "outputs": []
     },
@@ -230,7 +230,7 @@
         "\n",
         "#### Data Frames for Games\n"
       ],
-      "id": "fe5be273"
+      "id": "b8b59f0c"
     },
     {
       "cell_type": "code",
@@ -261,7 +261,7 @@
         "df1['Win'] = df1['Result'].map({'W': 1, 'L': 0})\n",
         "df1['Season'] = '2022–23'"
       ],
-      "id": "18e0dade",
+      "id": "6530af5f",
       "execution_count": null,
       "outputs": []
     },
@@ -276,7 +276,7 @@
       "source": [
         "df1.head()"
       ],
-      "id": "c1716eda",
+      "id": "56c07837",
       "execution_count": null,
       "outputs": []
     },
@@ -309,7 +309,7 @@
         "df2['Win'] = df2['Result'].map({'W': 1, 'L': 0})\n",
         "df2['Season'] = '2023–24'"
       ],
-      "id": "bc8682b5",
+      "id": "374dff2e",
       "execution_count": null,
       "outputs": []
     },
@@ -324,7 +324,7 @@
       "source": [
         "df2.head()"
       ],
-      "id": "f15684fb",
+      "id": "c0038ed7",
       "execution_count": null,
       "outputs": []
     },
@@ -334,7 +334,7 @@
       "source": [
         "#### Finding Win Proportions By Season\n"
       ],
-      "id": "0c2990cf"
+      "id": "3e2dfd60"
     },
     {
       "cell_type": "code",
@@ -347,7 +347,7 @@
       "source": [
         "df1['Win'].value_counts(normalize=True)"
       ],
-      "id": "196f39db",
+      "id": "2907904c",
       "execution_count": null,
       "outputs": []
     },
@@ -362,7 +362,7 @@
       "source": [
         "df2['Win'].value_counts(normalize=True)"
       ],
-      "id": "af0e1010",
+      "id": "160427b7",
       "execution_count": null,
       "outputs": []
     },
@@ -372,7 +372,7 @@
       "source": [
         "#### Data Frames for Practice (Before Games)\n"
       ],
-      "id": "4a281376"
+      "id": "a8286cdc"
     },
     {
       "cell_type": "code",
@@ -381,7 +381,7 @@
         "season1['Date'] = pd.to_datetime(season1['Date']).dt.normalize()\n",
         "season2['Date'] = pd.to_datetime(season2['Date']).dt.normalize()"
       ],
-      "id": "20c6b37b",
+      "id": "ba8bd042",
       "execution_count": null,
       "outputs": []
     },
@@ -412,7 +412,7 @@
         "before_games1 = season1[season1['Date'].isin(before_games_dates1)]\n",
         "before_games2 = season2[season2['Date'].isin(before_games_dates2)]"
       ],
-      "id": "9da871fc",
+      "id": "0537526d",
       "execution_count": null,
       "outputs": []
     },
@@ -422,7 +422,7 @@
       "source": [
         "#### Data Frames for Practice (After Games)\n"
       ],
-      "id": "9f299532"
+      "id": "11afc9f8"
     },
     {
       "cell_type": "code",
@@ -451,7 +451,7 @@
         "after_games1 = season1[season1['Date'].isin(after_games_dates1)]\n",
         "after_games2 = season2[season2['Date'].isin(after_games_dates2)]"
       ],
-      "id": "8d2f19ec",
+      "id": "224286b8",
       "execution_count": null,
       "outputs": []
     },
@@ -463,7 +463,7 @@
         "\n",
         "First, with our in-game dataframe, we can create a visual of the wins (cumulatively) we have each season by game number. By doing so, we can look for any trends in how the seasons progress e.g. strong starts, mid-season slumps, momentum building toward playoffs, etc.\n"
       ],
-      "id": "4c231208"
+      "id": "9a997523"
     },
     {
       "cell_type": "code",
@@ -490,7 +490,7 @@
         "sns.despine()\n",
         "plt.show()"
       ],
-      "id": "d4192d63",
+      "id": "317b5d17",
       "execution_count": null,
       "outputs": []
     },
@@ -504,7 +504,7 @@
         "\n",
         "Now, we want to understand the relationships between the key metrics: total player load, player load per minute, IMA accel total, IMA decel total, and explosive efforts, so we plot correlation heatmaps for those metrics for each season. We are most interested in seeing if there's a correlation between total player load and explosive efforts.\n"
       ],
-      "id": "0cd5b47c"
+      "id": "046b2486"
     },
     {
       "cell_type": "code",
@@ -516,7 +516,7 @@
         "key_metrics2 = season2[['Total Player Load', 'Player Load Per Minute', 'IMA Accel Total',\n",
         "                   'IMA Decel Total', 'Explosive Efforts']]"
       ],
-      "id": "b00825ac",
+      "id": "fc3b4db9",
       "execution_count": null,
       "outputs": []
     },
@@ -537,7 +537,7 @@
         "plt.tight_layout()\n",
         "plt.show()"
       ],
-      "id": "75ed4ebf",
+      "id": "082da1e3",
       "execution_count": null,
       "outputs": []
     },
@@ -558,7 +558,7 @@
         "plt.tight_layout()\n",
         "plt.show()"
       ],
-      "id": "f6e23d09",
+      "id": "3903a83c",
       "execution_count": null,
       "outputs": []
     },
@@ -570,7 +570,7 @@
         "\n",
         "#### Total Player Load vs Explosive Efforts Scatterplots\n"
       ],
-      "id": "f711341e"
+      "id": "1e17b985"
     },
     {
       "cell_type": "code",
@@ -590,7 +590,7 @@
         "plt.ylabel(\"# of Explosive Efforts\")\n",
         "plt.show()"
       ],
-      "id": "2c886ff0",
+      "id": "006bd043",
       "execution_count": null,
       "outputs": []
     },
@@ -613,7 +613,7 @@
         "plt.grid(True)\n",
         "plt.show()"
       ],
-      "id": "d9702bae",
+      "id": "574173e0",
       "execution_count": null,
       "outputs": []
     },
@@ -625,7 +625,7 @@
         "\n",
         "Here, we are exploring how explosive efforts by itself changed over each of the two seasons.\n"
       ],
-      "id": "9a703b08"
+      "id": "a6ba1c37"
     },
     {
       "cell_type": "code",
@@ -655,7 +655,7 @@
         "plt.ylabel(\"Week Number\")\n",
         "plt.show()"
       ],
-      "id": "2b46fef7",
+      "id": "07d6e235",
       "execution_count": null,
       "outputs": []
     },
@@ -669,7 +669,7 @@
         "\n",
         "Now, let's analyze IMA accel total alongside the two variables above and compare all three metrics by game outcome (win/loss):\n"
       ],
-      "id": "e83f0c92"
+      "id": "71735e8c"
     },
     {
       "cell_type": "code",
@@ -678,7 +678,7 @@
         "games1 = season1[season1['Date'].isin(games_dates1)]\n",
         "games1 = pd.merge(games1, df1[['Date', 'Result', 'Win']], on='Date', how='left')"
       ],
-      "id": "bf3b5114",
+      "id": "d65eca90",
       "execution_count": null,
       "outputs": []
     },
@@ -689,7 +689,7 @@
         "games2 = season2[season2['Date'].isin(games_dates2)]\n",
         "games2 = pd.merge(games2, df2[['Date', 'Result', 'Win']], on='Date', how='left')"
       ],
-      "id": "cf2899c4",
+      "id": "864b1bf0",
       "execution_count": null,
       "outputs": []
     },
@@ -708,7 +708,7 @@
         "plt.xticks(rotation=0)\n",
         "plt.show()"
       ],
-      "id": "384b183e",
+      "id": "4ebcd91d",
       "execution_count": null,
       "outputs": []
     },
@@ -727,7 +727,7 @@
         "plt.xticks(rotation=0)\n",
         "plt.show()"
       ],
-      "id": "e31c68f8",
+      "id": "6f0e86f6",
       "execution_count": null,
       "outputs": []
     },
@@ -741,7 +741,7 @@
         "\n",
         "Just to look at it clearer, let's create visualizations of just total player load in wins and losses.\n"
       ],
-      "id": "0d6e8d5d"
+      "id": "36e7a3f8"
     },
     {
       "cell_type": "code",
@@ -757,7 +757,7 @@
         "plt.title('Total Player Load in Wins vs Losses')\n",
         "plt.show()"
       ],
-      "id": "562ec774",
+      "id": "f5eb1542",
       "execution_count": null,
       "outputs": []
     },
@@ -775,7 +775,7 @@
         "plt.title('Total Player Load in Wins vs Losses')\n",
         "plt.show()"
       ],
-      "id": "26a208f6",
+      "id": "8231517a",
       "execution_count": null,
       "outputs": []
     },
@@ -789,7 +789,7 @@
         "\n",
         "Now, we would like to analyze the data by player position to see if this trend still exists and if there are variations there.\n"
       ],
-      "id": "3e5096a8"
+      "id": "d226c20b"
     },
     {
       "cell_type": "code",
@@ -799,7 +799,7 @@
         "center1 = season1[season1['Position'] == 'Guard']\n",
         "guard1 = season1[season1['Position'] == 'Center']"
       ],
-      "id": "624ab2b9",
+      "id": "2b5f135e",
       "execution_count": null,
       "outputs": []
     },
@@ -811,7 +811,7 @@
         "center2 = games2[games2['Position'] == 'Guard']\n",
         "guard2 = games2[games2['Position'] == 'Center']"
       ],
-      "id": "24bdb66b",
+      "id": "73ce3ae6",
       "execution_count": null,
       "outputs": []
     },
@@ -834,7 +834,7 @@
         "sns.despine()\n",
         "plt.show()"
       ],
-      "id": "783219d6",
+      "id": "0a01ceb5",
       "execution_count": null,
       "outputs": []
     },
@@ -857,7 +857,7 @@
         "sns.despine()\n",
         "plt.show()"
       ],
-      "id": "26b3f872",
+      "id": "98ca5d41",
       "execution_count": null,
       "outputs": []
     },
@@ -871,7 +871,7 @@
         "\n",
         "Using the same variables as above, let's visualize our data slightly differently (different colors now represent different seasons instead of win or loss) to see if we can find any other trends that we didn't see previously.\n"
       ],
-      "id": "b6c696ea"
+      "id": "2edbe80f"
     },
     {
       "cell_type": "code",
@@ -899,7 +899,7 @@
         "sns.despine()\n",
         "plt.show()"
       ],
-      "id": "adf4c4cb",
+      "id": "265315c2",
       "execution_count": null,
       "outputs": []
     },
@@ -911,7 +911,7 @@
         "\n",
         "#### Player Load by Position Between Seasons (Different Hues = Win/Loss)\n"
       ],
-      "id": "0b6f0d70"
+      "id": "92a74ad1"
     },
     {
       "cell_type": "code",
@@ -983,7 +983,7 @@
         ")\n",
         "plt.show()"
       ],
-      "id": "3d3f6c9c",
+      "id": "d4ae4cdd",
       "execution_count": null,
       "outputs": []
     },
@@ -995,7 +995,7 @@
         "\n",
         "Now, let's look at the 'drills' periods during practice to see how player load affects the players during these periods specifically. We will make a new dataframe that only consists of the entries that are recorded during drill periods.\n"
       ],
-      "id": "cd9231bf"
+      "id": "1cec0a7b"
     },
     {
       "cell_type": "code",
@@ -1009,7 +1009,7 @@
         "drills1 = season1[season1['Period'].str.contains('5v5', na=False)]\n",
         "drills1.head()"
       ],
-      "id": "d9095860",
+      "id": "23c6a47e",
       "execution_count": null,
       "outputs": []
     },
@@ -1024,7 +1024,7 @@
       "source": [
         "drills1.describe()"
       ],
-      "id": "7366f10c",
+      "id": "84bf6d47",
       "execution_count": null,
       "outputs": []
     },
@@ -1040,7 +1040,7 @@
         "drills2 = season2[season2['Period'].str.contains('5v5', na=False)]\n",
         "drills2.head()"
       ],
-      "id": "20b6b110",
+      "id": "164e4d7c",
       "execution_count": null,
       "outputs": []
     },
@@ -1055,7 +1055,7 @@
       "source": [
         "drills2.describe()"
       ],
-      "id": "f5f9e792",
+      "id": "046a4554",
       "execution_count": null,
       "outputs": []
     },
@@ -1071,7 +1071,7 @@
         "drills1_5vG = season1[season1['Period'].str.contains('5vG', na=False)]\n",
         "drills1_5vG.head()"
       ],
-      "id": "2182aca8",
+      "id": "d28f5f4d",
       "execution_count": null,
       "outputs": []
     },
@@ -1087,7 +1087,7 @@
         "drills2_5vG = season2[season2['Period'].str.contains('5vG', na=False)]\n",
         "drills2_5vG.head()"
       ],
-      "id": "278e8028",
+      "id": "3fb5fe3e",
       "execution_count": null,
       "outputs": []
     },
@@ -1102,7 +1102,7 @@
       "source": [
         "drills1_5vG.describe()"
       ],
-      "id": "ec1ca9ce",
+      "id": "82cb5470",
       "execution_count": null,
       "outputs": []
     },
@@ -1117,7 +1117,7 @@
       "source": [
         "drills2_5vG.describe()"
       ],
-      "id": "1d53f860",
+      "id": "a48a9741",
       "execution_count": null,
       "outputs": []
     },
@@ -1131,7 +1131,7 @@
         "\n",
         "Then, let's look at the differences between the dataframes for before, during, and after games.\n"
       ],
-      "id": "698179d1"
+      "id": "cc6c1152"
     },
     {
       "cell_type": "code",
@@ -1144,7 +1144,7 @@
       "source": [
         "before_games1.describe()"
       ],
-      "id": "30f2e10f",
+      "id": "d6d5197c",
       "execution_count": null,
       "outputs": []
     },
@@ -1159,7 +1159,7 @@
       "source": [
         "games1.describe()"
       ],
-      "id": "00c8369f",
+      "id": "b92176d1",
       "execution_count": null,
       "outputs": []
     },
@@ -1174,7 +1174,7 @@
       "source": [
         "after_games1.describe()"
       ],
-      "id": "07e6bb2c",
+      "id": "46d60c32",
       "execution_count": null,
       "outputs": []
     },
@@ -1189,7 +1189,7 @@
       "source": [
         "before_games2.describe()"
       ],
-      "id": "3fbe16bf",
+      "id": "c271afb8",
       "execution_count": null,
       "outputs": []
     },
@@ -1204,7 +1204,7 @@
       "source": [
         "games2.describe()"
       ],
-      "id": "a76df34d",
+      "id": "ee7339ab",
       "execution_count": null,
       "outputs": []
     },
@@ -1219,7 +1219,7 @@
       "source": [
         "after_games2.describe()"
       ],
-      "id": "4ef2a0fa",
+      "id": "38590f8e",
       "execution_count": null,
       "outputs": []
     },
@@ -1231,7 +1231,7 @@
         "\n",
         "From above, we see that for both seasons on average, the total player load was highest during the games and lowest right before the games. But is there a more specific game-by-game correlation between this relationship and team's performance?\n"
       ],
-      "id": "cdd1c121"
+      "id": "120e6f81"
     },
     {
       "cell_type": "code",
@@ -1254,7 +1254,7 @@
         "\n",
         "plt.show()"
       ],
-      "id": "20567565",
+      "id": "2f31fa89",
       "execution_count": null,
       "outputs": []
     },
@@ -1279,7 +1279,7 @@
         "\n",
         "plt.show()"
       ],
-      "id": "918b332c",
+      "id": "14ef32a0",
       "execution_count": null,
       "outputs": []
     },
@@ -1289,7 +1289,7 @@
       "source": [
         "There seems to be a general trend across both seasons where during the first half of the season, the total player load before and after games stay pretty similar. However, as the season goes on, we see that the total player load after games start to become significantly higher than the load before gameis building up for the players, which would lead them to physically exert themselves more during games to maintain their previous competitive performance. Additionally, there is an increase in intensity of conference play towards the end of the season and also more frequent game substitutions due to injuries that would cause players to be more tired. On the flip side, player loads before games might have been intentionally reduced in order to maximize recovery and conserve energy as the team gets closer to the postseason.\n"
       ],
-      "id": "cbaa6997"
+      "id": "4e094f93"
     }
   ],
   "metadata": {

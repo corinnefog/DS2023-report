@@ -16,8 +16,8 @@ import seaborn as sns
 #### Loading the Data
 
 ```{python}
-season1 = pd.read_csv('~/DS2023/Final Project/catapult season 1(in).csv')
-season2 = pd.read_csv('~/DS2023/Final Project/catapult season 2(in).csv')
+season1 = pd.read_csv('~/Downloads/DS2023/Final Project/catapult season 1(in).csv')
+season2 = pd.read_csv('~/Downloads/DS2023/Final Project/catapult season 2(in).csv')
 ```
 
 #### Looking at the Entries
