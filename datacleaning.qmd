@@ -1,0 +1,100 @@
+---
+jupyter: python3
+---
+
+```{python}
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import os
+```
+
+**First, we need to load the data, and see what it looks like**
+
+```{python}
+season1 = pd.read_csv('~/Downloads/DS2023/Final Project/catapult season 1(in).csv')
+season2 = pd.read_csv('~/Downloads/DS2023/Final Project/catapult season 2(in).csv')
+```
+
+```{python}
+season1.head()
+```
+
+```{python}
+season2.head()
+```
+
+```{python}
+season1.isnull().sum()
+```
+
+```{python}
+season2.isnull().sum()
+```
+
+**Next, since there are a lot of N/A values for the columns describing the session as a whole, I'm going to fill in the values for the date so it looks better**
+
+```{python}
+nan_columns = season1.iloc[:, 26:-2]
+nan_columns.columns
+```
+
+```{python}
+column_fill = ['Session Total Jumps', 'Session Accel Low', 'Session Decel Low',
+       'Session CoD Left Low', 'Session CoD Right Low', 'Session Accel Med',
+       'Session Decel Medium', 'Session CoD Left Medium',
+       'Session CoD Right Medium', 'Session IMA Accel High',
+       'Session Decel High', 'Session CoD Left High', 'Session CoD Right High',
+       'Session IMA Accel Total', 'Session IMA Decel Total',
+       'Session Jump Count Low Band', 'Session Jump Count Med Band',
+       'Session Jump Count High Band', 'Session Total Jump',
+       'Session Jumps Per Minute', 'Total CoD Left', 'Total CoD Right',
+       'Total High IMA', 'Total IMA', 'IMA/Min']
+season1[column_fill] = season1.groupby('About')[column_fill].ffill()
+season1.head()
+```
+
+```{python}
+season2[column_fill] = season2.groupby('About')[column_fill].ffill()
+season2.head()
+```
+
+**Since some of the numeric values ended up having a .0 at the end, we decided to remove that to make the look of the dataset cleaner**
+
+```{python}
+round_col = ['Session Total Jumps', 'Session Accel Low', 'Session Decel Low',
+       'Session CoD Left Low', 'Session CoD Right Low', 'Session Accel Med',
+       'Session Decel Medium', 'Session CoD Left Medium',
+       'Session CoD Right Medium', 'Session IMA Accel High',
+       'Session Decel High', 'Session CoD Left High', 'Session CoD Right High',
+       'Session IMA Accel Total', 'Session IMA Decel Total',
+       'Session Jump Count Low Band', 'Session Jump Count Med Band',
+       'Session Jump Count High Band', 'Session Total Jump',
+       'Session Jumps Per Minute', 'Total CoD Left', 'Total CoD Right',
+       'Total High IMA', 'Total IMA']
+season1[round_col] = season1[round_col].round(0).astype('Int64')
+season2[round_col] = season2[round_col].round(0).astype('Int64')
+```
+
+**A lot of values also have three decimal places when they aren't needed, so we will round them down to one, again, for polishing purposes**
+
+```{python}
+season1['Total Player Load'] = season1['Total Player Load'].round(1)
+season2['Total Player Load'] = season2['Total Player Load'].round(1)
+```
+
+**Next, we just wanted to make sure the dates were all formatted correctly and the same between datasets**
+
+```{python}
+season1['Date'] = pd.to_datetime(season1['Date'], format='%m/%d/%y', errors='coerce')
+season2['Date'] = pd.to_datetime(season2['Date'], format='%m/%d/%y', errors='coerce')
+
+season1 = season1.sort_values('Date')
+season2 = season2.sort_values('Date')
+
+# print a date to check
+print(season1['Date'].head())
+print(season2['Date'].head())
+```
+

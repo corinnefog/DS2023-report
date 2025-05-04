@@ -1,0 +1,356 @@
+---
+jupyter: python3
+---
+
+```{python}
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+season2 = pd.read_csv('~/Downloads/DS2023/Final Project/catapult season 2(in).csv')
+season2.head()
+```
+
+```{python}
+season1 = pd.read_csv('~/Downloads/DS2023/Final Project/catapult season 1(in).csv')
+```
+
+```{python}
+games_23_24 = [
+    '11/06/2023', '11/10/2023', '11/14/2023', '11/16/2023', '11/20/2023',
+    '11/22/2023', '11/29/2023', '12/02/2024', '12/05/2023', '12/16/2023',
+    '12/19/2023', '12/27/2023', '12/30/2023', '01/03/2024', '01/06/2024',
+    '01/13/2024', '01/17/2024', '01/20/2024', '01/24/2024', '01/27/2024',
+    '01/31/2024', '02/03/2024', '02/05/2024', '02/10/2024', '02/13/2024',
+    '02/17/2024', '02/19/2024', '02/24/2024', '02/28/2024', '03/02/2024', 
+    '03/09/2024'
+]
+
+results_23_24 = [
+    'W', 'W', 'W', 'W', 'L', 'W', 'W', 'W', 'W', 'W', 'L', 'W', 'L', 'W', 'L', 'L', 'W', 'W', 'W', 'W', 
+    'W', 'W', 'W', 'W', 'L', 'W', 'L', 'L', 'W', 'L', 'W'
+]
+
+df2 = pd.DataFrame({
+    'Date': pd.to_datetime(games_23_24),
+    'Result': results_23_24
+})
+
+df2['Win'] = df2['Result'].map({'W': 1, 'L': 0})
+df2['Season'] = '2023–24'
+```
+
+```{python}
+games_22_23 = [
+    '11/07/2022', '11/11/2022', '11/18/2022', '11/20/2022',
+    '11/25/2022', '11/29/2022', '12/03/2022', '12/06/2022', '12/17/2022',
+    '12/20/2022', '12/28/2022', '12/31/2022', '01/03/2023', '01/07/2023',
+    '01/10/2023', '01/14/2023', '01/18/2023', '01/21/2023', '01/28/2023',
+    '01/30/2023', '02/04/2023', '02/07/2023', '02/11/2023', '02/15/2023',
+    '02/18/2023', '02/22/2023', '02/25/2023', '02/28/2023', '03/04/2023', 
+    '03/09/2023', '03/10/2023'
+]
+
+#the last game of the ACC playoffs is left out so each season has data for 31 games
+
+results_22_23 = [
+    'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'L', 'L', 'W', 'W', 'L', 'W', 'W',
+    'W', 'W', 'W', 'W', 'W', 'L', 'W', 'W', 'W', 'W', 'L', 'L', 'W', 'W', 'W', 'W'
+]
+
+df1 = pd.DataFrame({
+    'Date': pd.to_datetime(games_22_23),
+    'Result': results_22_23
+})
+
+df1['Win'] = df1['Result'].map({'W': 1, 'L': 0})
+df1['Season'] = '2022–23'
+```
+
+```{python}
+before_games_23_24 = [
+    '11/05/2023', '11/09/2023', '11/13/2023', '11/15/2023', '11/19/2023',
+    '11/21/2023', '11/28/2023', '12/01/2024', '12/04/2023', '12/15/2023',
+    '12/18/2023', '12/26/2023', '12/29/2023', '01/02/2024', '01/05/2024',
+    '01/12/2024', '01/16/2024', '01/19/2024', '01/23/2024', '01/26/2024',
+    '01/30/2024', '02/02/2024', '02/06/2024', '02/09/2024', '02/12/2024',
+    '02/16/2024', '02/18/2024', '02/23/2024', '02/27/2024', '03/01/2024', '03/08/2024'
+]
+
+before_games_22_23 = [
+    '11/06/2022', '11/10/2022', '11/13/2022', '11/17/2022', '11/19/2022',
+    '11/24/2022', '11/28/2022', '12/04/2022', '12/05/2022', '12/16/2022',
+    '12/19/2022', '12/27/2022', '12/30/2022', '01/02/2023', '01/06/2023',
+    '01/09/2023', '01/13/2023', '01/17/2023', '01/20/2023', '01/27/2023',
+    '01/29/2023', '02/03/2023', '02/06/2023', '02/10/2023', '02/14/2023',
+    '02/17/2023', '02/21/2023', '02/24/2023', '02/27/2023', '03/03/2023'
+]
+
+dates_23_24 = pd.to_datetime(before_games_23_24, format='%m/%d/%Y')
+season1['Date'] = pd.to_datetime(season1['Date'])
+dates_22_23 = pd.to_datetime(before_games_22_23, format='%m/%d/%Y')
+season1['Date'] = pd.to_datetime(season1['Date'])
+
+before_games2 = season2[season2['Date'].isin(before_games_23_24)]
+before_games1 = season1[season1['Date'].isin(before_games_22_23)]
+```
+
+```{python}
+after_games_23_24 = [
+    '11/07/2023', '11/11/2023', '11/15/2023', '11/17/2023', '11/21/2023',
+    '11/23/2023', '11/30/2023', '12/03/2024', '12/06/2023', '12/17/2023',
+    '12/20/2023', '12/28/2023', '12/31/2023', '01/04/2024', '01/07/2024',
+    '01/14/2024', '01/18/2024', '01/21/2024', '01/25/2024', '01/28/2024',
+    '02/01/2024', '02/04/2024', '02/06/2024', '02/11/2024', '02/14/2024',
+    '02/18/2024', '02/20/2024', '02/25/2024', '02/29/2024', '03/03/2024', '03/10/2024'
+]
+
+after_games_22_23 = [
+    '11/08/2022', '11/12/2022', '11/15/2022', '11/19/2022', '11/21/2022',
+    '11/26/2022', '11/30/2022', '12/04/2022', '12/07/2022', '12/18/2022',
+    '12/21/2022', '12/29/2022', '01/01/2022', '01/04/2023', '01/08/2023',
+    '01/11/2023', '01/15/2023', '01/19/2023', '01/22/2023', '01/29/2023',
+    '01/31/2023', '02/05/2023', '02/08/2023', '02/12/2023', '02/16/2023',
+    '02/19/2023', '02/23/2023', '02/26/2023', '03/01/2023', '03/05/2023'
+]
+
+after_games2 = season2[season2['Date'].isin(after_games_23_24)]
+after_games1 = season1[season1['Date'].isin(after_games_22_23)]
+```
+
+```{python}
+df1['Cumulative Wins'] = df1['Win'].cumsum()
+df2['Cumulative Wins'] = df2['Win'].cumsum()
+
+df1['Game #'] = range(1, len(df2) + 1)
+df2['Game #'] = range(1, len(df1) + 1)
+```
+
+```{python}
+games2 = season2[season2['Date'].isin(games_23_24)].copy()
+games2['Date'] = pd.to_datetime(games2['Date'])
+
+df2['Date'] = pd.to_datetime(df2['Date'])
+
+games2 = pd.merge(
+    games2,
+    df2[['Date', 'Result', 'Win']],
+    on='Date',
+    how='left'
+)
+```
+
+```{python}
+games_22_23 = pd.to_datetime(games_22_23)
+df1['Date'] = pd.to_datetime(df1['Date'])
+
+games1 = season1[season1['Date'].isin(games_22_23)].copy()
+games1['Date'] = pd.to_datetime(games1['Date'])
+
+games1 = pd.merge(
+    games1,
+    df1[['Date', 'Result', 'Win']],
+    on='Date',
+    how='left'
+)
+```
+
+```{python}
+games1['Season'] = '2022–23'
+games2['Season'] = '2023–24'
+combined = pd.concat([games1, games2]) 
+avg_load = combined.groupby(['Season', 'Position', 'Win'])['Total Player Load'].mean().reset_index()
+avg_load['Result'] = avg_load['Win'].map({1: 'Win', 0: 'Loss'})
+avg_load['Group'] = avg_load['Position'] + ' - ' + avg_load['Result']
+```
+
+**Graph 1**
+This first graph shows player load by position on game days between the 2 seasons. The differen colors signify what the average player load was when the game resulted in a win or a loss to show what the average player load by position should be in order to win.
+
+```{python}
+combined.columns = combined.columns.str.strip()
+
+combined['Result Label'] = combined['Win'].map({1: 'Win', 0: 'Loss'})
+
+g = sns.catplot(
+    data=combined,
+    x='Position',
+    y='Total Player Load',
+    hue='Result Label',
+    col='Season',
+    kind='bar',
+    errorbar=None,
+    estimator='mean',
+    palette={'Win':'#fe5a03', 'Loss': '#130ccc'},
+    height=6,
+    aspect=1
+)
+g.set(xlabel=None)
+g.set(ylabel=None)
+g._legend.remove()
+g.set_titles("{col_name}")
+
+plt.suptitle("Avg. Player Load by Position Between Seasons", fontsize=16, x= 0.23 , y=1.09)
+plt.text(
+    0.19, 1.01,
+    "Organized by if the game resulted in a ",
+    fontsize=14,
+    ha='center',
+    transform=plt.gcf().transFigure
+)
+plt.text(
+    0.351, 1.01,
+    "Win",
+    fontsize=14,
+    color='#fe5a03',
+    weight='bold',
+    ha='center',
+    transform=plt.gcf().transFigure
+)
+plt.text(
+    0.378, 1.01,
+    " or ",
+    fontsize=14,
+    ha='center',
+    transform=plt.gcf().transFigure
+)
+plt.text(
+    0.41, 1.01,
+    "Loss",
+    fontsize=14,
+    color='#130ccc',
+    weight='bold',
+    ha='center',
+    transform=plt.gcf().transFigure
+)
+plt.show()
+```
+
+**Graph 2**
+Here is the code for our heatmap showing the difference in player load by weeke when comparing the 2 seasons. This heatmap includes game and practice data.
+
+```{python}
+import matplotlib.cm as cm
+# Concatenate the DataFrames
+season1['Season'] = 1
+season2['Season'] = 2
+df_combined = pd.concat([season1, season2])
+df_combined['Date'] = pd.to_datetime(df_combined['Date'], format='%m/%d/%Y', errors='coerce')
+df_combined['Week'] = df_combined['Date'].dt.isocalendar().week
+
+# Group by week and season, calculate mean of 'Explosive Efforts' and 'Player Load Per Minute'
+weekly_stats = df_combined.groupby(['Season', 'Week'])[['Explosive Efforts', 'Player Load Per Minute']].mean().reset_index()
+
+# Pivot the table for the heatmap
+pivot_df = weekly_stats.pivot(index='Week', columns='Season', values='Player Load Per Minute')
+
+# Calculate the difference between seasons
+diff_df = pivot_df[2] - pivot_df[1] # Season 2 - Season 1
+
+# Create the heatmap with difference coloring
+plt.figure(figsize=(15, 8))
+ax = sns.heatmap(
+diff_df.values.reshape(1, -1),
+cmap=cm.RdBu_r,
+annot=True,
+fmt=".1f",
+xticklabels=False,
+yticklabels=["Difference"],
+cbar_kws={'label': 'Difference (Season 2 - Season 1)'}
+)
+
+# Set x-axis tick positions and labels for each week
+tick_positions = np.arange(0.5, len(diff_df.index) + 0.5) # Centered positions
+ax.set_xticks(tick_positions)
+ax.set_xticklabels(np.arange(1, len(diff_df.index) + 1)) # Labels starting from 1
+
+# Increase font size of title and axis labels
+plt.suptitle("Difference in Avg Player Load Per Minute per Week (Season 2 - Season 1)", fontsize=16, y=0.97, ha='left', x=0.13)
+plt.text(0.14, 1.04, "Higher PL in Season 2 is", ha='center', transform=ax.transAxes, fontsize=14)
+plt.text(0.475, 1.04, "and higher PL in Season 1 is", ha='center', transform=ax.transAxes, fontsize=14)
+plt.text(0.275, 1.034, "Red", ha='left', va='bottom', transform=ax.transAxes, fontsize=14, color='red', fontweight='bold')
+plt.text(0.63, 1.034, "Blue", ha='left', va='bottom', transform=ax.transAxes, fontsize=14, color='blue', fontweight='bold')
+
+plt.xlabel("Week", fontsize=14)
+plt.ylabel("Difference", fontsize=14)
+
+# Remove y-axis tick
+ax.yaxis.set_ticks([])
+
+plt.show()
+```
+
+**Graph 3**
+
+```{python}
+import matplotlib.dates as mdates
+
+season2['Date'] = pd.to_datetime(season2['Date']).dt.normalize()
+games_23_24_dt = pd.to_datetime(games_23_24).normalize()
+
+games2 = season2[season2['Date'].isin(games_23_24_dt)].copy()
+games2['Date'] = pd.to_datetime(games2['Date']).dt.normalize()
+
+df2['Date'] = pd.to_datetime(df2['Date']).dt.normalize()
+
+games2 = pd.merge(
+    games2,
+    df2[['Date', 'Result', 'Win']],
+    on='Date',
+    how='left'
+)
+
+avg_efforts2 = df2[['Date', 'Result']].copy()
+efforts2 = games2.groupby('Date', as_index=False)['Explosive Efforts'].mean()
+avg_efforts2 = avg_efforts2.merge(efforts2, on='Date', how='left')
+
+avg_efforts1 = df1[['Date', 'Result']].copy()
+efforts1 = games1.groupby('Date', as_index=False)['Explosive Efforts'].mean()
+avg_efforts1 = avg_efforts1.merge(efforts1, on='Date', how='left')
+
+wins1 = avg_efforts1[avg_efforts1['Result'] == 'W']
+losses1 = avg_efforts1[avg_efforts1['Result'] == 'L']
+wins2 = avg_efforts2[avg_efforts2['Result'] == 'W']
+losses2 = avg_efforts2[avg_efforts2['Result'] == 'L']
+
+
+fig, axs = plt.subplots(1, 2, figsize=(14, 6), sharey=True)
+
+def style_axis(ax):
+    ax.spines['left'].set_visible(True)
+    ax.spines['left'].set_color('lightgray')
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+    ax.spines['bottom'].set_visible(False)
+    ax.yaxis.grid(True, color='lightgray', linestyle='-', linewidth=0.7)
+    ax.xaxis.grid(False)
+    ax.xaxis.set_major_locator(mdates.MonthLocator(interval=1))
+    ax.xaxis.set_major_formatter(mdates.DateFormatter('%b %Y'))
+
+axs[0].plot(avg_efforts1['Date'], avg_efforts1['Explosive Efforts'], color='black', linewidth=1, zorder=1)
+axs[0].scatter(wins1['Date'], wins1['Explosive Efforts'], color='#fe5a03', s=50, label='Win', zorder=5)
+axs[0].scatter(losses1['Date'], losses1['Explosive Efforts'], color='#130ccc', s=50, label='Loss', zorder=5)
+axs[0].set_title("2022–2023 Season")
+axs[0].set_ylabel("Average Explosive Efforts")
+axs[0].legend(loc='upper left', bbox_to_anchor=(0, 0.965), frameon=False)
+style_axis(axs[0])
+
+axs[1].plot(
+    avg_efforts2.dropna(subset=['Explosive Efforts'])['Date'],
+    avg_efforts2.dropna(subset=['Explosive Efforts'])['Explosive Efforts'],
+    color='black',
+    linewidth=1,
+    zorder=1
+)
+axs[1].scatter(wins2['Date'], wins2['Explosive Efforts'], color='#fe5a03', s=50, label='Win', zorder=5)
+axs[1].scatter(losses2['Date'], losses2['Explosive Efforts'], color='#130ccc', s=50, label='Loss', zorder=5)
+
+axs[1].set_title("2023–2024 Season")
+style_axis(axs[1])
+
+plt.suptitle("Explosive Efforts Per Game Between Seasons", fontsize=14)
+plt.figtext(0.5, 0.91, "Linking Game Outcomes to Explosive Effort Metrics", ha='center', fontsize=11, color='gray')
+plt.tight_layout(rect=[0, 0.03, 1, 0.95])
+plt.show()
+```
+
