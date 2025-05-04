@@ -1,2 +1,654 @@
+---
+title: Importing Libraries
+jupyter: python3
+---
 
+
+
+```{python}
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+%matplotlib inline
+import seaborn as sns
+```
+
+#### Loading the Data
+
+```{python}
+season1 = pd.read_csv('season1.csv')
+season2 = pd.read_csv('season2.csv')
+```
+
+#### Looking at the Entries
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 585}
+season1.head()
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 585}
+season2.head()
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/}
+print("\nShape of Season 1 Dataset:", season1.shape)
+print("\nShape of Season 2 Dataset:", season2.shape)
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 1000}
+display(season1.info())
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 1000}
+display(season2.info())
+```
+
+As we can see, the datasets have both categorical variables (objects) and numerical variables (floats and integers). Let's split them up.
+
+For Season 1 Data:
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/}
+categorical_vars1 = season1.select_dtypes(include=['object']).columns.tolist()
+numerical_vars1 = season1.select_dtypes(include=['float64', 'int64']).columns.tolist()
+print("\nCategorical variables:\n", "\n".join(categorical_vars1), "\n")
+print("Numerical variables:\n", "\n".join(numerical_vars1))
+```
+
+For Season 2 Data:
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/}
+categorical_vars2 = season2.select_dtypes(include=['object']).columns.tolist()
+numerical_vars2 = season2.select_dtypes(include=['float64', 'int64']).columns.tolist()
+print("\nCategorical variables:\n", "\n".join(categorical_vars2), "\n")
+print("Numerical variables:\n", "\n".join(numerical_vars2))
+```
+
+The variables in the two datasets are the same, so we can just use the variables list from either season.
+
+```{python}
+categorical_vars = categorical_vars1
+numerical_vars = numerical_vars1
+```
+
+Now we want to look at the numerical data values from the two datasets separately and look at their summary statistics.
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 731}
+display(season1[numerical_vars].describe())
+display(season2[numerical_vars].describe())
+```
+
+Now we are creating two sets of dataframes to store the win/loss results for game dates and for practice (before and after games) dates separately. We're doing this so we can see whether there are win/loss trends based on player load before, during, and after the game separately. Since we played one extra game in 2022-2023 season (we got further in the ACC championships), we will leave out the outstanding game so that each season has data for the same number of games (in this case, 31).
+
+#### Data Frames for Games
+
+```{python}
+games_season1 = [
+    '11/07/2022', '11/11/2022', '11/18/2022', '11/20/2022',
+    '11/25/2022', '11/29/2022', '12/03/2022', '12/06/2022', '12/17/2022',
+    '12/20/2022', '12/28/2022', '12/31/2022', '01/03/2023', '01/07/2023',
+    '01/10/2023', '01/14/2023', '01/18/2023', '01/21/2023', '01/28/2023',
+    '01/30/2023', '02/04/2023', '02/07/2023', '02/11/2023', '02/15/2023',
+    '02/18/2023', '02/22/2023', '02/25/2023', '02/28/2023', '03/04/2023',
+    '03/09/2023', '03/10/2023'
+]
+
+results_season1 = [
+    'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'L', 'L', 'W', 'W', 'L', 'W', 'W',
+    'W', 'W', 'W', 'W', 'W', 'L', 'W', 'W', 'W', 'W', 'L', 'L', 'W', 'W', 'W', 'W'
+]
+
+games_dates1 = pd.to_datetime(games_season1, format='%m/%d/%Y')
+
+df1 = pd.DataFrame({
+    'Date': games_dates1,
+    'Result': results_season1
+})
+
+df1['Win'] = df1['Result'].map({'W': 1, 'L': 0})
+df1['Season'] = '2022–23'
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 206}
+df1.head()
+```
+
+```{python}
+games_season2 = [
+    '11/06/2023', '11/10/2023', '11/14/2023', '11/16/2023', '11/20/2023',
+    '11/22/2023', '11/29/2023', '12/02/2024', '12/05/2023', '12/16/2023',
+    '12/19/2023', '12/27/2023', '12/30/2023', '01/03/2024', '01/06/2024',
+    '01/13/2024', '01/17/2024', '01/20/2024', '01/24/2024', '01/27/2024',
+    '01/31/2024', '02/03/2024', '02/05/2024', '02/10/2024', '02/13/2024',
+    '02/17/2024', '02/19/2024', '02/24/2024', '02/28/2024', '03/02/2024',
+    '03/09/2024'
+]
+
+results_season2 = [
+    'W', 'W', 'W', 'W', 'L', 'W', 'W', 'W', 'W', 'W', 'L', 'W', 'L', 'W', 'L', 'L', 'W', 'W', 'W', 'W',
+    'W', 'W', 'W', 'W', 'L', 'W', 'L', 'L', 'W', 'L', 'W'
+]
+
+games_dates2 = pd.to_datetime(games_season2, format='%m/%d/%Y')
+
+df2 = pd.DataFrame({
+    'Date': games_dates2,
+    'Result': results_season2
+})
+
+df2['Win'] = df2['Result'].map({'W': 1, 'L': 0})
+df2['Season'] = '2023–24'
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 206}
+df2.head()
+```
+
+#### Finding Win Proportions By Season
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 178}
+df1['Win'].value_counts(normalize=True)
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 178}
+df2['Win'].value_counts(normalize=True)
+```
+
+#### Data Frames for Practice (Before Games)
+
+```{python}
+season1['Date'] = pd.to_datetime(season1['Date']).dt.normalize()
+season2['Date'] = pd.to_datetime(season2['Date']).dt.normalize()
+```
+
+```{python}
+before_games_season1 = [
+    '11/06/2022', '11/10/2022', '11/13/2022', '11/17/2022', '11/19/2022',
+    '11/24/2022', '11/28/2022', '12/04/2022', '12/05/2022', '12/16/2022',
+    '12/19/2022', '12/27/2022', '12/30/2022', '01/02/2023', '01/06/2023',
+    '01/09/2023', '01/13/2023', '01/17/2023', '01/20/2023', '01/27/2023',
+    '01/29/2023', '02/03/2023', '02/06/2023', '02/10/2023', '02/14/2023',
+    '02/17/2023', '02/21/2023', '02/24/2023', '02/27/2023', '03/03/2023']
+
+before_games_season2 = [
+    '11/05/2023', '11/09/2023', '11/13/2023', '11/15/2023', '11/19/2023',
+    '11/21/2023', '11/28/2023', '12/01/2024', '12/04/2023', '12/15/2023',
+    '12/18/2023', '12/26/2023', '12/29/2023', '01/02/2024', '01/05/2024',
+    '01/12/2024', '01/16/2024', '01/19/2024', '01/23/2024', '01/26/2024',
+    '01/30/2024', '02/02/2024', '02/06/2024', '02/09/2024', '02/12/2024',
+    '02/16/2024', '02/18/2024', '02/23/2024', '02/27/2024', '03/01/2024',
+    '03/08/2024']
+
+before_games_dates1 = pd.to_datetime(before_games_season1).normalize()
+before_games_dates2 = pd.to_datetime(before_games_season2).normalize()
+
+before_games1 = season1[season1['Date'].isin(before_games_dates1)]
+before_games2 = season2[season2['Date'].isin(before_games_dates2)]
+```
+
+#### Data Frames for Practice (After Games)
+
+```{python}
+after_games_season1 = [
+    '11/08/2022', '11/12/2022', '11/15/2022', '11/19/2022', '11/21/2022',
+    '11/26/2022', '11/30/2022', '12/04/2022', '12/07/2022', '12/18/2022',
+    '12/21/2022', '12/29/2022', '01/01/2022', '01/04/2023', '01/08/2023',
+    '01/11/2023', '01/15/2023', '01/19/2023', '01/22/2023', '01/29/2023',
+    '01/31/2023', '02/05/2023', '02/08/2023', '02/12/2023', '02/16/2023',
+    '02/19/2023', '02/23/2023', '02/26/2023', '03/01/2023', '03/05/2023']
+
+after_games_season2 = [
+    '11/07/2023', '11/11/2023', '11/15/2023', '11/17/2023', '11/21/2023',
+    '11/23/2023', '11/30/2023', '12/03/2024', '12/06/2023', '12/17/2023',
+    '12/20/2023', '12/28/2023', '12/31/2023', '01/04/2024', '01/07/2024',
+    '01/14/2024', '01/18/2024', '01/21/2024', '01/25/2024', '01/28/2024',
+    '02/01/2024', '02/04/2024', '02/06/2024', '02/11/2024', '02/14/2024',
+    '02/18/2024', '02/20/2024', '02/25/2024', '02/29/2024', '03/03/2024',
+    '03/10/2024']
+
+after_games_dates1 = pd.to_datetime(after_games_season1).normalize()
+after_games_dates2 = pd.to_datetime(after_games_season2).normalize()
+
+after_games1 = season1[season1['Date'].isin(after_games_dates1)]
+after_games2 = season2[season2['Date'].isin(after_games_dates2)]
+```
+
+#### Cumulative Wins Graph
+
+First, with our in-game dataframe, we can create a visual of the wins (cumulatively) we have each season by game number. By doing so, we can look for any trends in how the seasons progress e.g. strong starts, mid-season slumps, momentum building toward playoffs, etc.
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 564}
+df1['Cumulative Wins'] = df1['Win'].cumsum()
+df2['Cumulative Wins'] = df2['Win'].cumsum()
+
+df1['Game #'] = range(1, len(df2) + 1)
+df2['Game #'] = range(1, len(df1) + 1)
+
+plt.figure(figsize=(10, 6))
+plt.plot(df1['Game #'], df1['Cumulative Wins'], label='2022–23', marker='o', color='blue')
+plt.plot(df2['Game #'], df2['Cumulative Wins'], label='2023–24', marker='o', color='green')
+plt.title('Cumulative Wins by Game #')
+plt.xlabel('Game Number')
+plt.ylabel('Cumulative Wins')
+plt.legend()
+sns.despine()
+plt.show()
+```
+
+The two seasons seemm pretty similar in that the slopes of the two graphs are similar. It shows there's not much difference in the momentum of specific time periods within each season.
+
+#### Correlation Heatmaps for Key Metrics
+
+Now, we want to understand the relationships between the key metrics: total player load, player load per minute, IMA accel total, IMA decel total, and explosive efforts, so we plot correlation heatmaps for those metrics for each season. We are most interested in seeing if there's a correlation between total player load and explosive efforts.
+
+```{python}
+key_metrics1 = season1[['Total Player Load', 'Player Load Per Minute', 'IMA Accel Total',
+                   'IMA Decel Total', 'Explosive Efforts']]
+
+key_metrics2 = season2[['Total Player Load', 'Player Load Per Minute', 'IMA Accel Total',
+                   'IMA Decel Total', 'Explosive Efforts']]
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 606}
+plt.figure(figsize=(12, 6))
+sns.heatmap(key_metrics1.corr(), annot=True, cmap='coolwarm', center=0)
+plt.xlabel("Metrics")
+plt.ylabel("Metrics")
+plt.title("Correlation Heatmap of Season 1 Key Metrics", pad=20, fontsize=16)
+plt.tight_layout()
+plt.show()
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 606}
+plt.figure(figsize=(12, 6))
+sns.heatmap(key_metrics2.corr(), annot=True, cmap='coolwarm', center=0)
+plt.xlabel("Metrics")
+plt.ylabel("Metrics")
+plt.title("Correlation Heatmap of Season 2 Key Metrics", pad=20, fontsize=16)
+plt.tight_layout()
+plt.show()
+```
+
+For both seasons, the correlation between total player load and explosive efforts is about 0.7-0.8, which is quite strong! Let's proceed with exploring more about this relation by graphing scatterplots and seeing if there are any other patterns.
+
+#### Total Player Load vs Explosive Efforts Scatterplots
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 564}
+plt.figure(figsize=(12, 6))
+sns.scatterplot(data=season1, x="Total Player Load", y="Explosive Efforts", color='blue')
+sns.regplot(data=season1, x="Total Player Load", y="Explosive Efforts", scatter=False, color='red', line_kws={"linestyle":"dashed"})
+
+plt.title("Total Player Load vs Explosive Efforts (2022-2023 Season Data)")
+plt.xlabel("Total Player Load")
+plt.ylabel("# of Explosive Efforts")
+plt.show()
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 564}
+plt.figure(figsize=(12, 6))
+sns.scatterplot(data=season2, x="Total Player Load", y="Explosive Efforts", color='red')
+sns.regplot(data=season2, x="Total Player Load", y="Explosive Efforts", scatter=False, color='blue', line_kws={"linestyle":"dashed"})
+
+plt.title("Total Player Load vs Explosive Efforts (2023-2024 Season Data)")
+plt.xlabel("Total Player Load")
+plt.ylabel("# of Explosive Efforts")
+plt.grid(True)
+plt.show()
+```
+
+#### Explosive Efforts Heatmap
+
+Here, we are exploring how explosive efforts by itself changed over each of the two seasons.
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 911}
+season1['Season'] = 1
+season2['Season'] = 2
+seasons_combined = pd.concat([season1, season2])
+
+seasons_combined['Date'] = pd.to_datetime(seasons_combined['Date'], format='%m/%d/%Y', errors='coerce')
+seasons_combined['Week'] = seasons_combined['Date'].dt.isocalendar().week
+
+weekly_stats = seasons_combined.groupby(['Season', 'Week'])[['Explosive Efforts', 'Player Load Per Minute']].mean().reset_index()
+pivot_seasons = weekly_stats.pivot(index='Week', columns='Season', values='Explosive Efforts')
+
+print(seasons_combined.columns)
+
+plt.figure(figsize=(10, 6))
+sns.heatmap(pivot_seasons, annot=True, cmap='coolwarm', fmt=".1f")
+plt.title("Avg Explosive Efforts per Week by Season")
+plt.xlabel("Season")
+plt.ylabel("Week Number")
+plt.show()
+```
+
+Looking at the heatmap for both seasons, it's interesting to see that the explosive efforts in the 2023-2024 season are consistently higher than the efforts in the 2022-2023 season. However, both seasons seem to have a similar trend where the explosive efforts dip somewhere in the middle of the season, and then increase back up towards the end. The difference is that in the 2022-2023 season, the dip is around week 11 and in 2023-2024 season the dip looks to be a little later in week 20. We also see less noticeable changes in explosive efforts throughout the season in comparison to the 2022-2023 season.
+
+#### Metrics vs Game Outcome Graphs (by each season)
+
+Now, let's analyze IMA accel total alongside the two variables above and compare all three metrics by game outcome (win/loss):
+
+```{python}
+games1 = season1[season1['Date'].isin(games_dates1)]
+games1 = pd.merge(games1, df1[['Date', 'Result', 'Win']], on='Date', how='left')
+```
+
+```{python}
+games2 = season2[season2['Date'].isin(games_dates2)]
+games2 = pd.merge(games2, df2[['Date', 'Result', 'Win']], on='Date', how='left')
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 472}
+games1.groupby('Result')[['Total Player Load', 'IMA Accel Total', 'Explosive Efforts']].mean().plot(kind='bar')
+plt.title('Average Metrics by Game Outcome for 2022-2023 Season')
+plt.ylabel('Average Value')
+plt.xticks(rotation=0)
+plt.show()
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 472}
+games2.groupby('Result')[['Total Player Load', 'IMA Accel Total', 'Explosive Efforts']].mean().plot(kind='bar')
+plt.title('Average Metrics by Game Outcome for 2023-2024 Season')
+plt.ylabel('Average Value')
+plt.xticks(rotation=0)
+plt.show()
+```
+
+This is interesting, because it seems like the average values for all three metrics were unanimously lower during games we won compared to games we lost. Why is this? It is because they are in better shape and/or have better technique and thus don't have to exert as much energy to do well?
+
+#### Total Player Load Box Plot Graphs
+
+Just to look at it clearer, let's create visualizations of just total player load in wins and losses.
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 472}
+sns.boxplot(data=games1, x='Win', y='Total Player Load')
+plt.xticks([0, 1], ['Loss', 'Win'])
+plt.title('Total Player Load in Wins vs Losses')
+plt.show()
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 472}
+sns.boxplot(data=games2, x='Win', y='Total Player Load')
+plt.xticks([0, 1], ['Loss', 'Win'])
+plt.title('Total Player Load in Wins vs Losses')
+plt.show()
+```
+
+Yes, we've comfirmed that the total player load is consistently lower during wins than losses for both seasons.
+
+#### Position Analysis Graph
+
+Now, we would like to analyze the data by player position to see if this trend still exists and if there are variations there.
+
+```{python}
+forward1 = season1[season1['Position'] == 'Forward']
+center1 = season1[season1['Position'] == 'Guard']
+guard1 = season1[season1['Position'] == 'Center']
+```
+
+```{python}
+forward2 = games2[games2['Position'] == 'Forward']
+center2 = games2[games2['Position'] == 'Guard']
+guard2 = games2[games2['Position'] == 'Center']
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 607}
+load_by_position = games1.groupby(['Position', 'Win'])['Total Player Load'].mean().reset_index()
+plt.figure(figsize=(10, 6))
+sns.barplot(data=load_by_position, x='Position', y='Total Player Load', hue='Win')
+plt.title('Average Player Load by Position in Wins vs Losses for the 2022-2023 Season')
+plt.ylabel('Avg Total Player Load')
+plt.xlabel(None)
+plt.tight_layout()
+sns.despine()
+plt.show()
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 607}
+load_by_position = games2.groupby(['Position', 'Win'])['Total Player Load'].mean().reset_index()
+plt.figure(figsize=(10, 6))
+sns.barplot(data=load_by_position, x='Position', y='Total Player Load', hue='Win')
+plt.title('Average Player Load by Position in Wins vs Losses for the 2023-2024 Season')
+plt.ylabel('Avg Total Player Load')
+plt.xlabel(None)
+plt.tight_layout()
+sns.despine()
+plt.show()
+```
+
+It seems like, on average (except for centers in the 2023-2024 season),  the total player load for is higher when a game is lost compared to when it is won, which corresponds to our earlier findings above before we separated by position, which still gave us that same pattern.
+
+#### Player Load by Position and Game Result Across Seasons
+
+Using the same variables as above, let's visualize our data slightly differently (different colors now represent different seasons instead of win or loss) to see if we can find any other trends that we didn't see previously.
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 549}
+games1['Season'] = '2022–23'
+games2['Season'] = '2023–24'
+combined = pd.concat([games1, games2])
+avg_load = combined.groupby(['Season', 'Position', 'Win'])['Total Player Load'].mean().reset_index()
+avg_load['Result'] = avg_load['Win'].map({1: 'Win', 0: 'Loss'})
+avg_load['Group'] = avg_load['Position'] + ' - ' + avg_load['Result']
+plt.figure(figsize=(14, 6))
+sns.barplot(data=avg_load, x='Group', y='Total Player Load', hue='Season', palette='Set2')
+plt.title('Player Load by Position and Game Result Across Seasons')
+plt.ylabel('Avg Total Player Load')
+plt.xlabel('Position and Game Result')
+plt.xticks(rotation=0)
+plt.legend(title='Season')
+plt.tight_layout()
+sns.despine()
+plt.show()
+```
+
+There is no discernable pattern. Although, it is intriguing that forwards and guards have a decently higher player load for both wins and losses in the 2022-23 season, but centers have a **lower** player load for both wins and losses that season. This seems like the complete opposite of the other two positions, and there doesn't seem to be a reason, at least based on the responsibilities of a center, for this phenomenon. Perhaps this could be something the coaches look into to figure out the reason why.
+
+#### Player Load by Position Between Seasons (Different Hues = Win/Loss)
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 656}
+combined.columns = combined.columns.str.strip()
+
+combined['Result Label'] = combined['Win'].map({1: 'Win', 0: 'Loss'})
+
+g = sns.catplot(
+    data=combined,
+    x='Position',
+    y='Total Player Load',
+    hue='Result Label',
+    col='Season',
+    kind='bar',
+    errorbar=None,
+    estimator='mean',
+    palette={'Win':'#fe5a03', 'Loss': '#130ccc'},
+    height=6,
+    aspect=1
+)
+
+g.set(xlabel=None)
+g._legend.remove()
+g.set_titles("{col_name}")
+
+
+plt.suptitle("Avg. Player Load by Position Between Seasons", fontsize=16, x= 0.23 , y=1.09)
+plt.text(
+    0.19, 1.01,
+    "Organized by if the game resulted in a ",
+    fontsize=14,
+    ha='center',
+    transform=plt.gcf().transFigure
+)
+
+plt.text(
+    0.353, 1.01,
+    "Win",
+    fontsize=14,
+    color='#fe5a03',
+    weight='bold',
+    ha='center',
+    transform=plt.gcf().transFigure
+)
+
+plt.text(
+    0.38, 1.01,
+    " or ",
+    fontsize=14,
+    ha='center',
+    transform=plt.gcf().transFigure
+)
+
+plt.text(
+    0.41, 1.01,
+    "Loss",
+    fontsize=14,
+    color='#130ccc',
+    weight='bold',
+    ha='center',
+    transform=plt.gcf().transFigure
+)
+plt.show()
+```
+
+#### Drills Analysis
+
+Now, let's look at the 'drills' periods during practice to see how player load affects the players during these periods specifically. We will make a new dataframe that only consists of the entries that are recorded during drill periods.
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 568}
+drills1 = season1[season1['Period'].str.contains('5v5', na=False)]
+drills1.head()
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 505}
+drills1.describe()
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 568}
+drills2 = season2[season2['Period'].str.contains('5v5', na=False)]
+drills2.head()
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 505}
+drills2.describe()
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 568}
+drills1_5vG = season1[season1['Period'].str.contains('5vG', na=False)]
+drills1_5vG.head()
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 568}
+drills2_5vG = season2[season2['Period'].str.contains('5vG', na=False)]
+drills2_5vG.head()
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 505}
+drills1_5vG.describe()
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 505}
+drills2_5vG.describe()
+```
+
+---
+
+#### Before VS During VS After Games Analysis
+
+Then, let's look at the differences between the dataframes for before, during, and after games.
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 505}
+before_games1.describe()
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 505}
+games1.describe()
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 505}
+after_games1.describe()
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 505}
+before_games2.describe()
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 505}
+games2.describe()
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 505}
+after_games2.describe()
+```
+
+#### Correlation Graph Between Total Player Load and Performance
+
+From above, we see that for both seasons on average, the total player load was highest during the games and lowest right before the games. But is there a more specific game-by-game correlation between this relationship and team's performance?
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 593}
+plt.figure(figsize=(12, 6))
+
+sns.lineplot(data=before_games1, x='Date', y='Total Player Load', label='Before Games')
+sns.lineplot(data=after_games1, x='Date', y='Total Player Load', label='After Games')
+
+plt.title('Total Player Load Before vs. After Games (Season 1)\n', fontsize=16, fontweight='bold')
+plt.xlabel('Date', fontsize=12)
+plt.ylabel('Total Player Load', fontsize=12)
+plt.legend(title='Period')
+
+plt.show()
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 593}
+plt.figure(figsize=(12, 6))
+
+sns.lineplot(data=before_games2, x='Date', y='Total Player Load', label='Before Games')
+sns.lineplot(data=after_games2, x='Date', y='Total Player Load', label='After Games')
+
+plt.title('Total Player Load Before vs. After Games (Season 2)\n', fontsize=16, fontweight='bold')
+plt.xlabel('Date', fontsize=12)
+plt.ylabel('Total Player Load', fontsize=12)
+plt.legend(title='Period')
+
+plt.show()
+```
+
+There seems to be a general trend across both seasons where during the first half of the season, the total player load before and after games stay pretty similar. However, as the season goes on, we see that the total player load after games start to become significantly higher than the load before gameis building up for the players, which would lead them to physically exert themselves more during games to maintain their previous competitive performance. Additionally, there is an increase in intensity of conference play towards the end of the season and also more frequent game substitutions due to injuries that would cause players to be more tired. On the flip side, player loads before games might have been intentionally reduced in order to maximize recovery and conserve energy as the team gets closer to the postseason.
 
