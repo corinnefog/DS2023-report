@@ -4,11 +4,14 @@ This is a Quarto book.
 
 To learn more about Quarto books visit <https://quarto.org/docs/books>.
 
+# Report
+## Prepared for
+Prepared for the University of Virginia Men's Basketball program. This report is intended to support coaches and athletic trainers in making informed decisions based on player workload data collected through Catapult wearable technology.
+
 ## Problem Statement
-In basketball, physical actions like sprints, jumps, and quick decisions contribute to the overall physical demand placed on players. Tracking this workload helps
-teams better understand performance trends and identify moments where adjustments might be needed. This report examines how player load relates to individual and team
-outcomes. Our analysis was guided by three key questions. First, we examined whether workload patterns changed between seasons. Second, we evaluated whether these
-changes were associated with game outcomes. Third, we considered how these insights could inform coaching decisions.
+In basketball, performance is more than raw effort. Every sprint, jump, and cut adds to the physical toll players experience. What if success has less to do with how much energy is used, and more to do with when and how it is applied?
+This report uses two seasons of Catapult data to investigate whether patterns in workload and effort explain differences in team performance. Our goal was to uncover patterns that could guide coaching strategies related to training, rest, and in-game effort.
+We focused on three guiding questions. First, do workload patterns vary by position and game outcome? Second, how does intensity change across the season? Third, can explosive effort tell us anything about player readiness and team momentum?
 
 ## Analysis
 We started  by reviewing all the player load data across both seasons. Then we focused on three variables. These were average player load by position, player load per
@@ -20,5 +23,6 @@ position in both practice and in-game strategy. When looking at weekly load per 
 the season improved overall fitness.
 
 ## Conclusion
-Player load can do more than explain what happened in a game. It can help predict future performance and guide how teams prepare. We found that different positions have different workload patterns that are tied to winning. We also found that pushing harder in the middle of the season may lead to better results. Finally, we saw that explosive effort is a good signal of player engagement and energy. Based on what we learned, we suggest personalizing load management instead of giving everyone the same recovery plan. We also suggest increasing physical intensity during the middle of the season when players are most ready to push themselves. Finally, we believe explosive efforts should be tracked regularly to catch signs of fatigue early and avoid injuries.
-In the future, we could learn even more by bringing in other types of data. For example, heart rate, recovery time, and sleep could give more insight into player health. It would also help to look at how travel and game schedules affect performance. Postseason data might give us the clearest picture of how to help the team succeed during the most important games.
+Our findings highlight a key pattern. The team's strongest performances often came during periods when effort was managed with intention rather than sustained at a constant high level.
+Guards and forwards had lower average player loads in games that ended in wins, which suggests that pacing and role-based effort matter. Load per minute increased mid-season and corresponded with stronger results, highlighting the value of training intensity that rises at the right times. Explosive effort patterns also appeared to align with wins and losses, offering possible early indicators of momentum or fatigue.
+This all points to one story. Winning is often achieved not by exerting more effort, but by directing effort more intentionally. This includes personalized load management and strategic practice planning. Moving forward, coaches can use these metrics to spot early signs of burnout, plan smarter practices, and adjust training intensity to prepare for key parts of the season. This data is a blueprint for better planning and long-term player readiness.

@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 book:
-  title: "Report Title Here"
+  title: "How Timing and Intensity Shape Success"
   author: "Corinne Fogarty, Gracie Williams, Ruth Melese, Jolie Ng"
   favicon: uvads.png
   description: fill in later
