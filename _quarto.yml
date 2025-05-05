@@ -6,11 +6,11 @@ book:
   title: "How Timing and Intensity Shape Success"
   author: "Corinne Fogarty, Gracie Williams, Ruth Melese, Jolie Ng"
   favicon: uvads.png
-  description: fill in later
+  description: "A look into how Player Load effects the success of a season"
   keyword: add keywords
   #url: 
   sidebar:
-    logo: png
+    logo: uvads.png
     search: true
   repo-url: https://github.com/corinnefog/DS2023-Final
   repo-branch: main
