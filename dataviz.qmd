@@ -174,31 +174,29 @@ combined.columns = combined.columns.str.strip()
 
 combined['Result Label'] = combined['Win'].map({1: 'Win', 0: 'Loss'})
 
-# Prepare bar positions
 positions = combined['Position'].unique()
 seasons = ['2022–23', '2023–24']
 results = ['Win', 'Loss']
 
-# Calculate average values
 avg_data = (
     combined.groupby(['Position', 'Season', 'Result Label'])['Total Player Load']
     .mean()
     .reset_index()
 )
-# Set up the plot
+
 fig, ax = plt.subplots(figsize=(10, 6))
 
-# Define colors for seasons
+# Season colors 
 season_colors = {'2022–23': '#255394', '2023–24': '#538a56'}
 
-# Define hatches for results
+# hatches 
 result_hatches = {'Win': '.', 'Loss': '\\'}
 
 bar_width = 0.3
-gap = 0.2  # Space between seasons
+gap = 0.2  # space between bars
 x = np.arange(len(positions)) * (len(seasons) * len(results) * bar_width + gap)
 
-# Mapping to get the proper bar placement
+
 offsets = {
     ('2022–23', 'Win'): -1.5 * bar_width,
     ('2022–23', 'Loss'): -0.5 * bar_width,
@@ -206,7 +204,7 @@ offsets = {
     ('2023–24', 'Loss'): 1.5 * bar_width + gap / 2
 }
 
-# Plot each bar
+
 for season in seasons:
     for result in results:
         subdata = avg_data[
