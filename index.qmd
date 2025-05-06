@@ -11,7 +11,7 @@ We began by using a heat map to track how player load per minute changed each we
 ![](graph1.png)
 
 The second graph expands on this by showing player load by position across both seasons on the day before game day. The Season 2 dots appear to be higher than those from Season 1, with notable increases of over 25% across all positions. Centers experienced a 72.8% increase in load before games in Season 2.  This suggests that players may have been entering games more fatigued, which could affect in-game performance and recovery. Strategic reduction of pre-game intensity, especially for high-load positions, may improve performance outcomes.
-![](jittergraph.png.)
+![](jittergraph.png)
 
 We also compared average player load by position in wins versus losses across both seasons. Guards consistently had lower loads in games that ended in wins, while centers showed less variation. The pattern interestingly flipped for forwards between seasons. In Season 1, lower player load was associated with wins, but in Season 2, the opposite was observed. This shift may be explained by an almost complete roster change at the forward position between the 2022 and 2023 seasons. These findings highlight how efficiency and pacing are tied to performance, while also showing that changes in player rosters can reshape how effort translates to outcomes.
 ![](graph3.png)
