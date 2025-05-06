@@ -6,10 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Corinne Fogarty, Gracie Williams, Ruth Melese, Jolie Ng">
 <meta name="description" content="A look into how Player Load effects the success of a season">
 
-<title>How Timing and Intensity Shape Success</title>
+<title>5&nbsp; Data Dictionary – How Timing and Intensity Shape Success</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,7 +31,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./datacleaning.html" rel="next">
+<link href="./dataviz.html" rel="prev">
 <link href="./uvads.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -83,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Report</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./datadictionary.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Data Dictionary</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -116,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Report</span></span></a>
   </div>
 </li>
@@ -140,7 +139,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./datadictionary.html" class="sidebar-item-text sidebar-link">
+  <a href="./datadictionary.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Data Dictionary</span></span></a>
   </div>
 </li>
@@ -154,13 +153,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#report" id="toc-report" class="nav-link active" data-scroll-target="#report"><span class="header-section-number">1</span> Report</a>
-  <ul class="collapse">
-  <li><a href="#prepared-for" id="toc-prepared-for" class="nav-link" data-scroll-target="#prepared-for"><span class="header-section-number">1.1</span> Prepared for</a></li>
-  <li><a href="#problem-statement" id="toc-problem-statement" class="nav-link" data-scroll-target="#problem-statement"><span class="header-section-number">1.2</span> Problem Statement</a></li>
-  <li><a href="#analysis" id="toc-analysis" class="nav-link" data-scroll-target="#analysis"><span class="header-section-number">1.3</span> Analysis</a></li>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">1.4</span> Conclusion</a></li>
-  </ul></li>
+  <li><a href="#player-performance-metrics" id="toc-player-performance-metrics" class="nav-link active" data-scroll-target="#player-performance-metrics"><span class="header-section-number">5.1</span> Player Performance Metrics</a></li>
   </ul>
 </nav>
     </div>
@@ -169,24 +162,13 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">How Timing and Intensity Shape Success</h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Data Dictionary</span></h1>
 </div>
 
-<div>
-  <div class="description">
-    A look into how Player Load effects the success of a season
-  </div>
-</div>
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Corinne Fogarty, Gracie Williams, Ruth Melese, Jolie Ng </p>
-          </div>
-  </div>
     
   
     
@@ -197,28 +179,64 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="report" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Report</h1>
-<section id="prepared-for" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="prepared-for"><span class="header-section-number">1.1</span> Prepared for</h2>
-<p>Prepared for the University of Virginia Men’s Basketball program. This report is intended to support coaches and athletic trainers in making informed decisions based on player workload data collected through Catapult wearable technology.</p>
-</section>
-<section id="problem-statement" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="problem-statement"><span class="header-section-number">1.2</span> Problem Statement</h2>
-<p>In basketball, performance is more than raw effort. Every sprint, jump, and cut adds to the physical toll players experience. This report uses two seasons of Catapult data to investigate whether patterns in workload and effort explain differences in team performance. Our goal was to uncover patterns that could guide coaching strategies related to training, rest, and in-game effort. We focused on three guiding questions. First, do workload patterns vary by position and game outcome? Second, how does intensity change across the season? Third, can explosive effort tell us anything about player readiness and team momentum?</p>
-</section>
-<section id="analysis" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="analysis"><span class="header-section-number">1.3</span> Analysis</h2>
-<p>We began by using a heat map to track how player load per minute changed each week between the two seasons. Red shading shows where Season 2 had higher intensity than Season 1, while blue indicates the opposite. The trend reveals that weeks 11 through 21 in Season 2 had consistently higher player load per minute, with the biggest spikes in weeks 14 and 21. During this time, the team in Season 2 achieved a stronger overall record compared to the same stretch in Season 1. This suggests that a mid-season rise in physical demand may contribute to improved performance. <img src="graph1.png" class="img-fluid"></p>
-<p>The second graph expands on this by showing player load by position across both seasons on the day before game day. The Season 2 dots appear to be higher than those from Season 1, with notable increases of over 25% across all positions. Centers experienced a 72.8% increase in load before games in Season 2. This suggests that players may have been entering games more fatigued, which could affect in-game performance and recovery. Strategic reduction of pre-game intensity, especially for high-load positions, may improve performance outcomes. <img src="jittergraph.png" class="img-fluid"></p>
-<p>We also compared average player load by position in wins versus losses across both seasons. Guards consistently had lower loads in games that ended in wins, while centers showed less variation. The pattern interestingly flipped for forwards between seasons. In Season 1, lower player load was associated with wins, but in Season 2, the opposite was observed. This shift may be explained by an almost complete roster change at the forward position between the 2022 and 2023 seasons. These findings highlight how efficiency and pacing are tied to performance, while also showing that changes in player rosters can reshape how effort translates to outcomes. <img src="PL.png" class="img-fluid"></p>
-</section>
-<section id="conclusion" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">1.4</span> Conclusion</h2>
-<p>These patterns support the idea that managing workload is not just about limiting effort but distributing it strategically throughout the season and around game days. Coaches can use this insight to better structure training and recovery in ways that align with peak performance periods. This may include personalized load management, smarter practice planning, and intentional rest built into the season schedule. Outcomes are influenced more by the strategic application of effort than by its intensity alone. These findings can inform training and recovery strategies that enhance performance and support consistent player output across the season.</p>
+<section id="player-performance-metrics" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="player-performance-metrics"><span class="header-section-number">5.1</span> Player Performance Metrics</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 62%">
+<col style="width: 37%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Metric</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Position</td>
+<td>The player’s role on the team (e.g., Guard, Forward, Center), which influences movement patterns and workload.</td>
+</tr>
+<tr class="even">
+<td>Period Number</td>
+<td>The specific segment of the game or practice session being recorded.</td>
+</tr>
+<tr class="odd">
+<td>Total Player Load</td>
+<td>A cumulative measure of the physical workload experienced by a player during a session.</td>
+</tr>
+<tr class="even">
+<td>Player Load Per Minute</td>
+<td>Player load normalized per minute to account for differences in playing time.</td>
+</tr>
+<tr class="odd">
+<td>IMA Accel Total</td>
+<td>The total number of inertial movement accelerations across all intensity levels.</td>
+</tr>
+<tr class="even">
+<td>IMA Decel Total</td>
+<td>The total number of inertial movement decelerations across all intensity levels.</td>
+</tr>
+<tr class="odd">
+<td>Explosive Efforts</td>
+<td>The number of high-intensity movements, such as quick sprints or jumps.</td>
+</tr>
+<tr class="even">
+<td>Session Total Jump</td>
+<td>The total number of jumps performed by a player during the session.</td>
+</tr>
+<tr class="odd">
+<td>Session Jumps Per Minute</td>
+<td>The number of jumps a player performs per minute, useful for workload analysis.</td>
+</tr>
+<tr class="even">
+<td>Total High IMA</td>
+<td>The total number of high-intensity inertial movement activities, capturing rapid changes in motion.</td>
+</tr>
+</tbody>
+</table>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -641,11 +659,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./dataviz.html" class="pagination-link" aria-label="Data Viz">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Data Viz</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./datacleaning.html" class="pagination-link" aria-label="Data Cleaning">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Data Cleaning</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
