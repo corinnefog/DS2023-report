@@ -346,8 +346,11 @@ plt.show()
 
 ```{python}
 # Add Season column 
+before_games1 = before_games1.copy()
 before_games1['Season'] = '2022–23'
+before_games2 = before_games2.copy()
 before_games2['Season'] = '2023–24'
+
 
 # Combine the data
 pre_game_data = pd.concat([before_games1, before_games2], ignore_index=True)
