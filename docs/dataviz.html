@@ -211,7 +211,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div id="78d0c307" class="cell" data-execution_count="1">
+<div id="41859832" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -377,10 +377,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<div id="32a52e8c" class="cell" data-execution_count="2">
+<div id="1093a268" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>season1 <span class="op">=</span> pd.read_csv(<span class="st">'~/Downloads/DS2023/Final Project/catapult season 1(in).csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="329b2485" class="cell" data-execution_count="3">
+<div id="521045dc" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>games_23_24 <span class="op">=</span> [</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'11/06/2023'</span>, <span class="st">'11/10/2023'</span>, <span class="st">'11/14/2023'</span>, <span class="st">'11/16/2023'</span>, <span class="st">'11/20/2023'</span>,</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'11/22/2023'</span>, <span class="st">'11/29/2023'</span>, <span class="st">'12/02/2024'</span>, <span class="st">'12/05/2023'</span>, <span class="st">'12/16/2023'</span>,</span>
@@ -404,7 +404,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>df2[<span class="st">'Win'</span>] <span class="op">=</span> df2[<span class="st">'Result'</span>].<span class="bu">map</span>({<span class="st">'W'</span>: <span class="dv">1</span>, <span class="st">'L'</span>: <span class="dv">0</span>})</span>
 <span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>df2[<span class="st">'Season'</span>] <span class="op">=</span> <span class="st">'2023–24'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="30f1c1db" class="cell" data-execution_count="4">
+<div id="57eac0f8" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>games_22_23 <span class="op">=</span> [</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'11/07/2022'</span>, <span class="st">'11/11/2022'</span>, <span class="st">'11/18/2022'</span>, <span class="st">'11/20/2022'</span>,</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'11/25/2022'</span>, <span class="st">'11/29/2022'</span>, <span class="st">'12/03/2022'</span>, <span class="st">'12/06/2022'</span>, <span class="st">'12/17/2022'</span>,</span>
@@ -430,7 +430,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>df1[<span class="st">'Win'</span>] <span class="op">=</span> df1[<span class="st">'Result'</span>].<span class="bu">map</span>({<span class="st">'W'</span>: <span class="dv">1</span>, <span class="st">'L'</span>: <span class="dv">0</span>})</span>
 <span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>df1[<span class="st">'Season'</span>] <span class="op">=</span> <span class="st">'2022–23'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="ed4aeccd" class="cell" data-execution_count="5">
+<div id="2d611645" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>before_games_23_24 <span class="op">=</span> [</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'11/05/2023'</span>, <span class="st">'11/09/2023'</span>, <span class="st">'11/13/2023'</span>, <span class="st">'11/15/2023'</span>, <span class="st">'11/19/2023'</span>,</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'11/21/2023'</span>, <span class="st">'11/28/2023'</span>, <span class="st">'12/01/2024'</span>, <span class="st">'12/04/2023'</span>, <span class="st">'12/15/2023'</span>,</span>
@@ -457,13 +457,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>before_games2 <span class="op">=</span> season2[season2[<span class="st">'Date'</span>].isin(before_games_23_24)]</span>
 <span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>before_games1 <span class="op">=</span> season1[season1[<span class="st">'Date'</span>].isin(before_games_22_23)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>/var/folders/y7/ptqmbdxx7sd_k5_4ynr96zg00000gn/T/ipykernel_14116/1009311768.py:25: FutureWarning:
+<pre><code>/var/folders/y7/ptqmbdxx7sd_k5_4ynr96zg00000gn/T/ipykernel_15535/1009311768.py:25: FutureWarning:
 
 The behavior of 'isin' with dtype=datetime64[ns] and castable values (e.g. strings) is deprecated. In a future version, these will not be considered matching by isin. Explicitly cast to the appropriate dtype before calling isin instead.
 </code></pre>
 </div>
 </div>
-<div id="40699c39" class="cell" data-execution_count="6">
+<div id="095be6bb" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>after_games_23_24 <span class="op">=</span> [</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'11/07/2023'</span>, <span class="st">'11/11/2023'</span>, <span class="st">'11/15/2023'</span>, <span class="st">'11/17/2023'</span>, <span class="st">'11/21/2023'</span>,</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'11/23/2023'</span>, <span class="st">'11/30/2023'</span>, <span class="st">'12/03/2024'</span>, <span class="st">'12/06/2023'</span>, <span class="st">'12/17/2023'</span>,</span>
@@ -485,20 +485,20 @@ The behavior of 'isin' with dtype=datetime64[ns] and castable values (e.g. strin
 <span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>after_games2 <span class="op">=</span> season2[season2[<span class="st">'Date'</span>].isin(after_games_23_24)]</span>
 <span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>after_games1 <span class="op">=</span> season1[season1[<span class="st">'Date'</span>].isin(after_games_22_23)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>/var/folders/y7/ptqmbdxx7sd_k5_4ynr96zg00000gn/T/ipykernel_14116/3368522943.py:20: FutureWarning:
+<pre><code>/var/folders/y7/ptqmbdxx7sd_k5_4ynr96zg00000gn/T/ipykernel_15535/3368522943.py:20: FutureWarning:
 
 The behavior of 'isin' with dtype=datetime64[ns] and castable values (e.g. strings) is deprecated. In a future version, these will not be considered matching by isin. Explicitly cast to the appropriate dtype before calling isin instead.
 </code></pre>
 </div>
 </div>
-<div id="1d6e641b" class="cell" data-execution_count="7">
+<div id="a753003e" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>df1[<span class="st">'Cumulative Wins'</span>] <span class="op">=</span> df1[<span class="st">'Win'</span>].cumsum()</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>df2[<span class="st">'Cumulative Wins'</span>] <span class="op">=</span> df2[<span class="st">'Win'</span>].cumsum()</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>df1[<span class="st">'Game #'</span>] <span class="op">=</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="bu">len</span>(df2) <span class="op">+</span> <span class="dv">1</span>)</span>
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>df2[<span class="st">'Game #'</span>] <span class="op">=</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="bu">len</span>(df1) <span class="op">+</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="6acfde20" class="cell" data-execution_count="8">
+<div id="d3029d2f" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>games2 <span class="op">=</span> season2[season2[<span class="st">'Date'</span>].isin(games_23_24)].copy()</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>games2[<span class="st">'Date'</span>] <span class="op">=</span> pd.to_datetime(games2[<span class="st">'Date'</span>])</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -511,7 +511,7 @@ The behavior of 'isin' with dtype=datetime64[ns] and castable values (e.g. strin
 <span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>    how<span class="op">=</span><span class="st">'left'</span></span>
 <span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="54e64870" class="cell" data-execution_count="9">
+<div id="2e370ee6" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>games_22_23 <span class="op">=</span> pd.to_datetime(games_22_23)</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>df1[<span class="st">'Date'</span>] <span class="op">=</span> pd.to_datetime(df1[<span class="st">'Date'</span>])</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -525,7 +525,7 @@ The behavior of 'isin' with dtype=datetime64[ns] and castable values (e.g. strin
 <span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>    how<span class="op">=</span><span class="st">'left'</span></span>
 <span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="a335370f" class="cell" data-execution_count="10">
+<div id="829e6e03" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>games1[<span class="st">'Season'</span>] <span class="op">=</span> <span class="st">'2022–23'</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>games2[<span class="st">'Season'</span>] <span class="op">=</span> <span class="st">'2023–24'</span></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>combined <span class="op">=</span> pd.concat([games1, games2]) </span>
@@ -534,7 +534,7 @@ The behavior of 'isin' with dtype=datetime64[ns] and castable values (e.g. strin
 <span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>avg_load[<span class="st">'Group'</span>] <span class="op">=</span> avg_load[<span class="st">'Position'</span>] <span class="op">+</span> <span class="st">' - '</span> <span class="op">+</span> avg_load[<span class="st">'Result'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><strong>Graph 1</strong> This first graph shows player load by position on game days between the 2 seasons. The differen colors signify what the average player load was when the game resulted in a win or a loss to show what the average player load by position should be in order to win.</p>
-<div id="20a2e80f" class="cell" data-execution_count="11">
+<div id="cde8a6da" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.patches <span class="im">as</span> mpatches</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>combined.columns <span class="op">=</span> combined.columns.<span class="bu">str</span>.strip()</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -661,7 +661,7 @@ The behavior of 'isin' with dtype=datetime64[ns] and castable values (e.g. strin
 </div>
 </div>
 <p><strong>Graph 2</strong> Here is the code for our heatmap showing the difference in player load by weeke when comparing the 2 seasons. This heatmap includes game and practice data.</p>
-<div id="bd647dde" class="cell" data-execution_count="12">
+<div id="eed553b6" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.cm <span class="im">as</span> cm</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Concatenate the DataFrames</span></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>season1[<span class="st">'Season'</span>] <span class="op">=</span> <span class="dv">1</span></span>
@@ -719,7 +719,7 @@ The behavior of 'isin' with dtype=datetime64[ns] and castable values (e.g. strin
 </div>
 </div>
 <p><strong>Graph 3</strong></p>
-<div id="51f58d3a" class="cell" data-execution_count="13">
+<div id="b9e6e907" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Add Season column </span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>before_games1 <span class="op">=</span> before_games1.copy()</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>before_games1[<span class="st">'Season'</span>] <span class="op">=</span> <span class="st">'2022–23'</span></span>
