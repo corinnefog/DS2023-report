@@ -8,7 +8,7 @@ We focused on three guiding questions. First, do workload patterns vary by posit
 
 ## Analysis
 We began by using a heat map to track how player load per minute changed each week between the two seasons. Red shading shows where Season 2 had higher intensity than Season 1, while blue indicates the opposite. The trend reveals that weeks 11 through 21 in Season 2 had consistently higher player load per minute, with the biggest spikes in weeks 14 and 21. During this time, the team in Season 2 achieved a stronger overall record compared to the same stretch in Season 1.  This suggests that a mid-season rise in physical demand may contribute to improved performance.
-!(graph1.png)
+![](graph1.png)
 
 ## Conclusion
 Our findings highlight a key pattern. The team's strongest performances often came during periods when effort was managed with intention rather than sustained at a constant high level.
