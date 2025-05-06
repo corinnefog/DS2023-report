@@ -170,35 +170,58 @@ This first graph shows player load by position on game days between the 2 season
 
 ```{python}
 import matplotlib.patches as mpatches
-combined.columns = combined.columns.str.strip()
 
-combined['Result Label'] = combined['Win'].map({1: 'Win', 0: 'Loss'})
+losses1 = games1[games1['Result'] == 'L']
+losses2 = games2[games2['Result'] == 'L']
+wins1 = games1[games1['Result'] == 'W']
+wins2 = games2[games2['Result'] == 'W']
 
-# Prepare bar positions
-positions = combined['Position'].unique()
+Lforward1 = losses1[losses1['Position'] == 'Forward']
+Lcenter1 = losses1[losses1['Position'] == 'Center']
+Lguard1 = losses1[losses1['Position'] == 'Guard']
+
+Lforward2 = losses2[losses2['Position'] == 'Forward']
+Lcenter2 = losses2[losses2['Position'] == 'Center']
+Lguard2 = losses2[losses2['Position'] == 'Guard']
+
+Wforward1 = wins1[wins1['Position'] == 'Forward']
+Wcenter1 = wins1[wins1['Position'] == 'Center']
+Wguard1 = wins1[wins1['Position'] == 'Guard']
+
+Wforward2 = wins2[wins2['Position'] == 'Forward']
+Wcenter2 = wins2[wins2['Position'] == 'Center']
+Wguard2 = wins2[wins2['Position'] == 'Guard']
+
+
+group_averages = [
+    {"Season": "2022–23", "Position": "Forward", "Result": "Win",  "Total Player Load": Wforward1['Total Player Load'].mean()},
+    {"Season": "2022–23", "Position": "Center",  "Result": "Win",  "Total Player Load": Wcenter1['Total Player Load'].mean()},
+    {"Season": "2022–23", "Position": "Guard",   "Result": "Win",  "Total Player Load": Wguard1['Total Player Load'].mean()},
+    {"Season": "2022–23", "Position": "Forward", "Result": "Loss", "Total Player Load": Lforward1['Total Player Load'].mean()},
+    {"Season": "2022–23", "Position": "Center",  "Result": "Loss", "Total Player Load": Lcenter1['Total Player Load'].mean()},
+    {"Season": "2022–23", "Position": "Guard",   "Result": "Loss", "Total Player Load": Lguard1['Total Player Load'].mean()},
+    {"Season": "2023–24", "Position": "Forward", "Result": "Win",  "Total Player Load": Wforward2['Total Player Load'].mean()},
+    {"Season": "2023–24", "Position": "Center",  "Result": "Win",  "Total Player Load": Wcenter2['Total Player Load'].mean()},
+    {"Season": "2023–24", "Position": "Guard",   "Result": "Win",  "Total Player Load": Wguard2['Total Player Load'].mean()},
+    {"Season": "2023–24", "Position": "Forward", "Result": "Loss", "Total Player Load": Lforward2['Total Player Load'].mean()},
+    {"Season": "2023–24", "Position": "Center",  "Result": "Loss", "Total Player Load": Lcenter2['Total Player Load'].mean()},
+    {"Season": "2023–24", "Position": "Guard",   "Result": "Loss", "Total Player Load": Lguard2['Total Player Load'].mean()}
+]
+
+
+df = pd.DataFrame(group_averages)
+
+season_colors = {'2022–23': '#255394', '2023–24': '#538a56'}
+result_hatches = {'Win': '', 'Loss': '\\'}
+
+positions = df['Position'].unique()
 seasons = ['2022–23', '2023–24']
 results = ['Win', 'Loss']
 
-# Calculate average values
-avg_data = (
-    combined.groupby(['Position', 'Season', 'Result Label'])['Total Player Load']
-    .mean()
-    .reset_index()
-)
-# Set up the plot
-fig, ax = plt.subplots(figsize=(10, 6))
-
-# Define colors for seasons
-season_colors = {'2022–23': '#255394', '2023–24': '#538a56'}
-
-# Define hatches for results
-result_hatches = {'Win' : '','Loss': '\\'}
-
 bar_width = 0.3
-gap = 0.2  # Space between seasons
+gap = 0.2
 x = np.arange(len(positions)) * (len(seasons) * len(results) * bar_width + gap)
 
-# Mapping to get the proper bar placement
 offsets = {
     ('2022–23', 'Win'): -1.5 * bar_width,
     ('2022–23', 'Loss'): -0.5 * bar_width,
@@ -206,84 +229,59 @@ offsets = {
     ('2023–24', 'Loss'): 1.5 * bar_width + gap / 2
 }
 
-# Plot each bar
+fig, ax = plt.subplots(figsize=(10, 6))
+
 for season in seasons:
     for result in results:
-        subdata = avg_data[
-            (avg_data['Season'] == season) & (avg_data['Result Label'] == result)
-        ]
+        subdata = df[(df['Season'] == season) & (df['Result'] == result)]
         heights = subdata['Total Player Load']
         bar_pos = x + offsets[(season, result)]
         ax.bar(
-            bar_pos, 
-            heights, 
-            width=bar_width, 
+            bar_pos,
+            heights,
+            width=bar_width,
             color=season_colors[season],
             edgecolor='#02014a',
             alpha=0.7,
-            zorder=2, 
-            hatch=result_hatches[result], 
+            zorder=2,
+            hatch=result_hatches[result],
             label=f'{season} {result}' if (season, result) not in offsets else ""
         )
-
+        
 sns.despine()
-
-#plt.axhline(y=167, color='black', linestyle='-', linewidth=2, zorder=-5, alpha=0.6)
-#ax.text( x=ax.get_xlim()[1], y=167, s='Win', va='bottom',ha='right', fontsize=10,
-#color='#02014a')
-#plt.axhline(y=200,color='gray', linestyle='--', linewidth=2, zorder=-5, alpha=0.6)
-#ax.text( x=ax.get_xlim()[1], y=200, s='Loss', va='bottom',ha='right', fontsize=10,
-#color='#02014a')
-#id_y = (167 + 200) / 2  # Midpoint
-#ax.annotate(' 13% Difference', xy=(ax.get_xlim()[1], mid_y), xytext=(-14, 0),textcoords='offset points', va='center', 
-#ha='right', fontsize=10)
 
 plt.xticks(x, positions)
 
+for i, pos in enumerate(positions):
+    s1_center = x[i] + np.mean([offsets[('2022–23', 'Win')], offsets[('2022–23', 'Loss')]])
+    s2_center = x[i] + np.mean([offsets[('2023–24', 'Win')], offsets[('2023–24', 'Loss')]])
+    ax.text(s1_center, -15, 'S1', ha='center', va='top', fontsize=10)
+    ax.text(s2_center, -15, 'S2', ha='center', va='top', fontsize=10)
 
-handles, labels = ax.get_legend_handles_labels()
-unique_labels = dict(zip(labels, handles))
-win_patch = mpatches.Patch(facecolor='white', hatch='.', edgecolor='black', label='Win')
+win_patch = mpatches.Patch(facecolor='white', hatch='', edgecolor='black', label='Win')
 loss_patch = mpatches.Patch(facecolor='white', hatch='\\', edgecolor='black', label='Loss')
 ax.legend(
     list(unique_labels.values()) + [win_patch, loss_patch],
-    list(unique_labels.keys()) + ['Win', 'Loss - hatch'],
-    title='Result'
+    list(unique_labels.keys()) + ['Win (hatch)', 'Loss (hatch)'],
+    title='Season & Result'
 )
 
-plt.suptitle("Avg. Player Load by Position", fontsize=16, x= 0.23 , y=0.97)
+plt.suptitle("Avg. Player Load by Position", fontsize=16, x=0.23, y=0.97)
 plt.text(
-    0.15, 0.9,
-    "between ",
-    fontsize=14,
-    ha='center',
+    0.15, 0.9, "between ", fontsize=14, ha='center', transform=plt.gcf().transFigure
+)
+plt.text(
+    0.25, 0.9, "Season 1", fontsize=14, color='#255394', weight='bold', ha='center',
     transform=plt.gcf().transFigure
 )
 plt.text(
-    0.25, 0.9,
-    "Season 1",
-    fontsize=14,
-    color='#255394',
-    weight='bold',
-    ha='center',
-    transform=plt.gcf().transFigure
+    0.325, 0.9, " and ", fontsize=14, ha='center', transform=plt.gcf().transFigure
 )
 plt.text(
-    0.325, 0.9,
-    " and ",
-    fontsize=14,
-    ha='center',
+    0.4, 0.9, "Season 2", fontsize=14, color='#538a56', weight='bold', ha='center',
     transform=plt.gcf().transFigure
 )
-plt.text(
-    0.4, 0.9,
-    "Season 2",
-    fontsize=14,
-    color='#538a56',
-    weight='bold',
-    ha='center',
-    transform=plt.gcf().transFigure
-)
+
 plt.tight_layout()
 plt.show()
 ```
