@@ -258,6 +258,8 @@ for i, pos in enumerate(positions):
     ax.text(s1_center, -15, 'S1', ha='center', va='top', fontsize=10)
     ax.text(s2_center, -15, 'S2', ha='center', va='top', fontsize=10)
 
+handles, labels = ax.get_legend_handles_labels()
+unique_labels = dict(zip(labels, handles))
 win_patch = mpatches.Patch(facecolor='white', hatch='', edgecolor='black', label='Win')
 loss_patch = mpatches.Patch(facecolor='white', hatch='\\', edgecolor='black', label='Loss')
 ax.legend(
