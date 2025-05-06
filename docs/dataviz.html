@@ -211,7 +211,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div id="d19c1ba4" class="cell" data-execution_count="1">
+<div id="1adabfea" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -377,10 +377,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<div id="f406ac70" class="cell" data-execution_count="2">
+<div id="3af37ea2" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>season1 <span class="op">=</span> pd.read_csv(<span class="st">'~/Downloads/DS2023/Final Project/catapult season 1(in).csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="06780407" class="cell" data-execution_count="3">
+<div id="855135a3" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>games_23_24 <span class="op">=</span> [</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'11/06/2023'</span>, <span class="st">'11/10/2023'</span>, <span class="st">'11/14/2023'</span>, <span class="st">'11/16/2023'</span>, <span class="st">'11/20/2023'</span>,</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'11/22/2023'</span>, <span class="st">'11/29/2023'</span>, <span class="st">'12/02/2024'</span>, <span class="st">'12/05/2023'</span>, <span class="st">'12/16/2023'</span>,</span>
@@ -404,7 +404,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>df2[<span class="st">'Win'</span>] <span class="op">=</span> df2[<span class="st">'Result'</span>].<span class="bu">map</span>({<span class="st">'W'</span>: <span class="dv">1</span>, <span class="st">'L'</span>: <span class="dv">0</span>})</span>
 <span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>df2[<span class="st">'Season'</span>] <span class="op">=</span> <span class="st">'2023–24'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="82dc696d" class="cell" data-execution_count="4">
+<div id="952f8b4b" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>games_22_23 <span class="op">=</span> [</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'11/07/2022'</span>, <span class="st">'11/11/2022'</span>, <span class="st">'11/18/2022'</span>, <span class="st">'11/20/2022'</span>,</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'11/25/2022'</span>, <span class="st">'11/29/2022'</span>, <span class="st">'12/03/2022'</span>, <span class="st">'12/06/2022'</span>, <span class="st">'12/17/2022'</span>,</span>
@@ -430,7 +430,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>df1[<span class="st">'Win'</span>] <span class="op">=</span> df1[<span class="st">'Result'</span>].<span class="bu">map</span>({<span class="st">'W'</span>: <span class="dv">1</span>, <span class="st">'L'</span>: <span class="dv">0</span>})</span>
 <span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>df1[<span class="st">'Season'</span>] <span class="op">=</span> <span class="st">'2022–23'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="f791c4ea" class="cell" data-execution_count="5">
+<div id="0d1821df" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>before_games_23_24 <span class="op">=</span> [</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'11/05/2023'</span>, <span class="st">'11/09/2023'</span>, <span class="st">'11/13/2023'</span>, <span class="st">'11/15/2023'</span>, <span class="st">'11/19/2023'</span>,</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'11/21/2023'</span>, <span class="st">'11/28/2023'</span>, <span class="st">'12/01/2024'</span>, <span class="st">'12/04/2023'</span>, <span class="st">'12/15/2023'</span>,</span>
@@ -457,13 +457,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>before_games2 <span class="op">=</span> season2[season2[<span class="st">'Date'</span>].isin(before_games_23_24)]</span>
 <span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>before_games1 <span class="op">=</span> season1[season1[<span class="st">'Date'</span>].isin(before_games_22_23)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>/var/folders/y7/ptqmbdxx7sd_k5_4ynr96zg00000gn/T/ipykernel_19037/1009311768.py:25: FutureWarning:
+<pre><code>/var/folders/y7/ptqmbdxx7sd_k5_4ynr96zg00000gn/T/ipykernel_61383/1009311768.py:25: FutureWarning:
 
 The behavior of 'isin' with dtype=datetime64[ns] and castable values (e.g. strings) is deprecated. In a future version, these will not be considered matching by isin. Explicitly cast to the appropriate dtype before calling isin instead.
 </code></pre>
 </div>
 </div>
-<div id="9f141626" class="cell" data-execution_count="6">
+<div id="21506cb2" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>after_games_23_24 <span class="op">=</span> [</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'11/07/2023'</span>, <span class="st">'11/11/2023'</span>, <span class="st">'11/15/2023'</span>, <span class="st">'11/17/2023'</span>, <span class="st">'11/21/2023'</span>,</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'11/23/2023'</span>, <span class="st">'11/30/2023'</span>, <span class="st">'12/03/2024'</span>, <span class="st">'12/06/2023'</span>, <span class="st">'12/17/2023'</span>,</span>
@@ -485,20 +485,20 @@ The behavior of 'isin' with dtype=datetime64[ns] and castable values (e.g. strin
 <span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>after_games2 <span class="op">=</span> season2[season2[<span class="st">'Date'</span>].isin(after_games_23_24)]</span>
 <span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>after_games1 <span class="op">=</span> season1[season1[<span class="st">'Date'</span>].isin(after_games_22_23)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>/var/folders/y7/ptqmbdxx7sd_k5_4ynr96zg00000gn/T/ipykernel_19037/3368522943.py:20: FutureWarning:
+<pre><code>/var/folders/y7/ptqmbdxx7sd_k5_4ynr96zg00000gn/T/ipykernel_61383/3368522943.py:20: FutureWarning:
 
 The behavior of 'isin' with dtype=datetime64[ns] and castable values (e.g. strings) is deprecated. In a future version, these will not be considered matching by isin. Explicitly cast to the appropriate dtype before calling isin instead.
 </code></pre>
 </div>
 </div>
-<div id="1302e5c3" class="cell" data-execution_count="7">
+<div id="2cafd7b4" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>df1[<span class="st">'Cumulative Wins'</span>] <span class="op">=</span> df1[<span class="st">'Win'</span>].cumsum()</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>df2[<span class="st">'Cumulative Wins'</span>] <span class="op">=</span> df2[<span class="st">'Win'</span>].cumsum()</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>df1[<span class="st">'Game #'</span>] <span class="op">=</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="bu">len</span>(df2) <span class="op">+</span> <span class="dv">1</span>)</span>
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>df2[<span class="st">'Game #'</span>] <span class="op">=</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="bu">len</span>(df1) <span class="op">+</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="609d3cff" class="cell" data-execution_count="8">
+<div id="6a549ae8" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>games2 <span class="op">=</span> season2[season2[<span class="st">'Date'</span>].isin(games_23_24)].copy()</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>games2[<span class="st">'Date'</span>] <span class="op">=</span> pd.to_datetime(games2[<span class="st">'Date'</span>])</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -511,7 +511,7 @@ The behavior of 'isin' with dtype=datetime64[ns] and castable values (e.g. strin
 <span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>    how<span class="op">=</span><span class="st">'left'</span></span>
 <span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="2e72ee3b" class="cell" data-execution_count="9">
+<div id="3fe0a188" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>games_22_23 <span class="op">=</span> pd.to_datetime(games_22_23)</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>df1[<span class="st">'Date'</span>] <span class="op">=</span> pd.to_datetime(df1[<span class="st">'Date'</span>])</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -525,7 +525,7 @@ The behavior of 'isin' with dtype=datetime64[ns] and castable values (e.g. strin
 <span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>    how<span class="op">=</span><span class="st">'left'</span></span>
 <span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="e4631736" class="cell" data-execution_count="10">
+<div id="1175d80d" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>games1[<span class="st">'Season'</span>] <span class="op">=</span> <span class="st">'2022–23'</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>games2[<span class="st">'Season'</span>] <span class="op">=</span> <span class="st">'2023–24'</span></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>combined <span class="op">=</span> pd.concat([games1, games2]) </span>
@@ -534,129 +534,124 @@ The behavior of 'isin' with dtype=datetime64[ns] and castable values (e.g. strin
 <span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>avg_load[<span class="st">'Group'</span>] <span class="op">=</span> avg_load[<span class="st">'Position'</span>] <span class="op">+</span> <span class="st">' - '</span> <span class="op">+</span> avg_load[<span class="st">'Result'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><strong>Graph 1</strong> This first graph shows player load by position on game days between the 2 seasons. The differen colors signify what the average player load was when the game resulted in a win or a loss to show what the average player load by position should be in order to win.</p>
-<div id="769bf2a6" class="cell" data-execution_count="11">
+<div id="eb410498" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.patches <span class="im">as</span> mpatches</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>combined.columns <span class="op">=</span> combined.columns.<span class="bu">str</span>.strip()</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>combined[<span class="st">'Result Label'</span>] <span class="op">=</span> combined[<span class="st">'Win'</span>].<span class="bu">map</span>({<span class="dv">1</span>: <span class="st">'Win'</span>, <span class="dv">0</span>: <span class="st">'Loss'</span>})</span>
 <span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>positions <span class="op">=</span> combined[<span class="st">'Position'</span>].unique()</span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>seasons <span class="op">=</span> [<span class="st">'2022–23'</span>, <span class="st">'2023–24'</span>]</span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>results <span class="op">=</span> [<span class="st">'Win'</span>, <span class="st">'Loss'</span>]</span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>avg_data <span class="op">=</span> (</span>
-<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>    combined.groupby([<span class="st">'Position'</span>, <span class="st">'Season'</span>, <span class="st">'Result Label'</span>])[<span class="st">'Total Player Load'</span>]</span>
-<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>    .mean()</span>
-<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>    .reset_index()</span>
-<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
-<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Season colors </span></span>
-<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>season_colors <span class="op">=</span> {<span class="st">'2022–23'</span>: <span class="st">'#255394'</span>, <span class="st">'2023–24'</span>: <span class="st">'#538a56'</span>}</span>
-<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a><span class="co"># hatches </span></span>
-<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>result_hatches <span class="op">=</span> {<span class="st">'Win'</span>: <span class="st">'.'</span>, <span class="st">'Loss'</span>: <span class="st">'</span><span class="ch">\\</span><span class="st">'</span>}</span>
-<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a>bar_width <span class="op">=</span> <span class="fl">0.3</span></span>
-<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a>gap <span class="op">=</span> <span class="fl">0.2</span>  <span class="co"># space between bars</span></span>
-<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.arange(<span class="bu">len</span>(positions)) <span class="op">*</span> (<span class="bu">len</span>(seasons) <span class="op">*</span> <span class="bu">len</span>(results) <span class="op">*</span> bar_width <span class="op">+</span> gap)</span>
-<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-29"><a href="#cb13-29" aria-hidden="true" tabindex="-1"></a>offsets <span class="op">=</span> {</span>
-<span id="cb13-30"><a href="#cb13-30" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'2022–23'</span>, <span class="st">'Win'</span>): <span class="op">-</span><span class="fl">1.5</span> <span class="op">*</span> bar_width,</span>
-<span id="cb13-31"><a href="#cb13-31" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'2022–23'</span>, <span class="st">'Loss'</span>): <span class="op">-</span><span class="fl">0.5</span> <span class="op">*</span> bar_width,</span>
-<span id="cb13-32"><a href="#cb13-32" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'2023–24'</span>, <span class="st">'Win'</span>): <span class="fl">0.5</span> <span class="op">*</span> bar_width <span class="op">+</span> gap <span class="op">/</span> <span class="dv">2</span>,</span>
-<span id="cb13-33"><a href="#cb13-33" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'2023–24'</span>, <span class="st">'Loss'</span>): <span class="fl">1.5</span> <span class="op">*</span> bar_width <span class="op">+</span> gap <span class="op">/</span> <span class="dv">2</span></span>
-<span id="cb13-34"><a href="#cb13-34" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb13-35"><a href="#cb13-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-36"><a href="#cb13-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-37"><a href="#cb13-37" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> season <span class="kw">in</span> seasons:</span>
-<span id="cb13-38"><a href="#cb13-38" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> result <span class="kw">in</span> results:</span>
-<span id="cb13-39"><a href="#cb13-39" aria-hidden="true" tabindex="-1"></a>        subdata <span class="op">=</span> avg_data[</span>
-<span id="cb13-40"><a href="#cb13-40" aria-hidden="true" tabindex="-1"></a>            (avg_data[<span class="st">'Season'</span>] <span class="op">==</span> season) <span class="op">&amp;</span> (avg_data[<span class="st">'Result Label'</span>] <span class="op">==</span> result)</span>
-<span id="cb13-41"><a href="#cb13-41" aria-hidden="true" tabindex="-1"></a>        ]</span>
-<span id="cb13-42"><a href="#cb13-42" aria-hidden="true" tabindex="-1"></a>        heights <span class="op">=</span> subdata[<span class="st">'Total Player Load'</span>]</span>
-<span id="cb13-43"><a href="#cb13-43" aria-hidden="true" tabindex="-1"></a>        bar_pos <span class="op">=</span> x <span class="op">+</span> offsets[(season, result)]</span>
-<span id="cb13-44"><a href="#cb13-44" aria-hidden="true" tabindex="-1"></a>        ax.bar(</span>
-<span id="cb13-45"><a href="#cb13-45" aria-hidden="true" tabindex="-1"></a>            bar_pos, </span>
-<span id="cb13-46"><a href="#cb13-46" aria-hidden="true" tabindex="-1"></a>            heights, </span>
-<span id="cb13-47"><a href="#cb13-47" aria-hidden="true" tabindex="-1"></a>            width<span class="op">=</span>bar_width, </span>
-<span id="cb13-48"><a href="#cb13-48" aria-hidden="true" tabindex="-1"></a>            color<span class="op">=</span>season_colors[season],</span>
-<span id="cb13-49"><a href="#cb13-49" aria-hidden="true" tabindex="-1"></a>            edgecolor<span class="op">=</span><span class="st">'#02014a'</span>,</span>
-<span id="cb13-50"><a href="#cb13-50" aria-hidden="true" tabindex="-1"></a>            alpha<span class="op">=</span><span class="fl">0.7</span>,</span>
-<span id="cb13-51"><a href="#cb13-51" aria-hidden="true" tabindex="-1"></a>            zorder<span class="op">=</span><span class="dv">2</span>, </span>
-<span id="cb13-52"><a href="#cb13-52" aria-hidden="true" tabindex="-1"></a>            hatch<span class="op">=</span>result_hatches[result], </span>
-<span id="cb13-53"><a href="#cb13-53" aria-hidden="true" tabindex="-1"></a>            label<span class="op">=</span><span class="ss">f'</span><span class="sc">{</span>season<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>result<span class="sc">}</span><span class="ss">'</span> <span class="cf">if</span> (season, result) <span class="kw">not</span> <span class="kw">in</span> offsets <span class="cf">else</span> <span class="st">""</span></span>
-<span id="cb13-54"><a href="#cb13-54" aria-hidden="true" tabindex="-1"></a>        )</span>
-<span id="cb13-55"><a href="#cb13-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-56"><a href="#cb13-56" aria-hidden="true" tabindex="-1"></a>sns.despine()</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Prepare bar positions</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>positions <span class="op">=</span> combined[<span class="st">'Position'</span>].unique()</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>seasons <span class="op">=</span> [<span class="st">'2022–23'</span>, <span class="st">'2023–24'</span>]</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>results <span class="op">=</span> [<span class="st">'Win'</span>, <span class="st">'Loss'</span>]</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate average values</span></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>avg_data <span class="op">=</span> (</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>    combined.groupby([<span class="st">'Position'</span>, <span class="st">'Season'</span>, <span class="st">'Result Label'</span>])[<span class="st">'Total Player Load'</span>]</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>    .mean()</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>    .reset_index()</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up the plot</span></span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Define colors for seasons</span></span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>season_colors <span class="op">=</span> {<span class="st">'2022–23'</span>: <span class="st">'#255394'</span>, <span class="st">'2023–24'</span>: <span class="st">'#538a56'</span>}</span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Define hatches for results</span></span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a>result_hatches <span class="op">=</span> {<span class="st">'Win'</span> : <span class="st">''</span>,<span class="st">'Loss'</span>: <span class="st">'</span><span class="ch">\\</span><span class="st">'</span>}</span>
+<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a>bar_width <span class="op">=</span> <span class="fl">0.3</span></span>
+<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a>gap <span class="op">=</span> <span class="fl">0.2</span>  <span class="co"># Space between seasons</span></span>
+<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.arange(<span class="bu">len</span>(positions)) <span class="op">*</span> (<span class="bu">len</span>(seasons) <span class="op">*</span> <span class="bu">len</span>(results) <span class="op">*</span> bar_width <span class="op">+</span> gap)</span>
+<span id="cb13-29"><a href="#cb13-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-30"><a href="#cb13-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Mapping to get the proper bar placement</span></span>
+<span id="cb13-31"><a href="#cb13-31" aria-hidden="true" tabindex="-1"></a>offsets <span class="op">=</span> {</span>
+<span id="cb13-32"><a href="#cb13-32" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'2022–23'</span>, <span class="st">'Win'</span>): <span class="op">-</span><span class="fl">1.5</span> <span class="op">*</span> bar_width,</span>
+<span id="cb13-33"><a href="#cb13-33" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'2022–23'</span>, <span class="st">'Loss'</span>): <span class="op">-</span><span class="fl">0.5</span> <span class="op">*</span> bar_width,</span>
+<span id="cb13-34"><a href="#cb13-34" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'2023–24'</span>, <span class="st">'Win'</span>): <span class="fl">0.5</span> <span class="op">*</span> bar_width <span class="op">+</span> gap <span class="op">/</span> <span class="dv">2</span>,</span>
+<span id="cb13-35"><a href="#cb13-35" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'2023–24'</span>, <span class="st">'Loss'</span>): <span class="fl">1.5</span> <span class="op">*</span> bar_width <span class="op">+</span> gap <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb13-36"><a href="#cb13-36" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb13-37"><a href="#cb13-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-38"><a href="#cb13-38" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot each bar</span></span>
+<span id="cb13-39"><a href="#cb13-39" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> season <span class="kw">in</span> seasons:</span>
+<span id="cb13-40"><a href="#cb13-40" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> result <span class="kw">in</span> results:</span>
+<span id="cb13-41"><a href="#cb13-41" aria-hidden="true" tabindex="-1"></a>        subdata <span class="op">=</span> avg_data[</span>
+<span id="cb13-42"><a href="#cb13-42" aria-hidden="true" tabindex="-1"></a>            (avg_data[<span class="st">'Season'</span>] <span class="op">==</span> season) <span class="op">&amp;</span> (avg_data[<span class="st">'Result Label'</span>] <span class="op">==</span> result)</span>
+<span id="cb13-43"><a href="#cb13-43" aria-hidden="true" tabindex="-1"></a>        ]</span>
+<span id="cb13-44"><a href="#cb13-44" aria-hidden="true" tabindex="-1"></a>        heights <span class="op">=</span> subdata[<span class="st">'Total Player Load'</span>]</span>
+<span id="cb13-45"><a href="#cb13-45" aria-hidden="true" tabindex="-1"></a>        bar_pos <span class="op">=</span> x <span class="op">+</span> offsets[(season, result)]</span>
+<span id="cb13-46"><a href="#cb13-46" aria-hidden="true" tabindex="-1"></a>        ax.bar(</span>
+<span id="cb13-47"><a href="#cb13-47" aria-hidden="true" tabindex="-1"></a>            bar_pos, </span>
+<span id="cb13-48"><a href="#cb13-48" aria-hidden="true" tabindex="-1"></a>            heights, </span>
+<span id="cb13-49"><a href="#cb13-49" aria-hidden="true" tabindex="-1"></a>            width<span class="op">=</span>bar_width, </span>
+<span id="cb13-50"><a href="#cb13-50" aria-hidden="true" tabindex="-1"></a>            color<span class="op">=</span>season_colors[season],</span>
+<span id="cb13-51"><a href="#cb13-51" aria-hidden="true" tabindex="-1"></a>            edgecolor<span class="op">=</span><span class="st">'#02014a'</span>,</span>
+<span id="cb13-52"><a href="#cb13-52" aria-hidden="true" tabindex="-1"></a>            alpha<span class="op">=</span><span class="fl">0.7</span>,</span>
+<span id="cb13-53"><a href="#cb13-53" aria-hidden="true" tabindex="-1"></a>            zorder<span class="op">=</span><span class="dv">2</span>, </span>
+<span id="cb13-54"><a href="#cb13-54" aria-hidden="true" tabindex="-1"></a>            hatch<span class="op">=</span>result_hatches[result], </span>
+<span id="cb13-55"><a href="#cb13-55" aria-hidden="true" tabindex="-1"></a>            label<span class="op">=</span><span class="ss">f'</span><span class="sc">{</span>season<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>result<span class="sc">}</span><span class="ss">'</span> <span class="cf">if</span> (season, result) <span class="kw">not</span> <span class="kw">in</span> offsets <span class="cf">else</span> <span class="st">""</span></span>
+<span id="cb13-56"><a href="#cb13-56" aria-hidden="true" tabindex="-1"></a>        )</span>
 <span id="cb13-57"><a href="#cb13-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-58"><a href="#cb13-58" aria-hidden="true" tabindex="-1"></a><span class="co">#plt.axhline(y=167, color='black', linestyle='-', linewidth=2, zorder=-5, alpha=0.6)</span></span>
-<span id="cb13-59"><a href="#cb13-59" aria-hidden="true" tabindex="-1"></a><span class="co">#ax.text( x=ax.get_xlim()[1], y=167, s='Win', va='bottom',ha='right', fontsize=10,</span></span>
-<span id="cb13-60"><a href="#cb13-60" aria-hidden="true" tabindex="-1"></a><span class="co">#color='#02014a')</span></span>
-<span id="cb13-61"><a href="#cb13-61" aria-hidden="true" tabindex="-1"></a><span class="co">#plt.axhline(y=200,color='gray', linestyle='--', linewidth=2, zorder=-5, alpha=0.6)</span></span>
-<span id="cb13-62"><a href="#cb13-62" aria-hidden="true" tabindex="-1"></a><span class="co">#ax.text( x=ax.get_xlim()[1], y=200, s='Loss', va='bottom',ha='right', fontsize=10,</span></span>
-<span id="cb13-63"><a href="#cb13-63" aria-hidden="true" tabindex="-1"></a><span class="co">#color='#02014a')</span></span>
-<span id="cb13-64"><a href="#cb13-64" aria-hidden="true" tabindex="-1"></a><span class="co">#id_y = (167 + 200) / 2  # Midpoint</span></span>
-<span id="cb13-65"><a href="#cb13-65" aria-hidden="true" tabindex="-1"></a><span class="co">#ax.annotate(' 13% Difference', xy=(ax.get_xlim()[1], mid_y), xytext=(-14, 0),textcoords='offset points', va='center', </span></span>
-<span id="cb13-66"><a href="#cb13-66" aria-hidden="true" tabindex="-1"></a><span class="co">#ha='right', fontsize=10)</span></span>
-<span id="cb13-67"><a href="#cb13-67" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-68"><a href="#cb13-68" aria-hidden="true" tabindex="-1"></a>plt.xticks(x, positions)</span>
+<span id="cb13-58"><a href="#cb13-58" aria-hidden="true" tabindex="-1"></a>sns.despine()</span>
+<span id="cb13-59"><a href="#cb13-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-60"><a href="#cb13-60" aria-hidden="true" tabindex="-1"></a><span class="co">#plt.axhline(y=167, color='black', linestyle='-', linewidth=2, zorder=-5, alpha=0.6)</span></span>
+<span id="cb13-61"><a href="#cb13-61" aria-hidden="true" tabindex="-1"></a><span class="co">#ax.text( x=ax.get_xlim()[1], y=167, s='Win', va='bottom',ha='right', fontsize=10,</span></span>
+<span id="cb13-62"><a href="#cb13-62" aria-hidden="true" tabindex="-1"></a><span class="co">#color='#02014a')</span></span>
+<span id="cb13-63"><a href="#cb13-63" aria-hidden="true" tabindex="-1"></a><span class="co">#plt.axhline(y=200,color='gray', linestyle='--', linewidth=2, zorder=-5, alpha=0.6)</span></span>
+<span id="cb13-64"><a href="#cb13-64" aria-hidden="true" tabindex="-1"></a><span class="co">#ax.text( x=ax.get_xlim()[1], y=200, s='Loss', va='bottom',ha='right', fontsize=10,</span></span>
+<span id="cb13-65"><a href="#cb13-65" aria-hidden="true" tabindex="-1"></a><span class="co">#color='#02014a')</span></span>
+<span id="cb13-66"><a href="#cb13-66" aria-hidden="true" tabindex="-1"></a><span class="co">#id_y = (167 + 200) / 2  # Midpoint</span></span>
+<span id="cb13-67"><a href="#cb13-67" aria-hidden="true" tabindex="-1"></a><span class="co">#ax.annotate(' 13% Difference', xy=(ax.get_xlim()[1], mid_y), xytext=(-14, 0),textcoords='offset points', va='center', </span></span>
+<span id="cb13-68"><a href="#cb13-68" aria-hidden="true" tabindex="-1"></a><span class="co">#ha='right', fontsize=10)</span></span>
 <span id="cb13-69"><a href="#cb13-69" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-70"><a href="#cb13-70" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, pos <span class="kw">in</span> <span class="bu">enumerate</span>(positions):</span>
-<span id="cb13-71"><a href="#cb13-71" aria-hidden="true" tabindex="-1"></a>    s1_center <span class="op">=</span> x[i] <span class="op">+</span> np.mean([offsets[(<span class="st">'2022–23'</span>, <span class="st">'Win'</span>)], offsets[(<span class="st">'2022–23'</span>, <span class="st">'Loss'</span>)]])</span>
-<span id="cb13-72"><a href="#cb13-72" aria-hidden="true" tabindex="-1"></a>    s2_center <span class="op">=</span> x[i] <span class="op">+</span> np.mean([offsets[(<span class="st">'2023–24'</span>, <span class="st">'Win'</span>)], offsets[(<span class="st">'2023–24'</span>, <span class="st">'Loss'</span>)]])</span>
-<span id="cb13-73"><a href="#cb13-73" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb13-74"><a href="#cb13-74" aria-hidden="true" tabindex="-1"></a>    ax.text(s1_center, <span class="op">-</span><span class="dv">15</span>, <span class="st">'S1'</span>, ha<span class="op">=</span><span class="st">'center'</span>, va<span class="op">=</span><span class="st">'top'</span>, fontsize<span class="op">=</span><span class="dv">10</span>)</span>
-<span id="cb13-75"><a href="#cb13-75" aria-hidden="true" tabindex="-1"></a>    ax.text(s2_center, <span class="op">-</span><span class="dv">15</span>, <span class="st">'S2'</span>, ha<span class="op">=</span><span class="st">'center'</span>, va<span class="op">=</span><span class="st">'top'</span>, fontsize<span class="op">=</span><span class="dv">10</span>)</span>
-<span id="cb13-76"><a href="#cb13-76" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-77"><a href="#cb13-77" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-78"><a href="#cb13-78" aria-hidden="true" tabindex="-1"></a>handles, labels <span class="op">=</span> ax.get_legend_handles_labels()</span>
-<span id="cb13-79"><a href="#cb13-79" aria-hidden="true" tabindex="-1"></a>unique_labels <span class="op">=</span> <span class="bu">dict</span>(<span class="bu">zip</span>(labels, handles))</span>
-<span id="cb13-80"><a href="#cb13-80" aria-hidden="true" tabindex="-1"></a>win_patch <span class="op">=</span> mpatches.Patch(facecolor<span class="op">=</span><span class="st">'white'</span>, hatch<span class="op">=</span><span class="st">'.'</span>, edgecolor<span class="op">=</span><span class="st">'black'</span>, label<span class="op">=</span><span class="st">'Win'</span>)</span>
-<span id="cb13-81"><a href="#cb13-81" aria-hidden="true" tabindex="-1"></a>loss_patch <span class="op">=</span> mpatches.Patch(facecolor<span class="op">=</span><span class="st">'white'</span>, hatch<span class="op">=</span><span class="st">'</span><span class="ch">\\</span><span class="st">'</span>, edgecolor<span class="op">=</span><span class="st">'black'</span>, label<span class="op">=</span><span class="st">'Loss'</span>)</span>
-<span id="cb13-82"><a href="#cb13-82" aria-hidden="true" tabindex="-1"></a>ax.legend(</span>
-<span id="cb13-83"><a href="#cb13-83" aria-hidden="true" tabindex="-1"></a>    <span class="bu">list</span>(unique_labels.values()) <span class="op">+</span> [win_patch, loss_patch],</span>
-<span id="cb13-84"><a href="#cb13-84" aria-hidden="true" tabindex="-1"></a>    <span class="bu">list</span>(unique_labels.keys()) <span class="op">+</span> [<span class="st">'Win (hatch)'</span>, <span class="st">'Loss (hatch)'</span>],</span>
-<span id="cb13-85"><a href="#cb13-85" aria-hidden="true" tabindex="-1"></a>    title<span class="op">=</span><span class="st">'Season &amp; Result'</span></span>
-<span id="cb13-86"><a href="#cb13-86" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb13-87"><a href="#cb13-87" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-88"><a href="#cb13-88" aria-hidden="true" tabindex="-1"></a>plt.suptitle(<span class="st">"Avg. Player Load by Position"</span>, fontsize<span class="op">=</span><span class="dv">16</span>, x<span class="op">=</span> <span class="fl">0.23</span> , y<span class="op">=</span><span class="fl">0.97</span>)</span>
-<span id="cb13-89"><a href="#cb13-89" aria-hidden="true" tabindex="-1"></a>plt.text(</span>
-<span id="cb13-90"><a href="#cb13-90" aria-hidden="true" tabindex="-1"></a>    <span class="fl">0.15</span>, <span class="fl">0.9</span>,</span>
-<span id="cb13-91"><a href="#cb13-91" aria-hidden="true" tabindex="-1"></a>    <span class="st">"between "</span>,</span>
-<span id="cb13-92"><a href="#cb13-92" aria-hidden="true" tabindex="-1"></a>    fontsize<span class="op">=</span><span class="dv">14</span>,</span>
-<span id="cb13-93"><a href="#cb13-93" aria-hidden="true" tabindex="-1"></a>    ha<span class="op">=</span><span class="st">'center'</span>,</span>
-<span id="cb13-94"><a href="#cb13-94" aria-hidden="true" tabindex="-1"></a>    transform<span class="op">=</span>plt.gcf().transFigure</span>
-<span id="cb13-95"><a href="#cb13-95" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb13-96"><a href="#cb13-96" aria-hidden="true" tabindex="-1"></a>plt.text(</span>
-<span id="cb13-97"><a href="#cb13-97" aria-hidden="true" tabindex="-1"></a>    <span class="fl">0.25</span>, <span class="fl">0.9</span>,</span>
-<span id="cb13-98"><a href="#cb13-98" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Season 1"</span>,</span>
-<span id="cb13-99"><a href="#cb13-99" aria-hidden="true" tabindex="-1"></a>    fontsize<span class="op">=</span><span class="dv">14</span>,</span>
-<span id="cb13-100"><a href="#cb13-100" aria-hidden="true" tabindex="-1"></a>    color<span class="op">=</span><span class="st">'#255394'</span>,</span>
-<span id="cb13-101"><a href="#cb13-101" aria-hidden="true" tabindex="-1"></a>    weight<span class="op">=</span><span class="st">'bold'</span>,</span>
-<span id="cb13-102"><a href="#cb13-102" aria-hidden="true" tabindex="-1"></a>    ha<span class="op">=</span><span class="st">'center'</span>,</span>
-<span id="cb13-103"><a href="#cb13-103" aria-hidden="true" tabindex="-1"></a>    transform<span class="op">=</span>plt.gcf().transFigure</span>
-<span id="cb13-104"><a href="#cb13-104" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb13-105"><a href="#cb13-105" aria-hidden="true" tabindex="-1"></a>plt.text(</span>
-<span id="cb13-106"><a href="#cb13-106" aria-hidden="true" tabindex="-1"></a>    <span class="fl">0.325</span>, <span class="fl">0.9</span>,</span>
-<span id="cb13-107"><a href="#cb13-107" aria-hidden="true" tabindex="-1"></a>    <span class="st">" and "</span>,</span>
-<span id="cb13-108"><a href="#cb13-108" aria-hidden="true" tabindex="-1"></a>    fontsize<span class="op">=</span><span class="dv">14</span>,</span>
-<span id="cb13-109"><a href="#cb13-109" aria-hidden="true" tabindex="-1"></a>    ha<span class="op">=</span><span class="st">'center'</span>,</span>
-<span id="cb13-110"><a href="#cb13-110" aria-hidden="true" tabindex="-1"></a>    transform<span class="op">=</span>plt.gcf().transFigure</span>
-<span id="cb13-111"><a href="#cb13-111" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb13-112"><a href="#cb13-112" aria-hidden="true" tabindex="-1"></a>plt.text(</span>
-<span id="cb13-113"><a href="#cb13-113" aria-hidden="true" tabindex="-1"></a>    <span class="fl">0.4</span>, <span class="fl">0.9</span>,</span>
-<span id="cb13-114"><a href="#cb13-114" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Season 2"</span>,</span>
-<span id="cb13-115"><a href="#cb13-115" aria-hidden="true" tabindex="-1"></a>    fontsize<span class="op">=</span><span class="dv">14</span>,</span>
-<span id="cb13-116"><a href="#cb13-116" aria-hidden="true" tabindex="-1"></a>    color<span class="op">=</span><span class="st">'#538a56'</span>,</span>
-<span id="cb13-117"><a href="#cb13-117" aria-hidden="true" tabindex="-1"></a>    weight<span class="op">=</span><span class="st">'bold'</span>,</span>
-<span id="cb13-118"><a href="#cb13-118" aria-hidden="true" tabindex="-1"></a>    ha<span class="op">=</span><span class="st">'center'</span>,</span>
-<span id="cb13-119"><a href="#cb13-119" aria-hidden="true" tabindex="-1"></a>    transform<span class="op">=</span>plt.gcf().transFigure</span>
-<span id="cb13-120"><a href="#cb13-120" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb13-121"><a href="#cb13-121" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb13-122"><a href="#cb13-122" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-70"><a href="#cb13-70" aria-hidden="true" tabindex="-1"></a>plt.xticks(x, positions)</span>
+<span id="cb13-71"><a href="#cb13-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-72"><a href="#cb13-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-73"><a href="#cb13-73" aria-hidden="true" tabindex="-1"></a>handles, labels <span class="op">=</span> ax.get_legend_handles_labels()</span>
+<span id="cb13-74"><a href="#cb13-74" aria-hidden="true" tabindex="-1"></a>unique_labels <span class="op">=</span> <span class="bu">dict</span>(<span class="bu">zip</span>(labels, handles))</span>
+<span id="cb13-75"><a href="#cb13-75" aria-hidden="true" tabindex="-1"></a>win_patch <span class="op">=</span> mpatches.Patch(facecolor<span class="op">=</span><span class="st">'white'</span>, hatch<span class="op">=</span><span class="st">'.'</span>, edgecolor<span class="op">=</span><span class="st">'black'</span>, label<span class="op">=</span><span class="st">'Win'</span>)</span>
+<span id="cb13-76"><a href="#cb13-76" aria-hidden="true" tabindex="-1"></a>loss_patch <span class="op">=</span> mpatches.Patch(facecolor<span class="op">=</span><span class="st">'white'</span>, hatch<span class="op">=</span><span class="st">'</span><span class="ch">\\</span><span class="st">'</span>, edgecolor<span class="op">=</span><span class="st">'black'</span>, label<span class="op">=</span><span class="st">'Loss'</span>)</span>
+<span id="cb13-77"><a href="#cb13-77" aria-hidden="true" tabindex="-1"></a>ax.legend(</span>
+<span id="cb13-78"><a href="#cb13-78" aria-hidden="true" tabindex="-1"></a>    <span class="bu">list</span>(unique_labels.values()) <span class="op">+</span> [win_patch, loss_patch],</span>
+<span id="cb13-79"><a href="#cb13-79" aria-hidden="true" tabindex="-1"></a>    <span class="bu">list</span>(unique_labels.keys()) <span class="op">+</span> [<span class="st">'Win'</span>, <span class="st">'Loss - hatch'</span>],</span>
+<span id="cb13-80"><a href="#cb13-80" aria-hidden="true" tabindex="-1"></a>    title<span class="op">=</span><span class="st">'Result'</span></span>
+<span id="cb13-81"><a href="#cb13-81" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb13-82"><a href="#cb13-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-83"><a href="#cb13-83" aria-hidden="true" tabindex="-1"></a>plt.suptitle(<span class="st">"Avg. Player Load by Position"</span>, fontsize<span class="op">=</span><span class="dv">16</span>, x<span class="op">=</span> <span class="fl">0.23</span> , y<span class="op">=</span><span class="fl">0.97</span>)</span>
+<span id="cb13-84"><a href="#cb13-84" aria-hidden="true" tabindex="-1"></a>plt.text(</span>
+<span id="cb13-85"><a href="#cb13-85" aria-hidden="true" tabindex="-1"></a>    <span class="fl">0.15</span>, <span class="fl">0.9</span>,</span>
+<span id="cb13-86"><a href="#cb13-86" aria-hidden="true" tabindex="-1"></a>    <span class="st">"between "</span>,</span>
+<span id="cb13-87"><a href="#cb13-87" aria-hidden="true" tabindex="-1"></a>    fontsize<span class="op">=</span><span class="dv">14</span>,</span>
+<span id="cb13-88"><a href="#cb13-88" aria-hidden="true" tabindex="-1"></a>    ha<span class="op">=</span><span class="st">'center'</span>,</span>
+<span id="cb13-89"><a href="#cb13-89" aria-hidden="true" tabindex="-1"></a>    transform<span class="op">=</span>plt.gcf().transFigure</span>
+<span id="cb13-90"><a href="#cb13-90" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb13-91"><a href="#cb13-91" aria-hidden="true" tabindex="-1"></a>plt.text(</span>
+<span id="cb13-92"><a href="#cb13-92" aria-hidden="true" tabindex="-1"></a>    <span class="fl">0.25</span>, <span class="fl">0.9</span>,</span>
+<span id="cb13-93"><a href="#cb13-93" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Season 1"</span>,</span>
+<span id="cb13-94"><a href="#cb13-94" aria-hidden="true" tabindex="-1"></a>    fontsize<span class="op">=</span><span class="dv">14</span>,</span>
+<span id="cb13-95"><a href="#cb13-95" aria-hidden="true" tabindex="-1"></a>    color<span class="op">=</span><span class="st">'#255394'</span>,</span>
+<span id="cb13-96"><a href="#cb13-96" aria-hidden="true" tabindex="-1"></a>    weight<span class="op">=</span><span class="st">'bold'</span>,</span>
+<span id="cb13-97"><a href="#cb13-97" aria-hidden="true" tabindex="-1"></a>    ha<span class="op">=</span><span class="st">'center'</span>,</span>
+<span id="cb13-98"><a href="#cb13-98" aria-hidden="true" tabindex="-1"></a>    transform<span class="op">=</span>plt.gcf().transFigure</span>
+<span id="cb13-99"><a href="#cb13-99" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb13-100"><a href="#cb13-100" aria-hidden="true" tabindex="-1"></a>plt.text(</span>
+<span id="cb13-101"><a href="#cb13-101" aria-hidden="true" tabindex="-1"></a>    <span class="fl">0.325</span>, <span class="fl">0.9</span>,</span>
+<span id="cb13-102"><a href="#cb13-102" aria-hidden="true" tabindex="-1"></a>    <span class="st">" and "</span>,</span>
+<span id="cb13-103"><a href="#cb13-103" aria-hidden="true" tabindex="-1"></a>    fontsize<span class="op">=</span><span class="dv">14</span>,</span>
+<span id="cb13-104"><a href="#cb13-104" aria-hidden="true" tabindex="-1"></a>    ha<span class="op">=</span><span class="st">'center'</span>,</span>
+<span id="cb13-105"><a href="#cb13-105" aria-hidden="true" tabindex="-1"></a>    transform<span class="op">=</span>plt.gcf().transFigure</span>
+<span id="cb13-106"><a href="#cb13-106" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb13-107"><a href="#cb13-107" aria-hidden="true" tabindex="-1"></a>plt.text(</span>
+<span id="cb13-108"><a href="#cb13-108" aria-hidden="true" tabindex="-1"></a>    <span class="fl">0.4</span>, <span class="fl">0.9</span>,</span>
+<span id="cb13-109"><a href="#cb13-109" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Season 2"</span>,</span>
+<span id="cb13-110"><a href="#cb13-110" aria-hidden="true" tabindex="-1"></a>    fontsize<span class="op">=</span><span class="dv">14</span>,</span>
+<span id="cb13-111"><a href="#cb13-111" aria-hidden="true" tabindex="-1"></a>    color<span class="op">=</span><span class="st">'#538a56'</span>,</span>
+<span id="cb13-112"><a href="#cb13-112" aria-hidden="true" tabindex="-1"></a>    weight<span class="op">=</span><span class="st">'bold'</span>,</span>
+<span id="cb13-113"><a href="#cb13-113" aria-hidden="true" tabindex="-1"></a>    ha<span class="op">=</span><span class="st">'center'</span>,</span>
+<span id="cb13-114"><a href="#cb13-114" aria-hidden="true" tabindex="-1"></a>    transform<span class="op">=</span>plt.gcf().transFigure</span>
+<span id="cb13-115"><a href="#cb13-115" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb13-116"><a href="#cb13-116" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb13-117"><a href="#cb13-117" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -666,7 +661,7 @@ The behavior of 'isin' with dtype=datetime64[ns] and castable values (e.g. strin
 </div>
 </div>
 <p><strong>Graph 2</strong> Here is the code for our heatmap showing the difference in player load by weeke when comparing the 2 seasons. This heatmap includes game and practice data.</p>
-<div id="a3b21f04" class="cell" data-execution_count="12">
+<div id="f566e9c5" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.cm <span class="im">as</span> cm</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Concatenate the DataFrames</span></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>season1[<span class="st">'Season'</span>] <span class="op">=</span> <span class="dv">1</span></span>
@@ -724,80 +719,116 @@ The behavior of 'isin' with dtype=datetime64[ns] and castable values (e.g. strin
 </div>
 </div>
 <p><strong>Graph 3</strong></p>
-<div id="eaa7e946" class="cell" data-execution_count="13">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.dates <span class="im">as</span> mdates</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>season2[<span class="st">'Date'</span>] <span class="op">=</span> pd.to_datetime(season2[<span class="st">'Date'</span>]).dt.normalize()</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>games_23_24_dt <span class="op">=</span> pd.to_datetime(games_23_24).normalize()</span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>games2 <span class="op">=</span> season2[season2[<span class="st">'Date'</span>].isin(games_23_24_dt)].copy()</span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>games2[<span class="st">'Date'</span>] <span class="op">=</span> pd.to_datetime(games2[<span class="st">'Date'</span>]).dt.normalize()</span>
+<div id="a90e3a87" class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Add Season column </span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>before_games1[<span class="st">'Season'</span>] <span class="op">=</span> <span class="st">'2022–23'</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>before_games2[<span class="st">'Season'</span>] <span class="op">=</span> <span class="st">'2023–24'</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Combine the data</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>pre_game_data <span class="op">=</span> pd.concat([before_games1, before_games2], ignore_index<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>pre_game_data.columns <span class="op">=</span> pre_game_data.columns.<span class="bu">str</span>.strip()</span>
 <span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>df2[<span class="st">'Date'</span>] <span class="op">=</span> pd.to_datetime(df2[<span class="st">'Date'</span>]).dt.normalize()</span>
-<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>games2 <span class="op">=</span> pd.merge(</span>
-<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>    games2,</span>
-<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>    df2[[<span class="st">'Date'</span>, <span class="st">'Result'</span>, <span class="st">'Win'</span>]],</span>
-<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>    on<span class="op">=</span><span class="st">'Date'</span>,</span>
-<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>    how<span class="op">=</span><span class="st">'left'</span></span>
-<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>avg_efforts2 <span class="op">=</span> df2[[<span class="st">'Date'</span>, <span class="st">'Result'</span>]].copy()</span>
-<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>efforts2 <span class="op">=</span> games2.groupby(<span class="st">'Date'</span>, as_index<span class="op">=</span><span class="va">False</span>)[<span class="st">'Explosive Efforts'</span>].mean()</span>
-<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>avg_efforts2 <span class="op">=</span> avg_efforts2.merge(efforts2, on<span class="op">=</span><span class="st">'Date'</span>, how<span class="op">=</span><span class="st">'left'</span>)</span>
-<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a>avg_efforts1 <span class="op">=</span> df1[[<span class="st">'Date'</span>, <span class="st">'Result'</span>]].copy()</span>
-<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a>efforts1 <span class="op">=</span> games1.groupby(<span class="st">'Date'</span>, as_index<span class="op">=</span><span class="va">False</span>)[<span class="st">'Explosive Efforts'</span>].mean()</span>
-<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a>avg_efforts1 <span class="op">=</span> avg_efforts1.merge(efforts1, on<span class="op">=</span><span class="st">'Date'</span>, how<span class="op">=</span><span class="st">'left'</span>)</span>
-<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a>wins1 <span class="op">=</span> avg_efforts1[avg_efforts1[<span class="st">'Result'</span>] <span class="op">==</span> <span class="st">'W'</span>]</span>
-<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a>losses1 <span class="op">=</span> avg_efforts1[avg_efforts1[<span class="st">'Result'</span>] <span class="op">==</span> <span class="st">'L'</span>]</span>
-<span id="cb15-28"><a href="#cb15-28" aria-hidden="true" tabindex="-1"></a>wins2 <span class="op">=</span> avg_efforts2[avg_efforts2[<span class="st">'Result'</span>] <span class="op">==</span> <span class="st">'W'</span>]</span>
-<span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a>losses2 <span class="op">=</span> avg_efforts2[avg_efforts2[<span class="st">'Result'</span>] <span class="op">==</span> <span class="st">'L'</span>]</span>
-<span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-31"><a href="#cb15-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-32"><a href="#cb15-32" aria-hidden="true" tabindex="-1"></a>fig, axs <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">14</span>, <span class="dv">6</span>), sharey<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb15-33"><a href="#cb15-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-34"><a href="#cb15-34" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> style_axis(ax):</span>
-<span id="cb15-35"><a href="#cb15-35" aria-hidden="true" tabindex="-1"></a>    ax.spines[<span class="st">'left'</span>].set_visible(<span class="va">True</span>)</span>
-<span id="cb15-36"><a href="#cb15-36" aria-hidden="true" tabindex="-1"></a>    ax.spines[<span class="st">'left'</span>].set_color(<span class="st">'lightgray'</span>)</span>
-<span id="cb15-37"><a href="#cb15-37" aria-hidden="true" tabindex="-1"></a>    ax.spines[<span class="st">'top'</span>].set_visible(<span class="va">False</span>)</span>
-<span id="cb15-38"><a href="#cb15-38" aria-hidden="true" tabindex="-1"></a>    ax.spines[<span class="st">'right'</span>].set_visible(<span class="va">False</span>)</span>
-<span id="cb15-39"><a href="#cb15-39" aria-hidden="true" tabindex="-1"></a>    ax.spines[<span class="st">'bottom'</span>].set_visible(<span class="va">False</span>)</span>
-<span id="cb15-40"><a href="#cb15-40" aria-hidden="true" tabindex="-1"></a>    ax.yaxis.grid(<span class="va">True</span>, color<span class="op">=</span><span class="st">'lightgray'</span>, linestyle<span class="op">=</span><span class="st">'-'</span>, linewidth<span class="op">=</span><span class="fl">0.7</span>)</span>
-<span id="cb15-41"><a href="#cb15-41" aria-hidden="true" tabindex="-1"></a>    ax.xaxis.grid(<span class="va">False</span>)</span>
-<span id="cb15-42"><a href="#cb15-42" aria-hidden="true" tabindex="-1"></a>    ax.xaxis.set_major_locator(mdates.MonthLocator(interval<span class="op">=</span><span class="dv">1</span>))</span>
-<span id="cb15-43"><a href="#cb15-43" aria-hidden="true" tabindex="-1"></a>    ax.xaxis.set_major_formatter(mdates.DateFormatter(<span class="st">'%b %Y'</span>))</span>
-<span id="cb15-44"><a href="#cb15-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-45"><a href="#cb15-45" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].plot(avg_efforts1[<span class="st">'Date'</span>], avg_efforts1[<span class="st">'Explosive Efforts'</span>], color<span class="op">=</span><span class="st">'black'</span>, linewidth<span class="op">=</span><span class="dv">1</span>, zorder<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb15-46"><a href="#cb15-46" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].scatter(wins1[<span class="st">'Date'</span>], wins1[<span class="st">'Explosive Efforts'</span>], color<span class="op">=</span><span class="st">'#fe5a03'</span>, s<span class="op">=</span><span class="dv">50</span>, label<span class="op">=</span><span class="st">'Win'</span>, zorder<span class="op">=</span><span class="dv">5</span>)</span>
-<span id="cb15-47"><a href="#cb15-47" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].scatter(losses1[<span class="st">'Date'</span>], losses1[<span class="st">'Explosive Efforts'</span>], color<span class="op">=</span><span class="st">'#130ccc'</span>, s<span class="op">=</span><span class="dv">50</span>, label<span class="op">=</span><span class="st">'Loss'</span>, zorder<span class="op">=</span><span class="dv">5</span>)</span>
-<span id="cb15-48"><a href="#cb15-48" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].set_title(<span class="st">"2022–2023 Season"</span>)</span>
-<span id="cb15-49"><a href="#cb15-49" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].set_ylabel(<span class="st">"Average Explosive Efforts"</span>)</span>
-<span id="cb15-50"><a href="#cb15-50" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].legend(loc<span class="op">=</span><span class="st">'upper left'</span>, bbox_to_anchor<span class="op">=</span>(<span class="dv">0</span>, <span class="fl">0.965</span>), frameon<span class="op">=</span><span class="va">False</span>)</span>
-<span id="cb15-51"><a href="#cb15-51" aria-hidden="true" tabindex="-1"></a>style_axis(axs[<span class="dv">0</span>])</span>
-<span id="cb15-52"><a href="#cb15-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-53"><a href="#cb15-53" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">1</span>].plot(</span>
-<span id="cb15-54"><a href="#cb15-54" aria-hidden="true" tabindex="-1"></a>    avg_efforts2.dropna(subset<span class="op">=</span>[<span class="st">'Explosive Efforts'</span>])[<span class="st">'Date'</span>],</span>
-<span id="cb15-55"><a href="#cb15-55" aria-hidden="true" tabindex="-1"></a>    avg_efforts2.dropna(subset<span class="op">=</span>[<span class="st">'Explosive Efforts'</span>])[<span class="st">'Explosive Efforts'</span>],</span>
-<span id="cb15-56"><a href="#cb15-56" aria-hidden="true" tabindex="-1"></a>    color<span class="op">=</span><span class="st">'black'</span>,</span>
-<span id="cb15-57"><a href="#cb15-57" aria-hidden="true" tabindex="-1"></a>    linewidth<span class="op">=</span><span class="dv">1</span>,</span>
-<span id="cb15-58"><a href="#cb15-58" aria-hidden="true" tabindex="-1"></a>    zorder<span class="op">=</span><span class="dv">1</span></span>
-<span id="cb15-59"><a href="#cb15-59" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb15-60"><a href="#cb15-60" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">1</span>].scatter(wins2[<span class="st">'Date'</span>], wins2[<span class="st">'Explosive Efforts'</span>], color<span class="op">=</span><span class="st">'#fe5a03'</span>, s<span class="op">=</span><span class="dv">50</span>, label<span class="op">=</span><span class="st">'Win'</span>, zorder<span class="op">=</span><span class="dv">5</span>)</span>
-<span id="cb15-61"><a href="#cb15-61" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">1</span>].scatter(losses2[<span class="st">'Date'</span>], losses2[<span class="st">'Explosive Efforts'</span>], color<span class="op">=</span><span class="st">'#130ccc'</span>, s<span class="op">=</span><span class="dv">50</span>, label<span class="op">=</span><span class="st">'Loss'</span>, zorder<span class="op">=</span><span class="dv">5</span>)</span>
-<span id="cb15-62"><a href="#cb15-62" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-63"><a href="#cb15-63" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">1</span>].set_title(<span class="st">"2023–2024 Season"</span>)</span>
-<span id="cb15-64"><a href="#cb15-64" aria-hidden="true" tabindex="-1"></a>style_axis(axs[<span class="dv">1</span>])</span>
-<span id="cb15-65"><a href="#cb15-65" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-66"><a href="#cb15-66" aria-hidden="true" tabindex="-1"></a>plt.suptitle(<span class="st">"Explosive Efforts Per Game Between Seasons"</span>, fontsize<span class="op">=</span><span class="dv">14</span>)</span>
-<span id="cb15-67"><a href="#cb15-67" aria-hidden="true" tabindex="-1"></a>plt.figtext(<span class="fl">0.5</span>, <span class="fl">0.91</span>, <span class="st">"Linking Game Outcomes to Explosive Effort Metrics"</span>, ha<span class="op">=</span><span class="st">'center'</span>, fontsize<span class="op">=</span><span class="dv">11</span>, color<span class="op">=</span><span class="st">'gray'</span>)</span>
-<span id="cb15-68"><a href="#cb15-68" aria-hidden="true" tabindex="-1"></a>plt.tight_layout(rect<span class="op">=</span>[<span class="dv">0</span>, <span class="fl">0.03</span>, <span class="dv">1</span>, <span class="fl">0.95</span>])</span>
-<span id="cb15-69"><a href="#cb15-69" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Remove outliers above 400</span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>pre_game_data <span class="op">=</span> pre_game_data[pre_game_data[<span class="st">'Total Player Load'</span>] <span class="op">&lt;=</span> <span class="dv">400</span>]</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate group means</span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>group_means <span class="op">=</span> (</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>    pre_game_data.groupby([<span class="st">'Position'</span>, <span class="st">'Season'</span>])[<span class="st">'Total Player Load'</span>]</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>    .mean()</span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>    .reset_index()</span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up the plot</span></span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> sns.stripplot(</span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>pre_game_data,</span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">'Position'</span>,</span>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a>    y<span class="op">=</span><span class="st">'Total Player Load'</span>,</span>
+<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a>    hue<span class="op">=</span><span class="st">'Season'</span>,</span>
+<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a>    dodge<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a>    jitter<span class="op">=</span><span class="fl">0.3</span>,</span>
+<span id="cb15-28"><a href="#cb15-28" aria-hidden="true" tabindex="-1"></a>    size<span class="op">=</span><span class="dv">5</span>,</span>
+<span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a>    palette<span class="op">=</span>{<span class="st">'2022–23'</span>: <span class="st">'#255394'</span>, <span class="st">'2023–24'</span>: <span class="st">'#538a56'</span>},</span>
+<span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a>    alpha<span class="op">=</span><span class="fl">0.6</span></span>
+<span id="cb15-31"><a href="#cb15-31" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb15-32"><a href="#cb15-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-33"><a href="#cb15-33" aria-hidden="true" tabindex="-1"></a><span class="co"># Overlay black horizontal lines and annotate percent differences</span></span>
+<span id="cb15-34"><a href="#cb15-34" aria-hidden="true" tabindex="-1"></a>positions <span class="op">=</span> pre_game_data[<span class="st">'Position'</span>].unique()</span>
+<span id="cb15-35"><a href="#cb15-35" aria-hidden="true" tabindex="-1"></a>season_offsets <span class="op">=</span> {<span class="st">'2022–23'</span>: <span class="op">-</span><span class="fl">0.2</span>, <span class="st">'2023–24'</span>: <span class="fl">0.2</span>}</span>
+<span id="cb15-36"><a href="#cb15-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-37"><a href="#cb15-37" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, pos <span class="kw">in</span> <span class="bu">enumerate</span>(positions):</span>
+<span id="cb15-38"><a href="#cb15-38" aria-hidden="true" tabindex="-1"></a>    mean_s1 <span class="op">=</span> group_means[</span>
+<span id="cb15-39"><a href="#cb15-39" aria-hidden="true" tabindex="-1"></a>        (group_means[<span class="st">'Position'</span>] <span class="op">==</span> pos) <span class="op">&amp;</span> (group_means[<span class="st">'Season'</span>] <span class="op">==</span> <span class="st">'2022–23'</span>)</span>
+<span id="cb15-40"><a href="#cb15-40" aria-hidden="true" tabindex="-1"></a>    ][<span class="st">'Total Player Load'</span>].values[<span class="dv">0</span>]</span>
+<span id="cb15-41"><a href="#cb15-41" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-42"><a href="#cb15-42" aria-hidden="true" tabindex="-1"></a>    mean_s2 <span class="op">=</span> group_means[</span>
+<span id="cb15-43"><a href="#cb15-43" aria-hidden="true" tabindex="-1"></a>        (group_means[<span class="st">'Position'</span>] <span class="op">==</span> pos) <span class="op">&amp;</span> (group_means[<span class="st">'Season'</span>] <span class="op">==</span> <span class="st">'2023–24'</span>)</span>
+<span id="cb15-44"><a href="#cb15-44" aria-hidden="true" tabindex="-1"></a>    ][<span class="st">'Total Player Load'</span>].values[<span class="dv">0</span>]</span>
+<span id="cb15-45"><a href="#cb15-45" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-46"><a href="#cb15-46" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add horizontal lines</span></span>
+<span id="cb15-47"><a href="#cb15-47" aria-hidden="true" tabindex="-1"></a>    ax.hlines(y<span class="op">=</span>mean_s1, xmin<span class="op">=</span>i <span class="op">+</span> season_offsets[<span class="st">'2022–23'</span>] <span class="op">-</span> <span class="fl">0.1</span>, xmax<span class="op">=</span>i <span class="op">+</span> season_offsets[<span class="st">'2022–23'</span>] <span class="op">+</span> <span class="fl">0.1</span>, color<span class="op">=</span><span class="st">'black'</span>, linewidth<span class="op">=</span><span class="dv">2</span>, zorder<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb15-48"><a href="#cb15-48" aria-hidden="true" tabindex="-1"></a>    ax.hlines(y<span class="op">=</span>mean_s2, xmin<span class="op">=</span>i <span class="op">+</span> season_offsets[<span class="st">'2023–24'</span>] <span class="op">-</span> <span class="fl">0.1</span>, xmax<span class="op">=</span>i <span class="op">+</span> season_offsets[<span class="st">'2023–24'</span>] <span class="op">+</span> <span class="fl">0.1</span>, color<span class="op">=</span><span class="st">'black'</span>, linewidth<span class="op">=</span><span class="dv">2</span>, zorder<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb15-49"><a href="#cb15-49" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-50"><a href="#cb15-50" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate percent difference and annotate</span></span>
+<span id="cb15-51"><a href="#cb15-51" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> mean_s1 <span class="op">!=</span> <span class="dv">0</span>:</span>
+<span id="cb15-52"><a href="#cb15-52" aria-hidden="true" tabindex="-1"></a>        percent_diff <span class="op">=</span> ((mean_s2 <span class="op">-</span> mean_s1) <span class="op">/</span> mean_s1) <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb15-53"><a href="#cb15-53" aria-hidden="true" tabindex="-1"></a>        percent_label <span class="op">=</span> <span class="ss">f"</span><span class="sc">{</span>percent_diff<span class="sc">:+.1f}</span><span class="ss">%"</span></span>
+<span id="cb15-54"><a href="#cb15-54" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb15-55"><a href="#cb15-55" aria-hidden="true" tabindex="-1"></a>        percent_label <span class="op">=</span> <span class="st">"N/A"</span></span>
+<span id="cb15-56"><a href="#cb15-56" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-57"><a href="#cb15-57" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Annotate to the right of the Season 2 (green) average</span></span>
+<span id="cb15-58"><a href="#cb15-58" aria-hidden="true" tabindex="-1"></a>    right_x <span class="op">=</span> i <span class="op">+</span> season_offsets[<span class="st">'2023–24'</span>] <span class="op">+</span> <span class="fl">0.17</span></span>
+<span id="cb15-59"><a href="#cb15-59" aria-hidden="true" tabindex="-1"></a>    ax.annotate(</span>
+<span id="cb15-60"><a href="#cb15-60" aria-hidden="true" tabindex="-1"></a>        percent_label,</span>
+<span id="cb15-61"><a href="#cb15-61" aria-hidden="true" tabindex="-1"></a>        xy<span class="op">=</span>(right_x, mean_s2),</span>
+<span id="cb15-62"><a href="#cb15-62" aria-hidden="true" tabindex="-1"></a>        va<span class="op">=</span><span class="st">'center'</span>,</span>
+<span id="cb15-63"><a href="#cb15-63" aria-hidden="true" tabindex="-1"></a>        ha<span class="op">=</span><span class="st">'left'</span>,</span>
+<span id="cb15-64"><a href="#cb15-64" aria-hidden="true" tabindex="-1"></a>        fontsize<span class="op">=</span><span class="dv">10</span>,</span>
+<span id="cb15-65"><a href="#cb15-65" aria-hidden="true" tabindex="-1"></a>        weight<span class="op">=</span><span class="st">'bold'</span>,</span>
+<span id="cb15-66"><a href="#cb15-66" aria-hidden="true" tabindex="-1"></a>        color<span class="op">=</span><span class="st">'black'</span></span>
+<span id="cb15-67"><a href="#cb15-67" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb15-68"><a href="#cb15-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-69"><a href="#cb15-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-70"><a href="#cb15-70" aria-hidden="true" tabindex="-1"></a><span class="co"># Remove position x-label and add 'S1' and 'S2' labels below each position</span></span>
+<span id="cb15-71"><a href="#cb15-71" aria-hidden="true" tabindex="-1"></a>plt.xticks(<span class="bu">range</span>(<span class="bu">len</span>(positions)), positions)  <span class="co"># Keep position names</span></span>
+<span id="cb15-72"><a href="#cb15-72" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, pos <span class="kw">in</span> <span class="bu">enumerate</span>(positions):</span>
+<span id="cb15-73"><a href="#cb15-73" aria-hidden="true" tabindex="-1"></a>    ax.text(i <span class="op">+</span> season_offsets[<span class="st">'2022–23'</span>], <span class="op">-</span><span class="dv">25</span>, <span class="st">'S1'</span>, ha<span class="op">=</span><span class="st">'center'</span>, va<span class="op">=</span><span class="st">'top'</span>, fontsize<span class="op">=</span><span class="dv">10</span>, color<span class="op">=</span><span class="st">'#255394'</span>)  <span class="co"># For Season 1</span></span>
+<span id="cb15-74"><a href="#cb15-74" aria-hidden="true" tabindex="-1"></a>    ax.text(i <span class="op">+</span> season_offsets[<span class="st">'2023–24'</span>], <span class="op">-</span><span class="dv">25</span>, <span class="st">'S2'</span>, ha<span class="op">=</span><span class="st">'center'</span>, va<span class="op">=</span><span class="st">'top'</span>, fontsize<span class="op">=</span><span class="dv">10</span>, color<span class="op">=</span><span class="st">'#538a56'</span>)  <span class="co"># For Season 2</span></span>
+<span id="cb15-75"><a href="#cb15-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-76"><a href="#cb15-76" aria-hidden="true" tabindex="-1"></a><span class="co"># Title telling the story of differences between the seasons</span></span>
+<span id="cb15-77"><a href="#cb15-77" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Average Before Game Player Load Increased Across All Positions'</span>, fontsize<span class="op">=</span><span class="dv">16</span>, weight<span class="op">=</span><span class="st">'bold'</span>, loc<span class="op">=</span><span class="st">'left'</span>, y<span class="op">=</span><span class="fl">1.08</span>)</span>
+<span id="cb15-78"><a href="#cb15-78" aria-hidden="true" tabindex="-1"></a>plt.suptitle(<span class="st">'Increase of 27</span><span class="sc">% o</span><span class="st">r More in 23–24 Season'</span>, fontsize<span class="op">=</span><span class="dv">13</span>, x<span class="op">=</span><span class="fl">0.26</span>, y<span class="op">=</span><span class="fl">0.87</span>)</span>
+<span id="cb15-79"><a href="#cb15-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-80"><a href="#cb15-80" aria-hidden="true" tabindex="-1"></a><span class="co"># Final touches</span></span>
+<span id="cb15-81"><a href="#cb15-81" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Player Load Before Game'</span>)</span>
+<span id="cb15-82"><a href="#cb15-82" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">''</span>)</span>
+<span id="cb15-83"><a href="#cb15-83" aria-hidden="true" tabindex="-1"></a>plt.legend([])  <span class="co"># Remove legend</span></span>
+<span id="cb15-84"><a href="#cb15-84" aria-hidden="true" tabindex="-1"></a>sns.despine()</span>
+<span id="cb15-85"><a href="#cb15-85" aria-hidden="true" tabindex="-1"></a>plt.ylim(<span class="dv">0</span>, <span class="dv">400</span>)</span>
+<span id="cb15-86"><a href="#cb15-86" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb15-87"><a href="#cb15-87" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>/var/folders/y7/ptqmbdxx7sd_k5_4ynr96zg00000gn/T/ipykernel_61383/3089189867.py:2: SettingWithCopyWarning:
+
+
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+
+/var/folders/y7/ptqmbdxx7sd_k5_4ynr96zg00000gn/T/ipykernel_61383/3089189867.py:3: SettingWithCopyWarning:
+
+
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+</code></pre>
+</div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="dataviz_files/figure-html/cell-14-output-1.png" width="1334" height="552" class="figure-img"></p>
+<p><img src="dataviz_files/figure-html/cell-14-output-2.png" width="946" height="530" class="figure-img"></p>
 </figure>
 </div>
 </div>
