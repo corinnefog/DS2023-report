@@ -3,18 +3,12 @@
 Prepared for the University of Virginia Men's Basketball program. This report is intended to support coaches and athletic trainers in making informed decisions based on player workload data collected through Catapult wearable technology.
 
 ## Problem Statement
-In basketball, performance is more than raw effort. Every sprint, jump, and cut adds to the physical toll players experience. What if success has less to do with how much energy is used, and more to do with when and how it is applied?
-This report uses two seasons of Catapult data to investigate whether patterns in workload and effort explain differences in team performance. Our goal was to uncover patterns that could guide coaching strategies related to training, rest, and in-game effort.
+In basketball, performance is more than raw effort. Every sprint, jump, and cut adds to the physical toll players experience. This report uses two seasons of Catapult data to investigate whether patterns in workload and effort explain differences in team performance. Our goal was to uncover patterns that could guide coaching strategies related to training, rest, and in-game effort.
 We focused on three guiding questions. First, do workload patterns vary by position and game outcome? Second, how does intensity change across the season? Third, can explosive effort tell us anything about player readiness and team momentum?
 
 ## Analysis
-We started  by reviewing all the player load data across both seasons. Then we focused on three variables. These were average player load by position, player load per
-minute each week, and explosive efforts during games. Our goal was to find a story in the data that coaches could use to make informed decisions about training and
-strategy. When we looked at player load by position, we saw that guards and forwards tended to have lower average loads in games that ended in wins. Centers had about
-the same load whether the team won or lost. This suggests that efficient and well-paced effort leads to better outcomes. It also suggests adjusting intensity by 
-position in both practice and in-game strategy. When looking at weekly load per minute, we found that Season 2 had much higher levels of effort between Weeks 11 and 
-21. During that time, the team had a stronger win record compared to the same section in Season 1. This might suggest that higher physical intensity in the middle of 
-the season improved overall fitness.
+We began by using a heat map to track how player load per minute changed each week between the two seasons. Red shading shows where Season 2 had higher intensity than Season 1, while blue indicates the opposite. The trend reveals that weeks 11 through 21 in Season 2 had consistently higher player load per minute, with the biggest spikes in weeks 14 and 21. During this time, the team in Season 2 achieved a stronger overall record compared to the same stretch in Season 1.  This suggests that a mid-season rise in physical demand may contribute to improved performance.
+![Heatmap of weekly player load differences](images/graph1.png)
 
 ## Conclusion
 Our findings highlight a key pattern. The team's strongest performances often came during periods when effort was managed with intention rather than sustained at a constant high level.
