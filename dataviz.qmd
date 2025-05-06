@@ -174,29 +174,31 @@ combined.columns = combined.columns.str.strip()
 
 combined['Result Label'] = combined['Win'].map({1: 'Win', 0: 'Loss'})
 
+# Prepare bar positions
 positions = combined['Position'].unique()
 seasons = ['2022–23', '2023–24']
 results = ['Win', 'Loss']
 
+# Calculate average values
 avg_data = (
     combined.groupby(['Position', 'Season', 'Result Label'])['Total Player Load']
     .mean()
     .reset_index()
 )
-
+# Set up the plot
 fig, ax = plt.subplots(figsize=(10, 6))
 
-# Season colors 
+# Define colors for seasons
 season_colors = {'2022–23': '#255394', '2023–24': '#538a56'}
 
-# hatches 
-result_hatches = {'Win': '.', 'Loss': '\\'}
+# Define hatches for results
+result_hatches = {'Win' : '','Loss': '\\'}
 
 bar_width = 0.3
-gap = 0.2  # space between bars
+gap = 0.2  # Space between seasons
 x = np.arange(len(positions)) * (len(seasons) * len(results) * bar_width + gap)
 
-
+# Mapping to get the proper bar placement
 offsets = {
     ('2022–23', 'Win'): -1.5 * bar_width,
     ('2022–23', 'Loss'): -0.5 * bar_width,
@@ -204,7 +206,7 @@ offsets = {
     ('2023–24', 'Loss'): 1.5 * bar_width + gap / 2
 }
 
-
+# Plot each bar
 for season in seasons:
     for result in results:
         subdata = avg_data[
@@ -238,13 +240,6 @@ sns.despine()
 
 plt.xticks(x, positions)
 
-for i, pos in enumerate(positions):
-    s1_center = x[i] + np.mean([offsets[('2022–23', 'Win')], offsets[('2022–23', 'Loss')]])
-    s2_center = x[i] + np.mean([offsets[('2023–24', 'Win')], offsets[('2023–24', 'Loss')]])
-    
-    ax.text(s1_center, -15, 'S1', ha='center', va='top', fontsize=10)
-    ax.text(s2_center, -15, 'S2', ha='center', va='top', fontsize=10)
-
 
 handles, labels = ax.get_legend_handles_labels()
 unique_labels = dict(zip(labels, handles))
@@ -252,8 +247,8 @@ win_patch = mpatches.Patch(facecolor='white', hatch='.', edgecolor='black', labe
 loss_patch = mpatches.Patch(facecolor='white', hatch='\\', edgecolor='black', label='Loss')
 ax.legend(
     list(unique_labels.values()) + [win_patch, loss_patch],
-    list(unique_labels.keys()) + ['Win (hatch)', 'Loss (hatch)'],
-    title='Season & Result'
+    list(unique_labels.keys()) + ['Win', 'Loss - hatch'],
+    title='Result'
 )
 
 plt.suptitle("Avg. Player Load by Position", fontsize=16, x= 0.23 , y=0.97)
@@ -350,74 +345,92 @@ plt.show()
 **Graph 3**
 
 ```{python}
-import matplotlib.dates as mdates
+# Add Season column 
+before_games1['Season'] = '2022–23'
+before_games2['Season'] = '2023–24'
 
-season2['Date'] = pd.to_datetime(season2['Date']).dt.normalize()
-games_23_24_dt = pd.to_datetime(games_23_24).normalize()
+# Combine the data
+pre_game_data = pd.concat([before_games1, before_games2], ignore_index=True)
+pre_game_data.columns = pre_game_data.columns.str.strip()
 
-games2 = season2[season2['Date'].isin(games_23_24_dt)].copy()
-games2['Date'] = pd.to_datetime(games2['Date']).dt.normalize()
+# Remove outliers above 400
+pre_game_data = pre_game_data[pre_game_data['Total Player Load'] <= 400]
 
-df2['Date'] = pd.to_datetime(df2['Date']).dt.normalize()
-
-games2 = pd.merge(
-    games2,
-    df2[['Date', 'Result', 'Win']],
-    on='Date',
-    how='left'
+# Calculate group means
+group_means = (
+    pre_game_data.groupby(['Position', 'Season'])['Total Player Load']
+    .mean()
+    .reset_index()
 )
 
-avg_efforts2 = df2[['Date', 'Result']].copy()
-efforts2 = games2.groupby('Date', as_index=False)['Explosive Efforts'].mean()
-avg_efforts2 = avg_efforts2.merge(efforts2, on='Date', how='left')
-
-avg_efforts1 = df1[['Date', 'Result']].copy()
-efforts1 = games1.groupby('Date', as_index=False)['Explosive Efforts'].mean()
-avg_efforts1 = avg_efforts1.merge(efforts1, on='Date', how='left')
-
-wins1 = avg_efforts1[avg_efforts1['Result'] == 'W']
-losses1 = avg_efforts1[avg_efforts1['Result'] == 'L']
-wins2 = avg_efforts2[avg_efforts2['Result'] == 'W']
-losses2 = avg_efforts2[avg_efforts2['Result'] == 'L']
-
-
-fig, axs = plt.subplots(1, 2, figsize=(14, 6), sharey=True)
-
-def style_axis(ax):
-    ax.spines['left'].set_visible(True)
-    ax.spines['left'].set_color('lightgray')
-    ax.spines['top'].set_visible(False)
-    ax.spines['right'].set_visible(False)
-    ax.spines['bottom'].set_visible(False)
-    ax.yaxis.grid(True, color='lightgray', linestyle='-', linewidth=0.7)
-    ax.xaxis.grid(False)
-    ax.xaxis.set_major_locator(mdates.MonthLocator(interval=1))
-    ax.xaxis.set_major_formatter(mdates.DateFormatter('%b %Y'))
-
-axs[0].plot(avg_efforts1['Date'], avg_efforts1['Explosive Efforts'], color='black', linewidth=1, zorder=1)
-axs[0].scatter(wins1['Date'], wins1['Explosive Efforts'], color='#fe5a03', s=50, label='Win', zorder=5)
-axs[0].scatter(losses1['Date'], losses1['Explosive Efforts'], color='#130ccc', s=50, label='Loss', zorder=5)
-axs[0].set_title("2022–2023 Season")
-axs[0].set_ylabel("Average Explosive Efforts")
-axs[0].legend(loc='upper left', bbox_to_anchor=(0, 0.965), frameon=False)
-style_axis(axs[0])
-
-axs[1].plot(
-    avg_efforts2.dropna(subset=['Explosive Efforts'])['Date'],
-    avg_efforts2.dropna(subset=['Explosive Efforts'])['Explosive Efforts'],
-    color='black',
-    linewidth=1,
-    zorder=1
+# Set up the plot
+plt.figure(figsize=(10, 6))
+ax = sns.stripplot(
+    data=pre_game_data,
+    x='Position',
+    y='Total Player Load',
+    hue='Season',
+    dodge=True,
+    jitter=0.3,
+    size=5,
+    palette={'2022–23': '#255394', '2023–24': '#538a56'},
+    alpha=0.6
 )
-axs[1].scatter(wins2['Date'], wins2['Explosive Efforts'], color='#fe5a03', s=50, label='Win', zorder=5)
-axs[1].scatter(losses2['Date'], losses2['Explosive Efforts'], color='#130ccc', s=50, label='Loss', zorder=5)
 
-axs[1].set_title("2023–2024 Season")
-style_axis(axs[1])
+# Overlay black horizontal lines and annotate percent differences
+positions = pre_game_data['Position'].unique()
+season_offsets = {'2022–23': -0.2, '2023–24': 0.2}
 
-plt.suptitle("Explosive Efforts Per Game Between Seasons", fontsize=14)
-plt.figtext(0.5, 0.91, "Linking Game Outcomes to Explosive Effort Metrics", ha='center', fontsize=11, color='gray')
-plt.tight_layout(rect=[0, 0.03, 1, 0.95])
+for i, pos in enumerate(positions):
+    mean_s1 = group_means[
+        (group_means['Position'] == pos) & (group_means['Season'] == '2022–23')
+    ]['Total Player Load'].values[0]
+    
+    mean_s2 = group_means[
+        (group_means['Position'] == pos) & (group_means['Season'] == '2023–24')
+    ]['Total Player Load'].values[0]
+    
+    # Add horizontal lines
+    ax.hlines(y=mean_s1, xmin=i + season_offsets['2022–23'] - 0.1, xmax=i + season_offsets['2022–23'] + 0.1, color='black', linewidth=2, zorder=3)
+    ax.hlines(y=mean_s2, xmin=i + season_offsets['2023–24'] - 0.1, xmax=i + season_offsets['2023–24'] + 0.1, color='black', linewidth=2, zorder=3)
+    
+    # Calculate percent difference and annotate
+    if mean_s1 != 0:
+        percent_diff = ((mean_s2 - mean_s1) / mean_s1) * 100
+        percent_label = f"{percent_diff:+.1f}%"
+    else:
+        percent_label = "N/A"
+    
+    # Annotate to the right of the Season 2 (green) average
+    right_x = i + season_offsets['2023–24'] + 0.17
+    ax.annotate(
+        percent_label,
+        xy=(right_x, mean_s2),
+        va='center',
+        ha='left',
+        fontsize=10,
+        weight='bold',
+        color='black'
+    )
+
+
+# Remove position x-label and add 'S1' and 'S2' labels below each position
+plt.xticks(range(len(positions)), positions)  # Keep position names
+for i, pos in enumerate(positions):
+    ax.text(i + season_offsets['2022–23'], -25, 'S1', ha='center', va='top', fontsize=10, color='#255394')  # For Season 1
+    ax.text(i + season_offsets['2023–24'], -25, 'S2', ha='center', va='top', fontsize=10, color='#538a56')  # For Season 2
+
+# Title telling the story of differences between the seasons
+plt.title('Average Before Game Player Load Increased Across All Positions', fontsize=16, weight='bold', loc='left', y=1.08)
+plt.suptitle('Increase of 27% or More in 23–24 Season', fontsize=13, x=0.26, y=0.87)
+
+# Final touches
+plt.ylabel('Player Load Before Game')
+plt.xlabel('')
+plt.legend([])  # Remove legend
+sns.despine()
+plt.ylim(0, 400)
+plt.tight_layout()
 plt.show()
 ```
 
