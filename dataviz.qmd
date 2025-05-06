@@ -353,9 +353,6 @@ before_games2['Season'] = '2023–24'
 pre_game_data = pd.concat([before_games1, before_games2], ignore_index=True)
 pre_game_data.columns = pre_game_data.columns.str.strip()
 
-# Remove outliers above 400
-pre_game_data = pre_game_data[pre_game_data['Total Player Load'] <= 400]
-
 # Calculate group means
 group_means = (
     pre_game_data.groupby(['Position', 'Season'])['Total Player Load']
@@ -422,7 +419,7 @@ for i, pos in enumerate(positions):
 
 # Title telling the story of differences between the seasons
 plt.title('Average Before Game Player Load Increased Across All Positions', fontsize=16, weight='bold', loc='left', y=1.08)
-plt.suptitle('Increase of 27% or More in 23–24 Season', fontsize=13, x=0.26, y=0.87)
+plt.suptitle('Increase of 17% or More in 23–24 Season', fontsize=13, x=0.26, y=0.87)
 
 # Final touches
 plt.ylabel('Player Load Before Game')
